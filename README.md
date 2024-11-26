@@ -1,7 +1,7 @@
 # portfolio.github.io
 ## Portfolio
 
-### Hello, I'm [Your Name] 👋
+### Hello, I'm [Srushti Hadimani] 👋
 
 I am passionate about technology and problem-solving. Here's a glimpse of my work:
 
@@ -20,19 +20,20 @@ I am passionate about technology and problem-solving. Here's a glimpse of my wor
 
 ## Portfolio Topic
 
+
 <dl>
 <dt>Course Name</dt>
 <dd>Algorithmic Problem Solving</dd>
 <dt>Course Code</dt>
 <dd>Course Code Placeholder</dd>
 <dt>Name</dt>
-<dd>Your Name</dd>
+<dd>Srushti Hadimani</dd>
 <dt>SRN</dt>
-<dd>Your SRN</dd>
+<dd>01fe23bcs260</dd>
 <dt>Course Instructor</dt>
-<dd>Instructor Name Placeholder</dd>
+<dd>Prakash Hegde</dd>
 <dt>University</dt>
-<dd>Your University Name</dd>
+<dd>KLE Technological University</dd>
 <dt>Portfolio Topic/Domain</dt>
 <dd>Google</dd>
 </dl>
