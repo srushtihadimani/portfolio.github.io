@@ -29,7 +29,7 @@ Your future city starts today—let’s build it together!
 
 ## Smart City Design - Aurangabad Portfolio
 
-## - *Course Name*: Algorithmic Problem Solving
+## - *Course Name*: Design And Analysis Of Algorithm
    - *Course Code*: 24ECSC205
 ### Aarzoo Chikkodi
 - *SRN*: 01fe23bcs276
