@@ -1,6 +1,6 @@
 ### Hello,I'm srushti Hadimani👋
 
-I am passionate about technology and problem-solving. Here's a glimpse of my work:
+I am passionate about technology and problem-solving. Here's a glimpse of my work:   
 
 🥷Meet The Team🕵️
 - *Aarzoo N Chikkodi*
