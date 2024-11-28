@@ -1,6 +1,8 @@
-###Hello, We are:
+### Hello,I'm srushti Hadimani👋
 
-## Team Members
+I am passionate about technology and problem-solving. Here's a glimpse of my work:
+
+🥷Meet The Team🕵️
 - *Aarzoo N Chikkodi*
 - *Srushti Hadimani*
 - *Shifa*
