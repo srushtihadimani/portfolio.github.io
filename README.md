@@ -43,7 +43,7 @@ Your future city starts today—let’s build it together!
 - *University*: KLE Technological University
 - *Portfolio Topic/Domain*: Digital Governance for city
 
-###Shifa
+### Shifa
 - *SRN*: 01fe23bcs046
 - *Course Instructor*: Prakash Hegde
 - *University*: KLE Technological University
