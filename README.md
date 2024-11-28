@@ -1,27 +1,27 @@
 # Portfolio
 
-## Hello, We are:
-- Aarzoo N Chikkodi
-- Srushti Hadimani
-- Shifa
+## Team Members
+- *Aarzoo N Chikkodi*
+- *Srushti Hadimani*
+- *Shifa*
 
-I am passionate about technology and problem-solving. Here's a glimpse of my work:
+We are passionate about technology and problem-solving. Here's a glimpse of our work:
 
 ### 🛠️ Smart City Designing
-This project involves the conceptualization, design, and development of a Smart City that incorporates technology, sustainable practices, and data-driven governance to enhance the quality of life for citizens, improve urban efficiency, and drive economic growth. The goal is to create a modern city that uses smart technology to make life easier, safer, and greener by improving transportation, energy use, and public services through tools like sensors, apps, and clean energy.
+Our project focuses on the conceptualization, design, and development of a Smart City that integrates technology, sustainable practices, and data-driven governance to enhance the quality of life for citizens, improve urban efficiency, and drive economic growth. The goal is to create a modern city that uses smart technology to make life easier, safer, and greener by improving transportation, energy use, and public services through tools like sensors, apps, and clean energy.
 
 #### Features of the City: "Building the City of Tomorrow"
-- 🌱 *Sustainability*: Champion a greener future by embracing renewable energy, implementing smart waste management, conserving precious water, and promoting eco-friendly transportation solutions.
-- ⚡ *Efficiency*: Revolutionize city services with cutting-edge technology! Leverage real-time data to optimize traffic flow, energy consumption, waste management, and public safety.
-- 🌐 *Connectivity*: Harness the power of IoT, 5G, and cloud technology to create a super-connected city that works in harmony, making interactions effortless.
-- 🌟 *Quality of Life*: Elevate everyday living with smarter solutions in healthcare, education, transportation, and security.
+- 🌱 *Sustainability*: Embrace renewable energy, implement smart waste management, conserve water, and promote eco-friendly transportation solutions.
+- ⚡ *Efficiency*: Utilize real-time data to optimize traffic flow, energy consumption, waste management, and public safety.
+- 🌐 *Connectivity*: Leverage IoT, 5G, and cloud technology to create a highly connected city.
+- 🌟 *Quality of Life*: Enhance everyday living with smarter solutions in healthcare, education, transportation, and security.
 
 Your future city starts today—let’s build it together!
 
 ## 🚀 Skills
-- C++, Python, JavaScript
-- Data Structures and Algorithms
-- Web Development (React.js, Node.js)
+- *Programming Languages*: C++, Python, JavaScript
+- *Core Competencies*: Data Structures and Algorithms
+- *Web Development*: React.js, Node.js
 
 ## 🌐 Find Us Online
 - [GitHub](https://github.com)
@@ -29,7 +29,6 @@ Your future city starts today—let’s build it together!
 
 ## Smart City Design - Aurangabad Portfolio
 
-## Person 1
 ### Srushti Hadimani
 - *Course Name*: Algorithmic Problem Solving
 - *Course Code*: 24ECSC205
