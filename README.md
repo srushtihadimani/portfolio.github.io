@@ -1,4 +1,4 @@
-# Portfolio
+
 
 ## Team Members
 - *Aarzoo N Chikkodi*
@@ -29,7 +29,7 @@ Your future city starts today—let’s build it together!
 
 ## Smart City Design - Aurangabad Portfolio
 
-## - *Course Name*: Design And Analysis Of Algorithm
+## - *Course Name*: Design And Analysis Of Algorithms
    - *Course Code*: 24ECSC205
 ### Aarzoo Chikkodi
 - *SRN*: 01fe23bcs276
