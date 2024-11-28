@@ -21,7 +21,7 @@ Your future city starts today—let’s build it together!
 ## 🚀 Skills
 - *Programming Languages*: C++, Python, JavaScript
 - *Core Competencies*: Data Structures and Algorithms
-- *Web Development*: React.js, Node.js
+
 
 ## 🌐 Find Us Online
 - [GitHub](https://github.com)
