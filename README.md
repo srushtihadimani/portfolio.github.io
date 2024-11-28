@@ -29,12 +29,28 @@ Your future city starts today—let’s build it together!
 
 ## Smart City Design - Aurangabad Portfolio
 
+### Aarzoo Chikkodi
+- *Course Name*: Algorithmic Problem Solving
+- *Course Code*: 24ECSC205
+- *SRN*: 01fe23bcs276
+- *Course Instructor*: Prakash Hegde
+- *University*: KLE Technological University
+- *Portfolio Topic/Domain*:  Agricultural and Power Generation Sector
+
 ### Srushti Hadimani
 - *Course Name*: Algorithmic Problem Solving
 - *Course Code*: 24ECSC205
 - *SRN*: 01fe23bcs260
 - *Course Instructor*: Prakash Hegde
 - *University*: KLE Technological University
-- *Portfolio Topic/Domain*: Google
+- *Portfolio Topic/Domain*: Digital Governance for city
+
+### Srushti Hadimani
+- *Course Name*: Algorithmic Problem Solving
+- *Course Code*: 24ECSC205
+- *SRN*: 01fe23bcs046
+- *Course Instructor*: Prakash Hegde
+- *University*: KLE Technological University
+- *Portfolio Topic/Domain*:Smart Entertainment in City
 
 > “The only way to do great work is to love what you do.” – Steve Jobs
