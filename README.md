@@ -5,21 +5,21 @@
 - *Shifa*
 
 We are passionate about technology and problem-solving. Here's a glimpse of our work:
-###Problem Space and Discovery
-##Identification of the Problem Space
+### Problem Space and Discovery
+## Identification of the Problem Space
 Urbanization and population growth have intensified challenges in resource management, environmental sustainability, infrastructure efficiency, and the overall quality of urban living. Traditional city planning methods often lack the capacity to address these complexities effectively, necessitating innovative and integrated solutions.
 
-##Key Challenges Identified:
+## Key Challenges Identified:
 1.Infrastructure Strain:
 Traffic congestion and limited public transportation options.
 Inefficient utilities, including water, energy, and waste systems.
 2.Quality of Life:
 Limited access to healthcare, education, and security services.
-##Approach to Problem Identification:
+## Approach to Problem Identification:
 🌱Data-Driven Analysis: Reviewed urbanization trends, resource utilization patterns, and emerging challenges throughstatistical and qualitative studies.
 🌱Research Review: Analyzed findings from global white papers and case studies on successful smart city models.
 
-##Key Findings from White Papers
+## Key Findings from White Papers
 🌐Sustainability Prioritization:
 Renewable energy systems and circular economies reduce environmental impact.
 Smart water management and energy grids minimize resource waste.
