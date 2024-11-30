@@ -26,7 +26,7 @@ Smart water management and energy grids minimize resource waste.
 - Citizen-Centric Development:
 Human-centered design improves accessibility, usability, and trust in smart city initiatives.
 Participatory governance models enable residents to actively contribute to policy and decision-making.
-🌐 Global Success Stories:
+- Global Success Stories:
 Singapore: Intelligent traffic management reduced congestion by 20%.
 Amsterdam: IoT-enabled street lighting achieved a 70% reduction in energy consumption.
 Barcelona: Smart waste bins optimized waste collection, reducing operational costs.
