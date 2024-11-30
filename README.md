@@ -20,7 +20,7 @@ Limited access to healthcare, education, and security services.
 🌱 Research Review: Analyzed findings from global white papers and case studies on successful smart city models.
 
 ## Key Findings from White Papers
-# 🌐 Sustainability Prioritization:
+## 🌐 Sustainability Prioritization:
 Renewable energy systems and circular economies reduce environmental impact.
 Smart water management and energy grids minimize resource waste.
 # 🌐 Citizen-Centric Development:
