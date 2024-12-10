@@ -56,7 +56,7 @@ Your future city starts today—let’s build it together!
 ## - *Course Name*: Design And Analysis Of Algorithms
    - *Course Code*: 24ECSC205
 ### Aarzoo Chikkodi
-- *SRN*: 01fe23bcs276
+- *SRN*: 01fe23bcs276.(https://github.com/Aarzoochikkodi/course-learning-reflections/blob/main/README.md)
 - *Course Instructor*: Prakash Hegde
 - *University*: KLE Technological University
 - *Portfolio Topic/Domain*:  Agricultural and Power Generation Sector
