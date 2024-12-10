@@ -4,7 +4,7 @@
 - *Srushti Hadimani*
 - *Shifa*
 
-We are passionate about technology and problem-solving. Here's a glimpse of our work:
+We are passionate about technology and problem-solving. 
 ## DESIGN AND ANALYSIS OF ALGORITHM🧑‍💻
    - ### Introduction to the Course🔍 
 Welcome to the Theory-Learning Portfolio for the Design and Analysis of Algorithms course. This portfolio documents my journey of learning fundamental concepts, analyzing complex problems, and understanding how algorithms shape modern computing.
@@ -27,6 +27,7 @@ Search Engines: Algorithms like DFS and BFS are used for web crawling.
 Social Media: Graph algorithms help in friend recommendations and identifying communities.
 Finance: Algorithms optimize trading strategies, detect fraud, and predict market trends.
 Healthcare: Machine learning algorithms, based on this foundational knowledge, assist in disease detection and treatment planning 
+### Here's a glimpse of our work:
 ### Problem Space and Discovery
 ## Identification of the Problem Space
 Urbanization and population growth have intensified challenges in resource management, environmental sustainability, infrastructure efficiency, and the overall quality of urban living. Traditional city planning methods often lack the capacity to address these complexities effectively, necessitating innovative and integrated solutions.
