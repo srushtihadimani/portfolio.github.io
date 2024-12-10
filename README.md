@@ -96,9 +96,11 @@ Your future city starts today—let’s build it together!
 - *University*: KLE Technological University
 - *Portfolio Topic/Domain*:Smart Entertainment in City
 
-> “The only way to do great work is to love what you do.” – Steve Jobs
+
 # Course Learning Reflections
 
 - **Srushti Hadimani**:https://github.com/srushtihadimani/Reflections/blob/main/README.md
 - **Aarzoo Chikkodi**:https://github.com/Aarzoochikkodi/course-learning-reflections/blob/main/README.md
+-
+> “The only way to do great work is to love what you do.” – Steve Jobs
 
