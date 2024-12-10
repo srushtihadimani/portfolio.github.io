@@ -7,4 +7,4 @@
 | **Interactive City Entertainment Map** | **Sustainable Cities and Communities (11)** | **11.4** - Strengthen efforts to protect and safeguard cultural heritage | **11.4.1** - Public and private expenditure on cultural heritage preservation |
 | **Holographic Live Streaming**     | **Industry, Innovation, and Infrastructure (9)** | **9.5** - Promote innovation through technological advancement | **9.5.1** - Research and development expenditure as a proportion of GDP |
 | **Citizen Feedback Portal (Smart Governance)** | **Peace, Justice, and Strong Institutions (16)** | **16.6** - Strengthen effective, accountable institutions | **16.6.2** - Proportion of population satisfied with public services |
-| **Real-Time Disaster Response System** | **Sustainable Cities and Communities (11)** | **11.5** - Mitigate the impact of
+| **Real-Time Disaster Response System** | **Sustainable Cities and Communities (11)** | **11.5** - Mitigate the impact of disasters on people and property | **11.5.1** - Number of deaths, missing persons, and directly affected persons attributed to disasters per 100,000 population |
