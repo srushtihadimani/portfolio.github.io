@@ -99,7 +99,6 @@ Your future city starts today—let’s build it together!
 > “The only way to do great work is to love what you do.” – Steve Jobs
 # Course Learning Reflections
 
-## Contributors
 - **Srushti Hadimani**:https://github.com/srushtihadimani/Reflections/blob/main/README.md
 - **Aarzoo Chikkodi**:https://github.com/Aarzoochikkodi/course-learning-reflections/blob/main/README.md
 
