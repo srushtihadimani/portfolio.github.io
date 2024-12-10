@@ -85,7 +85,7 @@ Your future city starts today—let’s build it together!
 - *Portfolio Topic/Domain*:  Agricultural and Power Generation Sector
 
 ### Srushti Hadimani
-- *SRN*: 01fe23bcs260
+- *SRN*: 01fe23bcs260.(https://github.com/srushtihadimani/Reflections/blob/main/README.md)
 - *Course Instructor*: Prakash Hegde
 - *University*: KLE Technological University
 - *Portfolio Topic/Domain*: Digital Governance for city
