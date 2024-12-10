@@ -5,8 +5,8 @@
 - *Shifa*
 
 We are passionate about technology and problem-solving. Here's a glimpse of our work:
-## DESIGN AND ANALYSIS OF ALGORITHM
-   - ### Introduction to the Course
+## DESIGN AND ANALYSIS OF ALGORITHM🧑‍💻
+   - ### Introduction to the Course🔍 
 Welcome to the Theory-Learning Portfolio for the Design and Analysis of Algorithms course. This portfolio documents my journey of learning fundamental concepts, analyzing complex problems, and understanding how algorithms shape modern computing.
 
 What Is the Course About?
