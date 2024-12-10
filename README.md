@@ -1,5 +1,5 @@
 
-🥷## Meet The Team🕵️
+## 🥷 Meet The Team🕵️
 - *Aarzoo N Chikkodi*
 - *Srushti Hadimani*
 - *Shifa*
