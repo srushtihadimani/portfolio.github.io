@@ -55,7 +55,7 @@
             position: relative;
             height: 100%;
             padding-top: 80px; /* Adjusted for fixed nav */
-            background: url('image.png') no-repeat center center fixed; /* Corrected the path to the image */
+            background: url('image.png') no-repeat center center fixed; /* Ensure correct image path */
             background-size: cover;
             background-color: rgba(0, 0, 0, 0.5); /* Overlay for readability */
         }
@@ -128,6 +128,22 @@
             bottom: 0;
             width: 100%;
         }
+
+        /* Add responsiveness for mobile screens */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .cta-button {
+                padding: 10px 15px;
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -136,7 +152,7 @@
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#project-overview">Project Overview</a></li>
+            <li><a href="#course-info">Project Overview</a></li>
             <li><a href="#business-cases">Business Cases</a></li>
             <li><a href="#reflections">Reflections</a></li>
         </ul>
@@ -156,60 +172,64 @@
         <h2>What is the Course About?</h2>
         <p>Our course, Design and Analysis of Algorithms, introduces us to the fundamentals of algorithms and data structures, focusing on their design, analysis, and application.</p>
         <p>We start with core concepts like time and space complexities, recursion, and backtracking. Next, we delve into tools like hashing and Union-Find, along with advanced data structures such as AVL Trees, Segment Trees, and Red-Black Trees. Sorting and searching algorithms, including Quick Sort, KMP, and Rabin-Karp, help us understand efficient data processing techniques.</p>
-        <p>Graph algorithms like Dijkstra’s shortest path and Prim’s spanning tree, and case studies such as the Travelling Salesperson Problem, show us how algorithms solve complex, real-world problems. The course also introduces concepts like NP-completeness and the limitations of algorithmic power.</p>
         <p>By the end, we gain a strong foundation in computational thinking and the ability to develop efficient solutions to challenging problems.</p>
-    </div>
+        <p>The "Design and Analysis of Algorithms" course provides an in-depth exploration of the fundamental principles and techniques used in algorithm design and analysis. This course is designed to equip students with the tools necessary to evaluate the efficiency and effectiveness of algorithms in solving real-world computational problems.</p>
+    <p>Throughout the course, students will be introduced to key concepts such as time and space complexity, recursion, and algorithmic problem-solving. Special attention is given to various algorithm design paradigms, including divide-and-conquer, dynamic programming, and greedy algorithms, which are essential for creating efficient solutions to a wide array of computational problems.</p>
+    <p>The course content is divided into several sections that cover the most important algorithms in computer science. These include:</p>
+    
+    <h3>Mathematical Foundations and Analysis Techniques</h3>
+    <p>The course begins with a focus on mathematical foundations essential for algorithm analysis. Topics such as asymptotic analysis, Big O notation, and recurrence relations will be explored in detail to help students understand the behavior of algorithms in terms of both time and space complexities.</p>
 
-    <!-- Detailed Course Data Section -->
-    <div class="course-info">
-        <h2>What Kind of Data Structures and Algorithms Have We Studied So Far?</h2>
-        <p><strong>Math Basics:</strong> We started our journey by understanding basic concepts of mathematics fundamental to algorithm analysis, including time and space efficiency. We worked on problems like Tower of Brahma and the n-Queens Problem.</p>
-        <p><strong>Math Foundations:</strong> We then explored the order of growth to understand solution efficiency more deeply.</p>
-        <p><strong>Data Structure Management:</strong> We explored trees, including binary trees, AVL Trees, Red-Black Trees, and data structures like heaps, tries, and skip lists. Key algorithms covered included BFS and DFS.</p>
-        <p><strong>Sorting Algorithms:</strong> We studied algorithms such as Bubble Sort, Quick Sort, Merge Sort, and Heap Sort, learning how to organize data efficiently.</p>
-        <p><strong>Searching Algorithms:</strong> We learned techniques such as Linear Search, Binary Search, and string matching algorithms including KMP and Rabin-Karp.</p>
-        <p><strong>Graph Algorithms:</strong> Algorithms like Depth-First Search, Dijkstra’s Algorithm, Bellman-Ford, Floyd-Warshall, and Prim’s and Kruskal’s MST Algorithms were explored in depth.</p>
-        <p><strong>Linear Search:</strong> Linear Search is the simplest search algorithm. It works by checking each element of the list sequentially until the desired element is found or the list ends.</p>
-<p><strong>Time Complexity:</strong> O(n), where n is the number of elements in the list.</p>
-<p><strong>Use Cases:</strong> Suitable for small datasets or unsorted data.</p>
+    <h3>Core Data Structures</h3>
+    <p>Students will gain proficiency in a range of data structures, including:</p>
+    <ul>
+        <li>Arrays, Linked Lists, Stacks, and Queues</li>
+        <li>Trees, including Binary Trees, AVL Trees, and Red-Black Trees</li>
+        <li>Graphs, Heaps, Hash Tables, and Tries</li>
+    </ul>
+    <p>For each of these data structures, students will not only learn how to implement them but also how to analyze their efficiency in terms of various operations, such as insertion, deletion, searching, and traversal.</p>
 
-<p><strong>Binary Search:</strong> Binary Search is a much more efficient algorithm than Linear Search but requires the list to be sorted. It works by repeatedly dividing the search interval in half. If the value of the search key is less than the item in the middle of the interval, it narrows the interval to the lower half. Otherwise, it narrows the interval to the upper half.</p>
-<p><strong>Time Complexity:</strong> O(log n), where n is the number of elements in the sorted list.</p>
-<p><strong>Use Cases:</strong> Effective for large sorted datasets, such as searching in sorted arrays or databases.</p>
+    <h3>Algorithm Design Paradigms</h3>
+    <p>The course covers essential algorithm design paradigms, including:</p>
+    <ul>
+        <li>Divide and Conquer</li>
+        <li>Dynamic Programming</li>
+        <li>Greedy Algorithms</li>
+    </ul>
+    <p>Students will apply these paradigms to solve problems efficiently, particularly in the context of sorting, searching, and optimization problems. They will explore examples such as Merge Sort, Quick Sort, and the Knapsack Problem.</p>
 
-<p><strong>KMP (Knuth-Morris-Pratt) Algorithm:</strong> The KMP algorithm is used for string matching. It improves the brute force search by using information gained from previous matches to skip unnecessary comparisons. The algorithm preprocesses the pattern and constructs a partial match table (also called the "prefix table") to avoid re-checking characters that have already been matched.</p>
-<p><strong>Time Complexity:</strong> O(m + n), where m is the length of the pattern and n is the length of the text.</p>
-<p><strong>Use Cases:</strong> Efficient for finding a substring within a longer string, commonly used in text editors and search engines.</p>
+    <h3>Advanced Algorithms</h3>
+    <p>In the advanced sections of the course, students will study a range of sophisticated algorithms, including:</p>
+    <ul>
+        <li>Graph Algorithms (BFS, DFS, Dijkstra’s, Prim’s, Kruskal’s)</li>
+        <li>String Matching Algorithms (KMP, Rabin-Karp)</li>
+        <li>Network Flow and Matching Algorithms</li>
+        <li>Approximation Algorithms and NP-Complete Problems</li>
+    </ul>
+    <p>Students will be introduced to the challenges of algorithmic efficiency in large-scale problems, and the concept of NP-completeness will be explored to understand the limits of algorithmic solutions.</p>
 
-<p><strong>Rabin-Karp Algorithm:</strong> Rabin-Karp is another string matching algorithm that uses hashing to find a pattern in a text. It computes a hash value for the pattern and compares it to hash values of substrings of the text. If the hash values match, it performs a direct comparison of the characters to ensure they are the same.</p>
-<p><strong>Time Complexity:</strong> O(m + n) on average, where m is the length of the pattern and n is the length of the text. However, in the worst case, it can be O(mn) if many hash collisions occur.</p>
-<p><strong>Use Cases:</strong> Useful for finding multiple patterns in a text or searching for a pattern in a large dataset.</p>
+    <h3>Real-World Applications and Case Studies</h3>
+    <p>The course will also feature case studies that demonstrate how algorithms are applied to real-world problems. Topics will include:</p>
+    <ul>
+        <li>Optimization problems in network design</li>
+        <li>Efficient search and retrieval in databases and information systems</li>
+        <li>Routing and scheduling in logistics and transportation</li>
+    </ul>
+    <p>Through these case studies, students will develop practical insights into how algorithms can be adapted and applied to solve problems across various industries.</p>
 
-<p><strong>Depth-First Search (DFS):</strong> DFS explores a graph by going as deep as possible down one path before backtracking. It starts from a source node and explores each branch before moving to the next branch.</p>
-<p><strong>Time Complexity:</strong> O(V + E), where V is the number of vertices and E is the number of edges.</p>
-<p><strong>Use Cases:</strong> Used in topological sorting, cycle detection, pathfinding, and maze-solving.</p>
+    <h3>Learning Outcomes</h3>
+    <p>Upon completing the course, students will be able to:</p>
+    <ul>
+        <li>Design and analyze efficient algorithms to solve computational problems</li>
+        <li>Understand and apply key data structures and algorithmic techniques</li>
+        <li>Evaluate the time and space complexity of algorithms using asymptotic notation</li>
+        <li>Implement advanced algorithms and apply them to solve complex problems</li>
+        <li>Recognize and tackle NP-complete problems and understand their limitations</li>
+    </ul>
 
-<p><strong>Dijkstra’s Algorithm:</strong> Dijkstra's Algorithm finds the shortest path from a source vertex to all other vertices in a graph with non-negative edge weights. It uses a greedy approach and updates the shortest known distance to each vertex.</p>
-<p><strong>Time Complexity:</strong> O(V^2) in the simplest form, but can be optimized to O(E + V log V) using a priority queue (min-heap).</p>
-<p><strong>Use Cases:</strong> Used in routing and network optimization, such as in GPS navigation systems.</p>
+    <p>This course will lay the foundation for advanced studies in computer science and provide the essential skills needed for careers in software development, data science, artificial intelligence, and more.</p>
+</div>
 
-<p><strong>Bellman-Ford Algorithm:</strong> The Bellman-Ford Algorithm is similar to Dijkstra's but can handle graphs with negative weight edges. It works by iteratively relaxing all edges and can also detect negative weight cycles.</p>
-<p><strong>Time Complexity:</strong> O(VE), where V is the number of vertices and E is the number of edges.</p>
-<p><strong>Use Cases:</strong> Useful for graphs with negative weight edges and detecting negative weight cycles.</p>
-
-<p><strong>Floyd-Warshall Algorithm:</strong> Floyd-Warshall is an all-pairs shortest path algorithm that finds the shortest paths between all pairs of vertices in a weighted graph (can handle negative weights). It works by iteratively updating the shortest paths between pairs by considering each vertex as an intermediate vertex.</p>
-<p><strong>Time Complexity:</strong> O(V^3), where V is the number of vertices.</p>
-<p><strong>Use Cases:</strong> Suitable for applications needing the shortest paths between all pairs of nodes, like in network routing or social network analysis.</p>
-
-<p><strong>Prim’s Algorithm:</strong> Prim's Algorithm is used to find the minimum spanning tree (MST) of a weighted, undirected graph. It starts from an arbitrary node and expands the MST by selecting the edge with the smallest weight that connects a vertex in the MST to a vertex outside the MST.</p>
-<p><strong>Time Complexity:</strong> O(E log V), where E is the number of edges and V is the number of vertices.</p>
-<p><strong>Use Cases:</strong> Used in network design, such as finding the most efficient way to connect nodes in a computer network.</p>
-
-<p><strong>Kruskal’s Algorithm:</strong> Kruskal’s Algorithm is another method for finding the minimum spanning tree (MST) in a graph. Unlike Prim's, it works by sorting all the edges in the graph by weight and adding the smallest edge to the MST that doesn't form a cycle.</p>
-<p><strong>Time Complexity:</strong> O(E log E), where E is the number of edges.</p>
-<p><strong>Use Cases:</strong> Used in network design, such as constructing efficient electrical grids or minimizing road construction in geographical areas.</p>
-
-    </div>
 
     <!-- Footer -->
     <div class="footer">
