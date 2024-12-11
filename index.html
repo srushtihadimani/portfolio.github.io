@@ -31,11 +31,13 @@
             text-decoration: underline;
         }
 
+        /* Header */
         header {
-            background: #2c3e50;
+            background: #16a085;
             color: white;
             text-align: center;
-            padding: 1.5rem;
+            padding: 2rem;
+            font-size: 2.5rem;
         }
 
         .container {
@@ -44,7 +46,8 @@
             padding: 2rem;
         }
 
-        .box {
+        /* Main Box */
+        .main-box {
             background: #34495e;
             color: white;
             border-radius: 10px;
@@ -53,17 +56,32 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .box h2 {
+        .main-box h2 {
             text-align: center;
             font-size: 2.5rem;
         }
 
-        .box p {
+        .main-box p {
             font-size: 1.1rem;
             line-height: 1.6;
         }
 
-        .box ul {
+        /* Sub-topic Boxes */
+        .sub-box {
+            background: #e74c3c;
+            color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .sub-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .sub-box ul {
             font-size: 1.1rem;
             line-height: 1.6;
         }
@@ -90,18 +108,21 @@
 </nav>
 
 <header>
-    <h1>Welcome to the Design and Analysis of Algorithms Course</h1>
+    Welcome to the Design and Analysis of Algorithms Course
 </header>
 
 <div class="container">
-    <div id="home" class="box">
+    <div id="home" class="main-box">
         <h2>What is this Course About?</h2>
         <p>This course introduces students to the world of algorithms and data structures, fundamental components of computer science. By studying the design, analysis, and application of algorithms, we gain skills in solving complex problems and optimizing solutions for real-world challenges.</p>
 
         <p>The course begins with basic concepts such as time and space complexities, recursion, and backtracking. It explores various data structures like binary trees, AVL trees, segment trees, red-black trees, and graphs. We delve into sorting algorithms, such as quicksort, mergesort, and heap sort, as well as graph algorithms, including Dijkstra’s shortest path and Prim’s algorithm for minimum spanning trees.</p>
 
         <p>As we progress, we explore advanced topics like NP-completeness, dynamic programming, greedy algorithms, and case studies, including the Travelling Salesperson Problem and the Knapsack Problem. The goal is to understand how these algorithms work, how to analyze their efficiency, and how to apply them to solve real-world problems.</p>
+    </div>
 
+    <!-- Sub-topic boxes -->
+    <div class="sub-box">
         <h3>Key Concepts Covered in the Course</h3>
         <ul>
             <li><strong>Time and Space Complexity:</strong> Understand how to evaluate the efficiency of algorithms using Big O notation.</li>
@@ -111,10 +132,14 @@
             <li><strong>Optimization Algorithms:</strong> Explore techniques like dynamic programming, greedy algorithms, and the Travelling Salesperson Problem (TSP).</li>
             <li><strong>NP-Completeness:</strong> Learn the theory behind intractable problems and understand the limits of computational power.</li>
         </ul>
+    </div>
 
+    <div class="sub-box">
         <h3>Why Is This Course Important?</h3>
         <p>Algorithms are at the core of every computational problem-solving process. From optimizing the routing of delivery vehicles to improving search engine performance, efficient algorithms are crucial in solving real-world challenges. Understanding the fundamentals of algorithm design and analysis is key for anyone pursuing a career in computer science, data science, software development, and related fields.</p>
+    </div>
 
+    <div class="sub-box">
         <h3>Real-World Applications</h3>
         <p>As you progress through this course, you will learn to apply algorithms to real-world problems, such as:</p>
         <ul>
@@ -124,7 +149,10 @@
             <li><strong>Cybersecurity:</strong> Leveraging hashing algorithms to secure passwords and sensitive data.</li>
             <li><strong>Competitive Programming:</strong> Practicing algorithmic problem-solving in coding competitions and hackathons.</li>
         </ul>
+    </div>
 
+    <div class="sub-box">
+        <h3>Course Conclusion</h3>
         <p>By the end of this course, you will be equipped with the tools and techniques needed to approach algorithmic challenges with efficiency and precision, opening up a wide range of opportunities in the tech industry.</p>
     </div>
 </div>
