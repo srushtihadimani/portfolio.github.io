@@ -13,7 +13,10 @@
 
         body, html {
             height: 100%;
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
+            color: #333;
+            background: #f0f4f7; /* Light background for good readability */
+            padding-top: 70px; /* Offset for fixed navbar */
         }
 
         /* Navigation Bar Styling */
@@ -22,7 +25,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 15px;
+            padding: 15px 0;
             z-index: 10;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
@@ -42,105 +45,60 @@
             color: white;
             font-size: 1.2rem;
             font-weight: bold;
-            transition: color 0.3s ease;
         }
 
         nav ul li a:hover {
-            color: #ff7f50;
+            color: #ffcc00;
         }
 
-        /* Main Container Styling with Professional Background */
-        .container {
-            position: relative;
-            height: 100%;
-            padding-top: 80px; /* Adjusted for fixed nav */
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 128, 255, 0.6)),
-                        url('https://via.placeholder.com/1920x1080/003366/ffffff?text=DSA+Course+Background') no-repeat center center fixed;
-            background-size: cover;
-            color: white;
-            background-attachment: fixed;
-        }
-
+        /* Content Area Styling */
         .content {
-            position: absolute;
-            top: 30%;
-            left: 10%;
-            transform: translate(-10%, -30%);
-            z-index: 1;
-            padding: 20px;
-            text-align: left;
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-top: 80px;
         }
 
-        h1 {
-            font-size: 3.5rem;
-            color: #ff7f50;
-            margin-bottom: 20px;
-            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+        .content h1, .content h2 {
+            text-align: center;
+            color: #003366;
         }
 
-        p {
-            font-size: 1.2rem;
-            color: #f1f1f1;
-            line-height: 1.8;
+        .content p {
+            line-height: 1.6;
+            font-size: 1.1rem;
             margin: 20px 0;
+            color: #555;
         }
 
-        .cta-button {
-            background-color: #ff7f50;
-            padding: 12px 20px;
-            font-size: 1.2rem;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
+        .content ul {
+            margin: 20px 0;
+            padding-left: 20px;
         }
 
-        .cta-button:hover {
-            background-color: #e06f35;
-        }
-
-        /* Course Information Section */
-        .course-info {
-            padding: 40px 15%;
-            text-align: center;
-            background-color: #fff;
-            color: #003366;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-            margin-top: 50px;
-            border-radius: 10px;
-        }
-
-        .course-info h2 {
-            font-size: 2.5rem;
-            color: #003366;
-        }
-
-        .course-info p {
+        .content ul li {
+            margin: 10px 0;
             font-size: 1.1rem;
+            color: #555;
+        }
+
+        .highlight {
+            color: #003366;
+            font-weight: bold;
+        }
+
+        .section {
+            margin-top: 40px;
+        }
+
+        .section h3 {
             margin-bottom: 15px;
-            line-height: 1.7;
+            color: #003366;
         }
 
-        .course-info ul {
-            list-style: inside;
-            margin-top: 15px;
-        }
-
-        .course-info ul li {
-            font-size: 1.1rem;
-            margin: 5px 0;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #003366;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
     </style>
 </head>
 <body>
@@ -148,93 +106,56 @@
     <!-- Navigation Bar -->
     <nav>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#project-overview">Project Overview</a></li>
-            <li><a href="#business-cases">Business Cases</a></li>
-            <li><a href="#reflections">Reflections</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Project Overview</a></li>
+            <li><a href="#">Course Reflections</a></li>
         </ul>
     </nav>
 
-    <!-- Main Container with Professional Background -->
-    <div id="home" class="container">
-        <div class="content">
-            <h1>Welcome to the Design and Analysis of Algorithms Course</h1>
-            <p>Master the art of algorithm design and analysis to solve complex, real-world problems efficiently.</p>
-            <a href="#course-info" class="cta-button">Explore the Course</a>
+    <!-- Main Content -->
+    <div class="content">
+
+        <h1>Design and Analysis of Algorithms (DSA) - Home</h1>
+        <div class="section">
+            <h2>What is the Course About?</h2>
+            <p>
+                Our course, <span class="highlight">Design and Analysis of Algorithms</span>, introduces us to the fundamentals of algorithms and data structures, focusing on their design, analysis, and application.
+                We start with core concepts like time and space complexities, recursion, and backtracking. Next, we delve into tools like hashing and Union-Find, along with advanced data structures such as AVL Trees, Segment Trees, and Red-Black Trees. Sorting and searching algorithms, including Quick Sort, KMP, and Rabin-Karp, help us understand efficient data processing techniques.
+                Graph algorithms like Dijkstra’s shortest path and Prim’s spanning tree, and case studies such as the Travelling Salesperson Problem, show us how algorithms solve complex, real-world problems. The course also introduces concepts like NP-completeness and the limitations of algorithmic power.
+                By the end, we gain a strong foundation in computational thinking and the ability to develop efficient solutions to challenging problems.
+            </p>
         </div>
+
+        <div class="section">
+            <h2>What kind of data structures and algorithms have we studied so far?</h2>
+            <p>
+                Throughout this course, we have encountered various data structures and algorithms essential for solving complex problems efficiently. Here’s a summary of what we have studied:
+            </p>
+            <ul>
+                <li><strong>Math Basics:</strong> We began by understanding the fundamental concepts of mathematics that form the foundation for algorithmic analysis, such as time and space complexity.</li>
+                <li><strong>Data Structures:</strong> We studied structured data types like binary trees, AVL trees, Red-Black trees, heaps, and graphs, each essential for different problem-solving approaches.</li>
+                <li><strong>Sorting Algorithms:</strong> Bubble Sort, Selection Sort, Merge Sort, Quick Sort, and Heap Sort were explored to understand various sorting techniques and their complexities.</li>
+                <li><strong>Graph Algorithms:</strong> We also studied graph traversal algorithms like Depth-First Search (DFS), Breadth-First Search (BFS), Dijkstra’s shortest path, and minimum spanning tree algorithms.</li>
+                <li><strong>Advanced Algorithms:</strong> We examined more advanced topics like NP-completeness, dynamic programming, greedy algorithms, and backtracking.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>How do you connect the course with real-time applications?</h2>
+            <p>
+                The concepts we learn in this course can be applied to real-world scenarios. For example:
+            </p>
+            <ul>
+                <li><strong>Smart City Design:</strong> Algorithms like Dijkstra’s, Prim’s, and Kruskal’s are used for optimizing road networks, traffic management, and resource distribution.</li>
+                <li><strong>Sorting and Searching:</strong> These algorithms are vital in organizing large datasets for fast access and retrieval, crucial for businesses, search engines, and databases.</li>
+                <li><strong>Tree Data Structures:</strong> Used in hierarchical data management, file systems, and compilers for syntax trees.</li>
+                <li><strong>Hashing:</strong> Key in cybersecurity for password encryption and databases for fast data retrieval.</li>
+                <li><strong>Competitive Programming:</strong> Algorithms like dynamic programming and graph traversal are frequently applied in coding competitions and software development challenges.</li>
+            </ul>
+        </div>
+
     </div>
-
-    <!-- Course Information Section -->
-    <div id="course-info" class="course-info">
-        <h2>What is the Course About?</h2>
-        <p>Our course, Design and Analysis of Algorithms, introduces us to the fundamentals of algorithms and data structures, focusing on their design, analysis, and application.</p>
-        <p>We start with core concepts like time and space complexities, recursion, and backtracking. Next, we delve into tools like hashing and Union-Find, along with advanced data structures such as AVL Trees, Segment Trees, and Red-Black Trees. Sorting and searching algorithms, including Quick Sort, KMP, and Rabin-Karp, help us understand efficient data processing techniques.</p>
-        <p>Graph algorithms like Dijkstra’s shortest path and Prim’s spanning tree, and case studies such as the Travelling Salesperson Problem, show us how algorithms solve complex, real-world problems. The course also introduces concepts like NP-completeness and the limitations of algorithmic power.</p>
-        <p>By the end, we gain a strong foundation in computational thinking and the ability to develop efficient solutions to challenging problems.</p>
-
-        <h2>What kind of data structures and algorithms have we studied so far?</h2>
-        <p><strong>Math Basics:</strong><br>
-        We started our journey to the algorithm world from understanding the basic concepts of maths which serve as fundamental for this course. In the math basics, we learnt how to find and calculate the time and space efficiency for a solution or recurrence relation. We also saw problems like the Tower of Brahma and the n-queens problem.</p>
-
-        <p><strong>Math Foundations:</strong><br>
-        We then moved onto the math foundations where we were introduced to concepts like orders of growth. Using the order of growth, we understood in more detail about the efficiency of a solution.</p>
-
-        <p><strong>Structured Data Management:</strong><br>
-        Further, we moved on to structured data management. In this, we came across n-ary trees, focusing on binary trees. We started with binary trees and advanced to binary search trees, AVL trees, Red-Black trees, and learned about heaps, tries, and skip lists.</p>
-
-        <h3>Linear Data Structures:</h3>
-        <ul>
-            <li>Arrays</li>
-            <li>Stacks</li>
-            <li>Queues</li>
-            <li>Binary Search Trees (BST)</li>
-            <li>AVL Trees</li>
-            <li>Red-Black Trees</li>
-            <li>Tries</li>
-        </ul>
-
-        <h3>Graph Structures:</h3>
-        <ul>
-            <li>Adjacency Matrix and List Representations</li>
-            <li>Directed and Undirected Graphs</li>
-        </ul>
-
-        <h3>Sorting Methods:</h3>
-        <ul>
-            <li>Bubble Sort</li>
-            <li>Selection Sort</li>
-            <li>Insertion Sort</li>
-            <li>Merge Sort</li>
-            <li>Quick Sort</li>
-            <li>Heap Sort</li>
-        </ul>
-
-        <h3>Graph Algorithms:</h3>
-        <ul>
-            <li>Depth-First Search (DFS)</li>
-            <li>Breadth-First Search (BFS)</li>
-            <li>Dijkstra’s Shortest Path Algorithm</li>
-            <li>Prim’s and Kruskal’s Minimum Spanning Tree Algorithms</li>
-        </ul>
-
-        <h2>How do you connect the course with real-time applications?</h2>
-        <p>Many algorithms we study in this course draw inspiration from nature or real-world observations. For example, the shortest path algorithm mimics the work of electricians optimizing wiring paths. This course not only teaches the design of these algorithms but also offers insights into the thought processes behind their invention.</p>
-
-        <h3>Real-World Applications:</h3>
-        <ul>
-            <li><strong>Smart City Design:</strong> Algorithms like Dijkstra’s and Prim’s are used for optimizing road networks and transport systems.</li>
-            <li><strong>Sorting and Searching:</strong> Sorting algorithms are crucial for organizing and processing large datasets.</li>
-            <li><strong>Tree Data Structures:</strong> Used in file systems and compilers for efficient data management.</li>
-            <li><strong>Hashing:</strong> Vital for cybersecurity, especially in password storage and data retrieval.</li>
-            <li><strong>Competitive Programming:</strong> Techniques like dynamic programming and graph traversal are frequently used in coding competitions and real-world software development.</li>
-            <li><strong>Optimization in Logistics:</strong> Algorithms like greedy and backtracking are used in logistics and real-time decision making.</li>
-        </ul>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Design and Analysis of Algorithms. All rights reserved.</p>
-    </footer>
 
 </body>
 </html>
