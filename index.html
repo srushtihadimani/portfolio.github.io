@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design and Analysis of Algorithms</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
         /* General Reset */
         * {
@@ -17,6 +16,7 @@
             font-family: Arial, sans-serif;
             line-height: 1.6;
             background-color: #f4f4f4;
+            color: #333;
         }
 
         /* Navigation Bar Styling */
@@ -55,7 +55,7 @@
         /* Header Section */
         header {
             height: 100vh;
-            background: url('https://images.unsplash.com/photo-1517336714731-489689fd2cd5?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjQ1NzN8MHx8fGFsbHwxfHx8fHx8fHx8fDE2Mjk2OTI2NzI&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center;
+            background: url('https://images.unsplash.com/photo-1504182973457-cd97c71b51b2?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjQ1NzN8MHx8fGFsbHwxfHx8fHx8fHx8fDE2Mjk2OTI2NzI&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center;
             background-size: cover;
             color: white;
             text-align: center;
@@ -93,23 +93,35 @@
             background-color: #e06f35;
         }
 
-        /* About Section */
-        #about {
+        /* Course Info Section */
+        #course-info {
             background-color: #fff;
             padding: 50px 0;
             text-align: center;
         }
 
-        #about h2 {
+        #course-info h2 {
             font-size: 2.5rem;
             margin-bottom: 20px;
         }
 
-        #about p {
+        #course-info p {
             font-size: 1.25rem;
             max-width: 800px;
             margin: 0 auto;
             line-height: 1.8;
+        }
+
+        #course-info ul {
+            list-style-type: square;
+            margin: 20px auto;
+            max-width: 600px;
+            text-align: left;
+        }
+
+        #course-info ul li {
+            font-size: 1.2rem;
+            margin: 10px 0;
         }
 
         /* Footer */
@@ -139,7 +151,7 @@
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#course-info">project overview</a></li>
             <li><a href="#business-cases">Business Cases</a></li>
             <li><a href="#course-reflections">Course Reflections</a></li>
         </ul>
@@ -148,23 +160,27 @@
     <!-- Header Section -->
     <header id="home">
         <h1>Design and Analysis of Algorithms</h1>
-        <p>Learn about efficient algorithms for problem-solving in computer science and programming. Explore topics like sorting, searching, and optimization.</p>
-        <a href="#about" class="cta-btn">Learn More</a>
+        <p>Explore the world of algorithms and computational problem-solving. Learn how to design and optimize algorithms for various real-world applications.</p>
+        <a href="#course-info" class="cta-btn">Learn More About the Course</a>
     </header>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About the Course</h2>
-        <p>This course is designed to provide an in-depth understanding of the key concepts in algorithm design and analysis. Topics covered include:</p>
+    <!-- Course Information Section -->
+    <section id="course-info">
+        <h2>Course Overview</h2>
+        <p>The Design and Analysis of Algorithms course focuses on the creation and optimization of algorithms used to solve problems efficiently. The course provides foundational knowledge and practical experience in designing algorithms for various types of problems, analyzing their efficiency, and understanding their limitations.</p>
+        
+        <h3>Key Topics Covered:</h3>
         <ul>
-            <li>Sorting and Searching Algorithms</li>
-            <li>Greedy Algorithms</li>
-            <li>Divide and Conquer</li>
-            <li>Graph Algorithms</li>
-            <li>Dynamic Programming</li>
-            <li>Complexity Analysis</li>
+            <li>Sorting Algorithms (Bubble Sort, Merge Sort, Quick Sort)</li>
+            <li>Searching Algorithms (Linear Search, Binary Search)</li>
+            <li>Greedy Algorithms and their Applications</li>
+            <li>Divide and Conquer Strategies</li>
+            <li>Graph Algorithms (DFS, BFS, Shortest Path)</li>
+            <li>Dynamic Programming and Backtracking</li>
+            <li>Algorithm Complexity Analysis (Big O Notation)</li>
         </ul>
-        <p>By the end of this course, you'll be equipped with the skills to solve computational problems effectively and efficiently.</p>
+        
+        <p>This course is designed for individuals looking to strengthen their problem-solving skills through algorithmic thinking. Whether you're a beginner or an advanced student, you'll develop essential skills to approach and solve complex computational problems.</p>
     </section>
 
     <!-- Footer -->
