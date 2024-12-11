@@ -14,12 +14,12 @@
         body, html {
             height: 100%;
             font-family: 'Arial', sans-serif;
-            background-color: #f4f7fa; /* Light background color */
+            background-color: #f4f7fa;
         }
 
         /* Navigation Bar Styling */
         nav {
-            background-color: #003366; /* Dark Blue */
+            background-color: #003366;
             position: fixed;
             top: 0;
             width: 100%;
@@ -47,10 +47,9 @@
         }
 
         nav ul li a:hover {
-            color: #ff7f50; /* Coral color for hover */
+            color: #ff7f50;
         }
 
-        /* Smooth scrolling behavior */
         html {
             scroll-behavior: smooth;
         }
@@ -59,10 +58,10 @@
         .container {
             position: relative;
             height: 100%;
-            padding-top: 80px; /* Adjusted for fixed nav */
-            background: url('background-image.jpg') no-repeat center center fixed; /* Background image */
+            padding-top: 80px;
+            background: url('background-image.jpg') no-repeat center center fixed;
             background-size: cover;
-            background-color: rgba(0, 0, 0, 0.5); /* Overlay for readability */
+            background-color: rgba(0, 0, 0, 0.5);
         }
 
         .content {
@@ -78,7 +77,7 @@
 
         h1 {
             font-size: 4rem;
-            color: #ff7f50; /* Vibrant orange for visibility */
+            color: #ff7f50;
             margin-bottom: 20px;
             text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
         }
@@ -101,45 +100,10 @@
         }
 
         .cta-button:hover {
-            background-color: #e06f35; /* Slightly darker orange */
+            background-color: #e06f35;
         }
 
-        /* Course Info Section */
-        .course-info {
-            padding: 40px 15%;
-            text-align: center;
-            background-color: #fff;
-            color: #003366;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-            margin-top: 100px;
-        }
-
-        .course-info h2 {
-            font-size: 2.5rem;
-            color: #003366;
-        }
-
-        .course-info p {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            line-height: 1.7;
-        }
-
-        /* Project Overview Section */
-        .project-overview {
-            padding: 40px 15%;
-            text-align: center;
-            background-color: #f9f9f9;
-            color: #003366;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-            margin-top: 50px;
-        }
-
-        .project-overview h2 {
-            font-size: 2.5rem;
-            color: #003366;
-        }
-
+        /* Footer */
         .footer {
             background-color: #003366;
             color: #fff;
@@ -157,9 +121,6 @@
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#course-info">About</a></li>
-            <li><a href="#learning-outcomes">Learning Outcomes</a></li>
-            <li><a href="#project-overview">Project Overview</a></li>
         </ul>
     </nav>
 
@@ -167,38 +128,20 @@
     <div id="home" class="container">
         <div class="content">
             <h1>Welcome to the Design and Analysis of Algorithms Course</h1>
-            <p>Master the art of algorithm design and analysis to solve complex, real-world problems efficiently.</p>
-            <a href="#course-info" class="cta-button">Explore the Course</a>
+            <p>This course is designed to provide students with an in-depth understanding of algorithms and their analysis. The key objective is to equip students with the knowledge and skills to design and analyze efficient algorithms for solving complex problems in computer science.</p>
+            <p>The course covers a wide range of topics, including:</p>
+            <ul>
+                <li>Introduction to Algorithms</li>
+                <li>Sorting and Searching Algorithms</li>
+                <li>Divide and Conquer Strategies</li>
+                <li>Greedy Algorithms</li>
+                <li>Dynamic Programming</li>
+                <li>Graph Algorithms</li>
+                <li>Complexity Analysis and Big-O Notation</li>
+            </ul>
+            <p>By the end of the course, students will have the practical skills and theoretical knowledge to approach complex problems in programming and software development.</p>
+            <a href="#about" class="cta-button">Learn More About the Course</a>
         </div>
-    </div>
-
-    <!-- About Course Section -->
-    <div id="course-info" class="course-info">
-        <h2>About the Course</h2>
-        <p>This course is designed to provide students with an in-depth understanding of algorithms and their analysis. The key objective is to equip students with the knowledge and skills to design and analyze efficient algorithms for solving complex problems.</p>
-        <p>We will cover a variety of topics, including data structures, sorting algorithms, graph algorithms, and more. The course also focuses on the importance of time and space complexity, which allows us to evaluate the efficiency of algorithms in real-world applications.</p>
-        <p>By the end of the course, students will have a strong understanding of how algorithms work, their limitations, and how to select the most appropriate algorithm for a given problem.</p>
-    </div>
-
-    <!-- Learning Outcomes Section -->
-    <div id="learning-outcomes" class="course-info">
-        <h2>Learning Outcomes</h2>
-        <p>Upon successful completion of this course, students will be able to:</p>
-        <ul style="text-align: left; margin-top: 20px; font-size: 1.2rem;">
-            <li>Understand the core concepts of algorithm analysis, including time and space complexity.</li>
-            <li>Design and implement efficient algorithms for sorting, searching, and graph traversal.</li>
-            <li>Evaluate and compare algorithms based on their efficiency in different contexts.</li>
-            <li>Apply algorithmic techniques to solve real-world computational problems effectively.</li>
-            <li>Understand advanced topics such as NP-completeness and dynamic programming.</li>
-            <li>Gain proficiency in using various data structures such as trees, graphs, heaps, and hash tables.</li>
-        </ul>
-    </div>
-
-    <!-- Project Overview Section -->
-    <div id="project-overview" class="project-overview">
-        <h2>Project Overview</h2>
-        <p>This section will provide a detailed look into the projects that students will undertake during the course. The projects are designed to reinforce the learned concepts through real-world applications, ensuring students gain hands-on experience with the design and analysis of algorithms.</p>
-        <p>Students will work on various problem-solving tasks that include designing efficient algorithms, analyzing their performance, and optimizing solutions.</p>
     </div>
 
     <!-- Footer -->
@@ -208,4 +151,3 @@
 
 </body>
 </html>
-
