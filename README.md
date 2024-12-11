@@ -6,27 +6,71 @@
 
 We are passionate about technology and problem-solving. 
 ## DESIGN AND ANALYSIS OF ALGORITHM🧑‍💻
-   - ### Introduction to the Course🔍 
-Welcome to the Theory-Learning Portfolio for the Design and Analysis of Algorithms course. This portfolio documents my journey of learning fundamental concepts, analyzing complex problems, and understanding how algorithms shape modern computing.
+   - ###<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Portfolio</title>
+    <style>
+        /* Add some basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Light gray background for the entire page */
+        }
+        .colored-section {
+            background-color: #d9f1f7; /* Light blue background for the section */
+            color: #333; /* Darker text for better readability */
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px; /* Adds rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+        }
+        h1, h2 {
+            color: #007b9e; /* Darker blue for headings */
+        }
+    </style>
+</head>
+<body>
+    <div class="colored-section">
+        <h1>Introduction to the Course 🔍</h1>
+        <p>
+            Welcome to the Theory-Learning Portfolio for the Design and Analysis of Algorithms course. This portfolio documents my journey of learning fundamental concepts, analyzing complex problems, and understanding how algorithms shape modern computing.
+        </p>
+        <h2>What Is the Course About?</h2>
+        <p>
+            The course provides a deep dive into the principles of algorithm design, focusing on developing efficient solutions to computational problems. It covers techniques like divide-and-conquer, greedy algorithms, dynamic programming, and backtracking, alongside complexity analysis.
+        </p>
+        <h2>Data Structures and Algorithms Studied</h2>
+        <p>
+            Throughout this course, I have studied and implemented the following:
+        </p>
+        <ul>
+            <li><strong>Data Structures:</strong> Arrays, linked lists, stacks, queues, heaps, hash tables, graphs, and trees (e.g., binary search trees, AVL trees).</li>
+            <li><strong>Algorithms:</strong> 
+                <ul>
+                    <li>Sorting algorithms: Bubble sort, merge sort, quicksort, and insertion sort.</li>
+                    <li>Graph algorithms: Depth-First Search (DFS), Breadth-First Search (BFS), Dijkstra's algorithm, and Kruskal’s algorithm.</li>
+                    <li>Other notable algorithms: Binary search, Floyd-Warshall, and the Knapsack problem using dynamic programming.</li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Connecting the Course to Real-Time Applications</h2>
+        <p>
+            Algorithms are the backbone of computing and are deeply integrated into real-world applications:
+        </p>
+        <ul>
+            <li><strong>Search Engines:</strong> Algorithms like DFS and BFS are used for web crawling.</li>
+            <li><strong>Social Media:</strong> Graph algorithms help in friend recommendations and identifying communities.</li>
+            <li><strong>Finance:</strong> Algorithms optimize trading strategies, detect fraud, and predict market trends.</li>
+            <li><strong>Healthcare:</strong> Machine learning algorithms, based on this foundational knowledge, assist in disease detection and treatment planning.</li>
+        </ul>
+    </div>
+</body>
+</html>
 
-What Is the Course About?
-The course provides a deep dive into the principles of algorithm design, focusing on developing efficient solutions to computational problems. It covers techniques like divide-and-conquer, greedy algorithms, dynamic programming, and backtracking, alongside complexity analysis.
-
-Data Structures and Algorithms Studied
-Throughout this course, I have studied and implemented the following:
-
-Data Structures: Arrays, linked lists, stacks, queues, heaps, hash tables, graphs, and trees (e.g., binary search trees, AVL trees).
-Algorithms:
-Sorting algorithms: Bubble sort, merge sort, quicksort, and insertion sort.
-Graph algorithms: Depth-First Search (DFS), Breadth-First Search (BFS), Dijkstra's algorithm, and Kruskal’s algorithm.
-Other notable algorithms: Binary search, Floyd-Warshall, and the Knapsack problem using dynamic programming.
-Connecting the Course to Real-Time Applications
-Algorithms are the backbone of computing and are deeply integrated into real-world applications:
-
-Search Engines: Algorithms like DFS and BFS are used for web crawling.
-Social Media: Graph algorithms help in friend recommendations and identifying communities.
-Finance: Algorithms optimize trading strategies, detect fraud, and predict market trends.
-Healthcare: Machine learning algorithms, based on this foundational knowledge, assist in disease detection and treatment planning 
 ### Here's a glimpse of our work:
 ### Problem Space and Discovery
 ## Identification of the Problem Space
