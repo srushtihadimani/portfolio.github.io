@@ -7,105 +7,114 @@
     <title>Design and Analysis of Algorithms</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
     <style>
+        /* General Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Arial", sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background-color: #f9f9fc;
             color: #333;
         }
 
+        /* Navigation Bar */
         nav {
-            background-color: #1e90ff;
+            background-color: #343a40;
             padding: 1em 0;
-            text-align: center;
         }
 
         nav ul {
             list-style: none;
-            padding: 0;
             margin: 0;
+            padding: 0;
+            text-align: center;
         }
 
         nav ul li {
             display: inline;
-            margin: 0 15px;
+            margin: 0 20px;
         }
 
         nav ul li a {
-            color: white;
             text-decoration: none;
+            color: #f8f9fa;
             font-weight: bold;
+            font-size: 1.1em;
         }
 
+        nav ul li a:hover {
+            color: #ffc107;
+        }
+
+        /* Header Section */
         header {
-            background: linear-gradient(to bottom right, #1e90ff, #87cefa);
+            background: linear-gradient(45deg, #6a1b9a, #8e44ad);
             color: white;
-            padding: 50px 20px;
+            padding: 60px 20px;
             text-align: center;
         }
 
         header h1 {
-            margin: 0;
-            font-size: 2.5em;
+            font-size: 3em;
+            margin-bottom: 10px;
         }
 
         header p {
-            font-size: 1.2em;
-            margin: 10px 0;
+            font-size: 1.3em;
+            margin-top: 0;
         }
 
+        /* Main Content */
         main {
-            padding: 20px;
+            padding: 40px 20px;
+            line-height: 1.6;
         }
 
         section {
-            margin: 20px 0;
+            margin-bottom: 40px;
         }
 
         h2 {
-            color: #1e90ff;
-            border-bottom: 2px solid #1e90ff;
-            display: inline-block;
+            color: #6a1b9a;
+            font-size: 2em;
             margin-bottom: 10px;
         }
 
         ul {
-            margin: 15px 0;
+            margin-top: 15px;
             padding-left: 20px;
         }
 
         ul li {
-            margin: 5px 0;
+            margin-bottom: 10px;
         }
 
+        /* Call-to-Action Buttons */
         .cta {
             text-align: center;
-            margin: 30px 0;
+            margin: 40px 0;
         }
 
         .cta a {
-            background-color: #1e90ff;
-            color: white;
-            padding: 10px 20px;
             text-decoration: none;
-            font-weight: bold;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            color: white;
+            background-color: #6a1b9a;
             border-radius: 5px;
             transition: background-color 0.3s;
+            font-weight: bold;
         }
 
         .cta a:hover {
-            background-color: #005cbf;
+            background-color: #8e44ad;
         }
 
+        /* Footer */
         footer {
-            background-color: #1e90ff;
+            background-color: #343a40;
             color: white;
             text-align: center;
             padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
         }
     </style>
 </head>
@@ -122,34 +131,53 @@
 
     <header>
         <h1>Welcome to the Design and Analysis of Algorithms</h1>
-        <p>Explore the world of algorithms, where logic meets efficiency and innovation.</p>
+        <p>Your gateway to mastering the logic and efficiency behind modern computing.</p>
     </header>
 
     <main>
         <section>
-            <h2>About the Course</h2>
-            <p>Dive into the core principles of algorithms and data structures, learning how they power modern computing. This course introduces you to:</p>
+            <h2>What is this course about?</h2>
+            <p>
+                This course dives deep into the fascinating world of algorithms and data structures. Whether you are
+                new to the subject or want to expand your expertise, we focus on teaching you how to design, analyze,
+                and implement efficient algorithms for solving complex problems. 
+            </p>
+            <p>
+                Starting with foundational concepts such as time and space complexities, we move into advanced topics
+                including graph algorithms, optimization techniques, and real-world applications. 
+            </p>
+        </section>
+
+        <section>
+            <h2>Why study algorithms?</h2>
+            <p>
+                Algorithms are at the core of every major technology we use today, from search engines to transportation
+                systems. This course empowers you with the skills to:
+            </p>
             <ul>
-                <li><strong>Algorithm Fundamentals:</strong> Time and space complexities, recursion, and problem-solving strategies.</li>
-                <li><strong>Advanced Topics:</strong> AVL Trees, Segment Trees, Graph Algorithms, and Optimization Techniques.</li>
-                <li><strong>Real-World Applications:</strong> From smart city designs to real-time decision-making in logistics.</li>
+                <li>Understand and evaluate the efficiency of solutions using mathematical foundations.</li>
+                <li>Analyze real-world problems and develop practical, efficient algorithms.</li>
+                <li>Excel in competitive programming and prepare for coding interviews.</li>
+                <li>Design scalable systems and software for future challenges.</li>
             </ul>
         </section>
 
         <section>
-            <h2>Why Study Algorithms?</h2>
-            <p>Algorithms shape the world we live in, from powering search engines to managing transportation systems. This course equips you with the knowledge to:</p>
+            <h2>What will you learn?</h2>
+            <p>By the end of the course, you’ll have mastered topics such as:</p>
             <ul>
-                <li>Analyze and design efficient solutions to real-world problems.</li>
-                <li>Excel in competitive programming and technical interviews.</li>
-                <li>Bridge the gap between theoretical concepts and practical applications.</li>
+                <li><strong>Core Concepts:</strong> Time complexity, recursion, backtracking.</li>
+                <li><strong>Advanced Data Structures:</strong> AVL Trees, Segment Trees, Red-Black Trees.</li>
+                <li><strong>Graph Algorithms:</strong> BFS, DFS, Dijkstra’s, and Minimum Spanning Trees.</li>
+                <li><strong>Optimization:</strong> Knapsack Problem, Union-Find, and Huffman Coding.</li>
+                <li><strong>Applications:</strong> Sorting large datasets, smart traffic systems, and resource allocation.</li>
             </ul>
         </section>
 
         <div class="cta">
-            <p>Ready to get started?</p>
+            <p>Ready to begin your journey?</p>
             <a href="about.html">Learn More About Me</a>
-            <a href="projects.html" style="margin-left: 10px;">Explore My Projects</a>
+            <a href="projects.html" style="margin-left: 15px;">Explore SDG Projects</a>
         </div>
     </main>
 
@@ -159,3 +187,15 @@
 </body>
 
 </html>
+
+           
+       
+           
+
+        
+
+        
+            
+           
+                
+   
