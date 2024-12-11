@@ -14,7 +14,6 @@
         body, html {
             height: 100%;
             font-family: 'Arial', sans-serif;
-            color: #333;
             margin: 0;
             padding: 0;
             background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); /* Soft gradient background */
@@ -56,7 +55,38 @@
             color: #ffcc00;
         }
 
-        /* Main Content Styling */
+        /* Welcome Section Styling */
+        .welcome-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            background: url('https://images.unsplash.com/photo-1501594907350-3093450b764e?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwyMDg0OHwwfDF8c2VhY2h8MXx8YWxnb3JpdGhtfGVufDB8fHx8fDE2NzI4NTQwMTg&ixlib=rb-1.2.1&q=80&w=1080') center center no-repeat;
+            background-size: cover;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+            padding: 20px;
+        }
+
+        .welcome-box {
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .welcome-box h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .welcome-box p {
+            font-size: 1.2rem;
+            margin-top: 15px;
+        }
+
+        /* Main Content Section Styling */
         .content {
             padding: 50px 20px;
             max-width: 1200px;
@@ -64,7 +94,7 @@
             background-color: rgba(255, 255, 255, 0.9); /* Light opaque background for text contrast */
             border-radius: 15px;
             box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
-            margin-top: 80px;
+            margin-top: 40px;
             color: #333;
             font-size: 1.1rem;
             line-height: 1.6;
@@ -123,6 +153,14 @@
         </ul>
     </nav>
 
+    <!-- Welcome Section -->
+    <div class="welcome-section">
+        <div class="welcome-box">
+            <h1>Welcome to the Design and Analysis of Algorithms Course</h1>
+            <p>Discover the fundamentals of algorithms and data structures, their applications, and how they solve complex real-world problems.</p>
+        </div>
+    </div>
+
     <!-- Main Content (Home) -->
     <div class="content">
 
@@ -149,20 +187,6 @@
                 <li><strong>Sorting Algorithms:</strong> Bubble Sort, Selection Sort, Merge Sort, Quick Sort, and Heap Sort were explored to understand various sorting techniques and their complexities.</li>
                 <li><strong>Graph Algorithms:</strong> We also studied graph traversal algorithms like Depth-First Search (DFS), Breadth-First Search (BFS), Dijkstra’s shortest path, and minimum spanning tree algorithms.</li>
                 <li><strong>Advanced Algorithms:</strong> We examined more advanced topics like NP-completeness, dynamic programming, greedy algorithms, and backtracking.</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>How do you connect the course with real-time applications?</h2>
-            <p>
-                The concepts we learn in this course can be applied to real-world scenarios. For example:
-            </p>
-            <ul>
-                <li><strong>Smart City Design:</strong> Algorithms like Dijkstra’s, Prim’s, and Kruskal’s are used for optimizing road networks, traffic management, and resource distribution.</li>
-                <li><strong>Sorting and Searching:</strong> These algorithms are vital in organizing large datasets for fast access and retrieval, crucial for businesses, search engines, and databases.</li>
-                <li><strong>Tree Data Structures:</strong> Used in hierarchical data management, file systems, and compilers for syntax trees.</li>
-                <li><strong>Hashing:</strong> Key in cybersecurity for password encryption and databases for fast data retrieval.</li>
-                <li><strong>Competitive Programming:</strong> Algorithms like dynamic programming and graph traversal are frequently applied in coding competitions and software development challenges.</li>
             </ul>
         </div>
 
