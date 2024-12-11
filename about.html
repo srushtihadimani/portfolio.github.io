@@ -3,26 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Aurangabad Smart City - Project Overview</title>
+    <style>
+        /* Reset some default styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Navigation styling */
+        nav ul {
+            list-style: none;
+            padding: 10px;
+            background-color: #333;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* Project Overview styling */
+        #overview {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        /* Container for team member boxes */
+        .team-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        /* Individual team member box styling */
+        .team-member {
+            background-color: #fff;
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            width: 280px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        /* Add hover effect to make the boxes interactive */
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Member name styling */
+        .team-member h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+
+        /* Member details styling */
+        .team-member p {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        /* Footer styling */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+
+    </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="projects">Business cases and SDG mapping</a></li>
-            <li><a href="contacts">Course Learning Reflections</a></li>
-        </ul>
-    </nav>
+    <header>
+        <h1>Aurangabad Smart City - Project Overview</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="project-overview.html">Project Overview</a></li>
+                <li><a href="team-details.html">Team Details</a></li>
+                <li><a href="business-cases.html">Business Cases</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
-        <h1>About Me</h1>
-        <p>Hello! I’m Aarzoo, a passionate developer eager to share my work with the world.</p>
+        <section id="overview">
+            <h2>Project Overview</h2>
+            <p>Welcome to the Aurangabad Smart City Project! Our goal is to create a sustainable and technology-driven city that improves the quality of life for its citizens, promotes innovation, and enhances urban efficiency.</p>
+            
+            <h3>Problem Space and How It Was Arrived At</h3>
+            <p>Aurangabad's Smart City initiative aims to tackle the urban challenges of infrastructure inefficiency, traffic congestion, environmental sustainability, and access to essential services. Through data-driven insights and innovative solutions, we aim to improve urban living.</p>
+            <p>The challenges identified are closely aligned with issues like traffic management, waste management, public transport, sustainable energy, and healthcare. Our approach integrates advanced technology and human-centered design to ensure sustainability and efficiency in every aspect of the city.</p>
+            <p><strong>Key Findings:</strong></p>
+            <ul>
+                <li>Optimized traffic and transport systems</li>
+                <li>Pollution-free urban environment</li>
+                <li>Smart city technologies for better governance and services</li>
+            </ul>
+            <p><strong>Future Vision:</strong> By focusing on sustainability, connectivity, and quality of life, Aurangabad will emerge as a model for smart cities across the world.</p>
+
+            <h3>Our Team</h3>
+            <p>Meet the brilliant minds behind the project:</p>
+
+            <div class="team-container">
+                <div class="team-member">
+                    <div class="team-member-box">
+                        <h3>Aarzoo Chikkodi</h3>
+                        <p><strong>SRN:</strong> 01fe23bcs276</p>
+                        <p><strong>Portfolio Topic:</strong> Agricultural and Power Generation Sector</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="team-member-box">
+                        <h3>Srushti Hadimani</h3>
+                        <p><strong>SRN:</strong> 01fe23bcs260</p>
+                        <p><strong>Portfolio Topic:</strong> Digital Governance for City</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="team-member-box">
+                        <h3>Shifa</h3>
+                        <p><strong>SRN:</strong> 01fe23bcs046</p>
+                        <p><strong>Portfolio Topic:</strong> Smart Entertainment in City</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Aarzoo. All rights reserved.</p>
+        <p>&copy; 2024 Aurangabad Smart City Project</p>
     </footer>
 </body>
 </html>
