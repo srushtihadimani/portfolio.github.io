@@ -3,29 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design and Analysis of Algorithms - Home</title>
+    <title>Design and Analysis of Algorithms</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
+        /* General Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body, html {
-            height: 100%;
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f7fa; /* Light background color */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
         }
 
         /* Navigation Bar Styling */
         nav {
-            background-color: #003366; /* Dark Blue */
+            background-color: #007BFF;
+            padding: 15px;
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 15px;
             z-index: 10;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         nav ul {
@@ -35,7 +37,7 @@
         }
 
         nav ul li {
-            margin: 0 25px;
+            margin: 0 30px;
         }
 
         nav ul li a {
@@ -47,102 +49,87 @@
         }
 
         nav ul li a:hover {
-            color: #ff7f50; /* Coral color for hover */
+            color: #ff7f50;
         }
 
-        /* Main Container Styling */
-        .container {
-            position: relative;
-            height: 100%;
-            padding-top: 80px; /* Adjusted for fixed nav */
-            background: url('image.png') no-repeat center center fixed; /* Ensure correct image path */
+        /* Header Section */
+        header {
+            height: 100vh;
+            background: url('https://images.unsplash.com/photo-1517336714731-489689fd2cd5?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjQ1NzN8MHx8fGFsbHwxfHx8fHx8fHx8fDE2Mjk2OTI2NzI&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center;
             background-size: cover;
-            background-color: rgba(0, 0, 0, 0.5); /* Overlay for readability */
-        }
-
-        .content {
-            position: absolute;
-            top: 30%;
-            left: 10%;
-            transform: translate(-10%, -30%);
-            color: #fff;
-            z-index: 1;
-            padding: 20px;
-            text-align: left;
-        }
-
-        h1 {
-            font-size: 3.5rem;
-            color: #ff7f50; /* Vibrant orange for visibility */
-            margin-bottom: 20px;
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
             text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
         }
 
-        p {
-            font-size: 1.2rem;
-            color: #f1f1f1;
-            line-height: 1.8;
-            margin: 20px 0;
+        header h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
         }
 
-        .cta-button {
+        header p {
+            font-size: 1.5rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Button Styling */
+        .cta-btn {
             background-color: #ff7f50;
-            padding: 12px 20px;
-            font-size: 1.2rem;
             color: white;
+            padding: 12px 25px;
             text-decoration: none;
             border-radius: 5px;
+            font-size: 1.1rem;
+            margin-top: 20px;
             transition: background-color 0.3s ease;
         }
 
-        .cta-button:hover {
-            background-color: #e06f35; /* Slightly darker orange */
+        .cta-btn:hover {
+            background-color: #e06f35;
         }
 
-        /* Main Content Area Styling */
-        .course-info {
-            padding: 40px 15%;
-            text-align: center;
+        /* About Section */
+        #about {
             background-color: #fff;
-            color: #003366;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .course-info h2 {
-            font-size: 2.5rem;
-            color: #003366;
-        }
-
-        .course-info p {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            line-height: 1.7;
-        }
-
-        .footer {
-            background-color: #003366;
-            color: #fff;
+            padding: 50px 0;
             text-align: center;
-            padding: 15px;
+        }
+
+        #about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        #about p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
             position: fixed;
             bottom: 0;
             width: 100%;
         }
 
-        /* Add responsiveness for mobile screens */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
+        footer p {
+            font-size: 1rem;
+        }
 
-            p {
-                font-size: 1rem;
-            }
-
-            .cta-button {
-                padding: 10px 15px;
-                font-size: 1rem;
-            }
+        /* Scroll Indicator */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
@@ -152,33 +139,38 @@
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#course-info">Project Overview</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#business-cases">Business Cases</a></li>
-            <li><a href="#reflections">Reflections</a></li>
+            <li><a href="#course-reflections">Course Reflections</a></li>
         </ul>
     </nav>
 
-    <!-- Main Container with Background Image -->
-    <div id="home" class="container">
-        <div class="content">
-            <h1>Welcome to the Design and Analysis of Algorithms Course</h1>
-            <p>Master the art of algorithm design and analysis to solve complex, real-world problems efficiently.</p>
-            <a href="#course-info" class="cta-button">Explore the Course</a>
-        </div>
-    </div>
+    <!-- Header Section -->
+    <header id="home">
+        <h1>Design and Analysis of Algorithms</h1>
+        <p>Learn about efficient algorithms for problem-solving in computer science and programming. Explore topics like sorting, searching, and optimization.</p>
+        <a href="#about" class="cta-btn">Learn More</a>
+    </header>
 
-    <!-- Course Information Section -->
-    <div id="course-info" class="course-info">
-        <h2>What is the Course About?</h2>
-        <p>Our course, Design and Analysis of Algorithms, introduces us to the fundamentals of algorithms and data structures, focusing on their design, analysis, and application.</p>
-        <p>We start with core concepts like time and space complexities, recursion, and backtracking. Next, we delve into tools like hashing and Union-Find, along with advanced data structures such as AVL Trees, Segment Trees, and Red-Black Trees. Sorting and searching algorithms, including Quick Sort, KMP, and Rabin-Karp, help us understand efficient data processing techniques.</p>
-        <p>By the end, we gain a strong foundation in computational thinking and the ability to develop efficient solutions to challenging problems.</p>
-    </div>
+    <!-- About Section -->
+    <section id="about">
+        <h2>About the Course</h2>
+        <p>This course is designed to provide an in-depth understanding of the key concepts in algorithm design and analysis. Topics covered include:</p>
+        <ul>
+            <li>Sorting and Searching Algorithms</li>
+            <li>Greedy Algorithms</li>
+            <li>Divide and Conquer</li>
+            <li>Graph Algorithms</li>
+            <li>Dynamic Programming</li>
+            <li>Complexity Analysis</li>
+        </ul>
+        <p>By the end of this course, you'll be equipped with the skills to solve computational problems effectively and efficiently.</p>
+    </section>
 
     <!-- Footer -->
-    <div class="footer">
+    <footer>
         <p>&copy; 2024 Design and Analysis of Algorithms. All rights reserved.</p>
-    </div>
+    </footer>
 
 </body>
 </html>
