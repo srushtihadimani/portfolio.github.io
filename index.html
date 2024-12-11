@@ -15,7 +15,7 @@
         }
 
         body {
-            background: linear-gradient(to bottom, #f0f5ff, #c3ddf3);
+            background: linear-gradient(to bottom, #f0f8ff, #dae8fc);
             color: #333;
             line-height: 1.6;
         }
@@ -153,86 +153,57 @@
     </style>
 </head>
 <body>
-    <!-- Header Section -->
     <header>
         <h1>Welcome to the Algorithms Course</h1>
         <nav>
-            <a href="index.html">Project Overview</a>
-            <a href="projects.html">Business Use Cases</a>
-            <a href="contacts.html">Course Reflections</a>
+            <a href="#overview">Project Overview</a>
+            <a href="#business">Business Use Cases</a>
+            <a href="#reflections">Course Reflections</a>
         </nav>
     </header>
 
-    <!-- Main Content Section -->
     <main>
-        <div class="intro">
-            <p>
-                The **Design and Analysis of Algorithms** course provides a comprehensive foundation in algorithms, 
-                data structures, and computational thinking. Explore theoretical knowledge and practical applications 
-                that empower you to tackle real-world problems with efficiency and precision.
-            </p>
-        </div>
+        <section class="intro">
+            <p>Explore the fascinating world of algorithms and data structures, mastering techniques to solve complex problems and create innovative solutions.</p>
+        </section>
 
-        <!-- Key Topics Section -->
-        <div class="content-block">
-            <h2 class="section-title">What This Course Covers</h2>
-            <p>
-                This course takes you on a journey through:
-            </p>
-            <ul>
-                <li>Understanding the basics of algorithm efficiency, time complexity, and space analysis.</li>
-                <li>Learning fundamental and advanced data structures like arrays, linked lists, binary trees, and tries.</li>
-                <li>Mastering various sorting and searching algorithms, including Quick Sort and Binary Search.</li>
-                <li>Exploring real-world graph algorithms such as Dijkstra's and Prim's algorithms for optimization problems.</li>
-                <li>Discovering advanced concepts like NP-completeness and limitations of algorithmic power.</li>
-            </ul>
-        </div>
+        <section id="overview" class="content-block">
+            <h2 class="section-title">What is the Course About?</h2>
+            <p>This course delves deep into the design and analysis of algorithms, exploring foundational topics like recursion, time and space complexity, and advanced structures such as Red-Black Trees and Segment Trees. Real-world case studies, including the Travelling Salesperson Problem and optimization problems, are covered to bridge theory and application.</p>
+        </section>
 
-        <!-- Cards Section -->
-        <div class="card-container">
-            <div class="card">
-                <h3>Linear Data Structures</h3>
-                <ul>
-                    <li>Arrays</li>
-                    <li>Stacks</li>
-                    <li>Queues</li>
-                </ul>
+        <section id="business" class="content-block">
+            <h2 class="section-title">Core Topics in Algorithms</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Linear Data Structures</h3>
+                    <ul>
+                        <li>Arrays</li>
+                        <li>Stacks</li>
+                        <li>Queues</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Tree Structures</h3>
+                    <ul>
+                        <li>Binary Search Trees</li>
+                        <li>AVL Trees</li>
+                        <li>Red-Black Trees</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Graph Structures</h3>
+                    <ul>
+                        <li>Adjacency Matrix</li>
+                        <li>Directed and Undirected Graphs</li>
+                    </ul>
+                </div>
             </div>
-
-            <div class="card">
-                <h3>Trees</h3>
-                <ul>
-                    <li>Binary Search Trees (BST)</li>
-                    <li>AVL Trees</li>
-                    <li>Red-Black Trees</li>
-                    <li>2-3 Trees</li>
-                    <li>Tries</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <h3>Graph Structures</h3>
-                <ul>
-                    <li>Adjacency Matrix and List Representations</li>
-                    <li>Directed and Undirected Graphs</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <h3>Specialized Structures</h3>
-                <ul>
-                    <li>Heaps</li>
-                    <li>Fenwick Trees (BIT)</li>
-                    <li>Segment Trees</li>
-                    <li>Skip Lists</li>
-                </ul>
-            </div>
-        </div>
+        </section>
     </main>
 
-    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Aarzoo. All Rights Reserved. | <a href="#">Contact</a> | <a href="#">Privacy Policy</a></p>
+        <p>&copy; 2024 Aarzoo. All rights reserved. | <a href="#contact">Contact Us</a></p>
     </footer>
 </body>
 </html>
