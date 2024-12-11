@@ -14,15 +14,16 @@
         body, html {
             height: 100%;
             font-family: 'Arial', sans-serif;
+            background-color: #f4f7fa; /* Light background color */
         }
 
         /* Navigation Bar Styling */
         nav {
-            background-color: rgba(0, 51, 102, 0.8); /* Semi-transparent Dark Blue */
+            background-color: #003366; /* Dark Blue */
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 20px;
+            padding: 15px;
             z-index: 10;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
@@ -34,7 +35,7 @@
         }
 
         nav ul li {
-            margin: 0 30px;
+            margin: 0 25px;
         }
 
         nav ul li a {
@@ -42,7 +43,6 @@
             color: white;
             font-size: 1.2rem;
             font-weight: bold;
-            letter-spacing: 0.5px;
             transition: color 0.3s ease;
         }
 
@@ -50,92 +50,63 @@
             color: #ff7f50; /* Coral color for hover */
         }
 
-        /* Main Container Styling with Parallax Effect */
+        /* Main Container Styling */
         .container {
             position: relative;
-            height: 100vh;
-            background: linear-gradient(45deg, #2c3e50, #2980b9); /* Gradient background */
+            height: 100%;
+            padding-top: 80px; /* Adjusted for fixed nav */
+            background: url('background-image.jpg') no-repeat center center fixed; /* Background image */
             background-size: cover;
-            background-attachment: fixed; /* Parallax effect */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.4); /* Dark overlay for readability */
-            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.5); /* Overlay for readability */
         }
 
         .content {
-            position: relative;
+            position: absolute;
+            top: 30%;
+            left: 10%;
+            transform: translate(-10%, -30%);
             color: #fff;
-            text-align: center;
-            z-index: 2;
+            z-index: 1;
             padding: 20px;
-            animation: fadeIn 2s ease-in-out;
+            text-align: left;
         }
 
         h1 {
             font-size: 4rem;
+            color: #ff7f50; /* Vibrant orange for visibility */
             margin-bottom: 20px;
-            text-transform: uppercase;
-            font-weight: bold;
-            letter-spacing: 2px;
-            color: #ff7f50;
-            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
         }
 
         p {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             color: #f1f1f1;
             line-height: 1.8;
             margin: 20px 0;
-            letter-spacing: 0.5px;
         }
 
         .cta-button {
             background-color: #ff7f50;
-            padding: 15px 25px;
+            padding: 12px 20px;
             font-size: 1.2rem;
             color: white;
             text-decoration: none;
-            border-radius: 30px;
-            box-shadow: 0 5px 20px rgba(255, 127, 80, 0.4);
-            transition: background-color 0.3s ease, transform 0.3s ease;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
 
         .cta-button:hover {
-            background-color: #e06f35;
-            transform: scale(1.1);
+            background-color: #e06f35; /* Slightly darker orange */
         }
 
-        /* Fade-in Animation */
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Course Information Section with Clean Background */
+        /* Course Info Section */
         .course-info {
-            background-color: #f9f9f9; /* Light, professional background */
-            color: #003366;
             padding: 40px 15%;
-            text-align: left;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-            margin-top: -50px;
-            z-index: 10;
+            text-align: center;
+            background-color: #fff;
+            color: #003366;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 100px;
         }
 
         .course-info h2 {
@@ -149,36 +120,6 @@
             line-height: 1.7;
         }
 
-        /* Section Titles */
-        h3 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-            color: #2980b9;
-        }
-
-        ul {
-            margin: 20px 0;
-        }
-
-        ul li {
-            margin-bottom: 10px;
-        }
-
-        /* Learning Outcomes Section Styling */
-        .learning-outcomes {
-            padding: 30px 0;
-            background-color: #ffffff;
-            color: #003366;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .learning-outcomes ul li {
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-            line-height: 1.8;
-        }
-
-        /* Footer */
         .footer {
             background-color: #003366;
             color: #fff;
@@ -196,83 +137,46 @@
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
+            <li><a href="#course-info">About</a></li>
             <li><a href="#project-overview">Project Overview</a></li>
-            <li><a href="#business-cases">Business Cases</a></li>
-            <li><a href="#reflections">Reflections</a></li>
+            <li><a href="#learning-outcomes">Learning Outcomes</a></li>
         </ul>
     </nav>
 
-    <!-- Main Container with Parallax Background -->
+    <!-- Main Container with Background Image -->
     <div id="home" class="container">
-        <div class="overlay"></div>
         <div class="content">
             <h1>Welcome to the Design and Analysis of Algorithms Course</h1>
-            <p>Master the art of algorithm design and analysis to solve complex, real-world problems efficiently and effectively.</p>
+            <p>Master the art of algorithm design and analysis to solve complex, real-world problems efficiently.</p>
             <a href="#course-info" class="cta-button">Explore the Course</a>
         </div>
     </div>
 
-    <!-- Course Information Section with Professional Background -->
+    <!-- About Course Section -->
     <div id="course-info" class="course-info">
-        <h2>What is the Course About?</h2>
-        <p>This course focuses on the principles of designing efficient algorithms to solve computational problems. Students will explore fundamental strategies for algorithmic problem-solving, analyze data structures, and develop skills to solve real-world challenges using optimized algorithms.</p>
-
-        <h3>Course Objectives</h3>
-        <ul>
-            <li>Understand the core concepts of algorithm design and analysis.</li>
-            <li>Learn various algorithmic techniques including divide and conquer, dynamic programming, greedy algorithms, and backtracking.</li>
-            <li>Analyze algorithms for performance using time and space complexity.</li>
-            <li>Apply algorithms to solve specific computational problems effectively.</li>
-            <li>Master advanced data structures to enhance algorithm design and efficiency.</li>
-        </ul>
-
-        <h3>Course Topics</h3>
-        <p>This course will cover:</p>
-        <ul>
-            <li>Introduction to Algorithms</li>
-            <li>Sorting and Searching Algorithms</li>
-            <li>Graph Algorithms (DFS, BFS, Dijkstra's, Kruskal's, Prim's)</li>
-            <li>Dynamic Programming and Greedy Algorithms</li>
-            <li>NP-Completeness and Computational Complexity</li>
-        </ul>
-
-        <h3>Real-World Applications</h3>
-        <p>Algorithms are essential in solving real-world problems in:</p>
-        <ul>
-            <li>Optimization Problems (e.g., resource allocation, route planning)</li>
-            <li>Machine Learning and Artificial Intelligence</li>
-            <li>Data Search and Retrieval</li>
-            <li>Networking and Cryptography</li>
-        </ul>
-    </div>
-
-    <!-- Project Overview Section with Unique ID -->
-    <div id="project-overview" class="course-info">
-        <h2>Project Overview</h2>
-        <p>This section provides an overview of the projects that can be undertaken in the course, including their scope, objectives, and evaluation criteria.</p>
-        <h3>Project Details</h3>
-        <ul>
-            <li>Design an efficient algorithm to solve a real-world problem.</li>
-            <li>Analyze the algorithm's performance in terms of time and space complexity.</li>
-            <li>Develop a report and presentation based on the findings.</li>
-        </ul>
+        <h2>About the Course</h2>
+        <p>This course is designed to provide students with an in-depth understanding of algorithms and their analysis. The key objective is to equip students with the knowledge and skills to design and analyze efficient algorithms for solving complex problems.</p>
+        <p>We will cover a variety of topics, including data structures, sorting algorithms, graph algorithms, and more. The course also focuses on the importance of time and space complexity, which allows us to evaluate the efficiency of algorithms in real-world applications.</p>
+        <p>By the end of the course, students will have a strong understanding of how algorithms work, their limitations, and how to select the most appropriate algorithm for a given problem.</p>
     </div>
 
     <!-- Learning Outcomes Section -->
-    <div class="learning-outcomes">
-        <h3>Learning Outcomes</h3>
-        <ul>
-            <li>Design and analyze efficient algorithms to solve computational problems.</li>
-            <li>Evaluate algorithm performance using time and space complexity analysis.</li>
-            <li>Apply advanced data structures to improve algorithm efficiency.</li>
-            <li>Optimize solutions for real-world challenges through algorithmic thinking.</li>
-            <li>Understand key algorithmic techniques such as dynamic programming, greedy algorithms, and graph algorithms.</li>
+    <div id="learning-outcomes" class="course-info">
+        <h2>Learning Outcomes</h2>
+        <p>Upon successful completion of this course, students will be able to:</p>
+        <ul style="text-align: left; margin-top: 20px; font-size: 1.2rem;">
+            <li>Understand the core concepts of algorithm analysis, including time and space complexity.</li>
+            <li>Design and implement efficient algorithms for sorting, searching, and graph traversal.</li>
+            <li>Evaluate and compare algorithms based on their efficiency in different contexts.</li>
+            <li>Apply algorithmic techniques to solve real-world computational problems effectively.</li>
+            <li>Understand advanced topics such as NP-completeness and dynamic programming.</li>
+            <li>Gain proficiency in using various data structures such as trees, graphs, heaps, and hash tables.</li>
         </ul>
     </div>
 
     <!-- Footer -->
     <div class="footer">
-        <p>&copy; 2024 Design and Analysis of Algorithms Course. All Rights Reserved.</p>
+        <p>&copy; 2024 Design and Analysis of Algorithms. All rights reserved.</p>
     </div>
 
 </body>
