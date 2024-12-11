@@ -55,7 +55,7 @@
             position: relative;
             height: 100%;
             padding-top: 80px; /* Adjusted for fixed nav */
-            background: url('/mnt/data/image.png') no-repeat center center fixed;
+            background: url('image.png') no-repeat center center fixed; /* Corrected the path to the image */
             background-size: cover;
             background-color: rgba(0, 0, 0, 0.5); /* Overlay for readability */
         }
@@ -169,6 +169,46 @@
         <p><strong>Sorting Algorithms:</strong> We studied algorithms such as Bubble Sort, Quick Sort, Merge Sort, and Heap Sort, learning how to organize data efficiently.</p>
         <p><strong>Searching Algorithms:</strong> We learned techniques such as Linear Search, Binary Search, and string matching algorithms including KMP and Rabin-Karp.</p>
         <p><strong>Graph Algorithms:</strong> Algorithms like Depth-First Search, Dijkstra’s Algorithm, Bellman-Ford, Floyd-Warshall, and Prim’s and Kruskal’s MST Algorithms were explored in depth.</p>
+        <p><strong>Linear Search:</strong> Linear Search is the simplest search algorithm. It works by checking each element of the list sequentially until the desired element is found or the list ends.</p>
+<p><strong>Time Complexity:</strong> O(n), where n is the number of elements in the list.</p>
+<p><strong>Use Cases:</strong> Suitable for small datasets or unsorted data.</p>
+
+<p><strong>Binary Search:</strong> Binary Search is a much more efficient algorithm than Linear Search but requires the list to be sorted. It works by repeatedly dividing the search interval in half. If the value of the search key is less than the item in the middle of the interval, it narrows the interval to the lower half. Otherwise, it narrows the interval to the upper half.</p>
+<p><strong>Time Complexity:</strong> O(log n), where n is the number of elements in the sorted list.</p>
+<p><strong>Use Cases:</strong> Effective for large sorted datasets, such as searching in sorted arrays or databases.</p>
+
+<p><strong>KMP (Knuth-Morris-Pratt) Algorithm:</strong> The KMP algorithm is used for string matching. It improves the brute force search by using information gained from previous matches to skip unnecessary comparisons. The algorithm preprocesses the pattern and constructs a partial match table (also called the "prefix table") to avoid re-checking characters that have already been matched.</p>
+<p><strong>Time Complexity:</strong> O(m + n), where m is the length of the pattern and n is the length of the text.</p>
+<p><strong>Use Cases:</strong> Efficient for finding a substring within a longer string, commonly used in text editors and search engines.</p>
+
+<p><strong>Rabin-Karp Algorithm:</strong> Rabin-Karp is another string matching algorithm that uses hashing to find a pattern in a text. It computes a hash value for the pattern and compares it to hash values of substrings of the text. If the hash values match, it performs a direct comparison of the characters to ensure they are the same.</p>
+<p><strong>Time Complexity:</strong> O(m + n) on average, where m is the length of the pattern and n is the length of the text. However, in the worst case, it can be O(mn) if many hash collisions occur.</p>
+<p><strong>Use Cases:</strong> Useful for finding multiple patterns in a text or searching for a pattern in a large dataset.</p>
+
+<p><strong>Depth-First Search (DFS):</strong> DFS explores a graph by going as deep as possible down one path before backtracking. It starts from a source node and explores each branch before moving to the next branch.</p>
+<p><strong>Time Complexity:</strong> O(V + E), where V is the number of vertices and E is the number of edges.</p>
+<p><strong>Use Cases:</strong> Used in topological sorting, cycle detection, pathfinding, and maze-solving.</p>
+
+<p><strong>Dijkstra’s Algorithm:</strong> Dijkstra's Algorithm finds the shortest path from a source vertex to all other vertices in a graph with non-negative edge weights. It uses a greedy approach and updates the shortest known distance to each vertex.</p>
+<p><strong>Time Complexity:</strong> O(V^2) in the simplest form, but can be optimized to O(E + V log V) using a priority queue (min-heap).</p>
+<p><strong>Use Cases:</strong> Used in routing and network optimization, such as in GPS navigation systems.</p>
+
+<p><strong>Bellman-Ford Algorithm:</strong> The Bellman-Ford Algorithm is similar to Dijkstra's but can handle graphs with negative weight edges. It works by iteratively relaxing all edges and can also detect negative weight cycles.</p>
+<p><strong>Time Complexity:</strong> O(VE), where V is the number of vertices and E is the number of edges.</p>
+<p><strong>Use Cases:</strong> Useful for graphs with negative weight edges and detecting negative weight cycles.</p>
+
+<p><strong>Floyd-Warshall Algorithm:</strong> Floyd-Warshall is an all-pairs shortest path algorithm that finds the shortest paths between all pairs of vertices in a weighted graph (can handle negative weights). It works by iteratively updating the shortest paths between pairs by considering each vertex as an intermediate vertex.</p>
+<p><strong>Time Complexity:</strong> O(V^3), where V is the number of vertices.</p>
+<p><strong>Use Cases:</strong> Suitable for applications needing the shortest paths between all pairs of nodes, like in network routing or social network analysis.</p>
+
+<p><strong>Prim’s Algorithm:</strong> Prim's Algorithm is used to find the minimum spanning tree (MST) of a weighted, undirected graph. It starts from an arbitrary node and expands the MST by selecting the edge with the smallest weight that connects a vertex in the MST to a vertex outside the MST.</p>
+<p><strong>Time Complexity:</strong> O(E log V), where E is the number of edges and V is the number of vertices.</p>
+<p><strong>Use Cases:</strong> Used in network design, such as finding the most efficient way to connect nodes in a computer network.</p>
+
+<p><strong>Kruskal’s Algorithm:</strong> Kruskal’s Algorithm is another method for finding the minimum spanning tree (MST) in a graph. Unlike Prim's, it works by sorting all the edges in the graph by weight and adding the smallest edge to the MST that doesn't form a cycle.</p>
+<p><strong>Time Complexity:</strong> O(E log E), where E is the number of edges.</p>
+<p><strong>Use Cases:</strong> Used in network design, such as constructing efficient electrical grids or minimizing road construction in geographical areas.</p>
+
     </div>
 
     <!-- Footer -->
