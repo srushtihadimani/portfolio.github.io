@@ -14,15 +14,51 @@
         body, html {
             height: 100%;
             font-family: 'Arial', sans-serif;
+            background-color: #f4f7fa; /* Light and subtle background */
         }
 
+        /* Navigation Bar Styling */
+        nav {
+            background-color: #003366; /* Professional dark blue */
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 15px;
+            z-index: 10;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff7f50; /* Coral color for hover */
+        }
+
+        /* Main Container Styling */
         .container {
             position: relative;
             height: 100%;
-            background-image: url('https://your-background-image-link.com'); /* Replace with your background image */
+            background-image: url('https://images.unsplash.com/photo-1593642634407-9f7ba8db9f84'); /* Optional background image */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            padding-top: 80px; /* Adjusted for fixed nav */
         }
 
         .container::after {
@@ -32,7 +68,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+            background: rgba(0, 0, 0, 0.4); /* Dark overlay to ensure text visibility */
         }
 
         .content {
@@ -43,153 +79,149 @@
             text-align: center;
             color: #fff;
             z-index: 1;
-            font-size: 1.2rem;
         }
 
         h1 {
             font-size: 3.5rem;
+            color: #ff7f50; /* Vibrant orange for visibility */
             margin-bottom: 20px;
-            color: #ff6a00; /* Vibrant orange color */
-            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
         }
 
         p {
-            margin-bottom: 10px;
             font-size: 1.2rem;
-            font-weight: bold;
-            color: #f5f5f5;
-        }
-
-        .details-section {
-            padding: 40px 20px;
-            background-color: #282828;
-            color: #fff;
-            font-size: 1.2rem;
+            color: #f1f1f1;
             line-height: 1.6;
-            margin-top: 30px;
-        }
-
-        .details-section h2 {
-            font-size: 2.5rem;
-            color: #ff6a00;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .details-section p {
-            font-size: 1.1rem;
-            font-weight: normal;
-            text-align: justify;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 15px 30px;
-            background-color: #ff6a00;
-            color: #fff;
-            font-size: 1.2rem;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 8px;
-            margin-top: 20px;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        .btn:hover {
-            background-color: #ff8500;
-            transform: scale(1.1);
-        }
-
-        .btn:focus {
-            outline: none;
-        }
-
-        .course-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 40px 20px;
-        }
-
-        .course-section h3 {
-            font-size: 2rem;
-            margin-bottom: 15px;
-            color: #ff6a00;
-        }
-
-        .course-section p {
-            text-align: center;
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-        }
-
-        .course-list {
-            list-style: none;
-            padding: 0;
             margin: 20px 0;
         }
 
-        .course-list li {
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-            color: #f5f5f5;
+        .cta-button {
+            background-color: #ff7f50;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
 
-        .course-list li strong {
-            color: #ff6a00;
+        .cta-button:hover {
+            background-color: #e06f35; /* Slightly darker orange */
+        }
+
+        /* Section Styling */
+        .section {
+            margin: 60px 0;
+            padding: 40px 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .section:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            color: #003366;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        /* Styling for the list of topics */
+        ul {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+
+        ul li {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        ul li:before {
+            content: "✔️";
+            margin-right: 10px;
+            color: #ff7f50; /* Check mark color */
         }
     </style>
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#overview">Course Overview</a></li>
+            <li><a href="#use-cases">Use Cases</a></li>
+            <li><a href="#course-content">Course Content</a></li>
+            <li><a href="#reflections">Reflections</a></li>
+        </ul>
+    </nav>
 
+    <!-- Main Container with Background Image -->
     <div class="container">
         <div class="content">
-            <h1>Welcome to the Algorithms Course!</h1>
-            <p><strong>COURSE NAME:</strong> Design and Analysis of Algorithms</p>
-            <p><strong>COURSE CODE:</strong> 23ECSE309</p>
-            <p><strong>COURSE TEACHER:</strong> Prof. Prakash Hegade</p>
-            <a href="#course-details" class="btn">TELL ME MORE</a>
+            <h1>Welcome to the Design and Analysis of Algorithms Course</h1>
+            <p>Master the art of algorithm design and analysis to solve complex, real-world problems efficiently.</p>
+            <a href="#overview" class="cta-button">Explore the Course</a>
         </div>
     </div>
 
-    <section id="course-details" class="details-section">
+    <!-- Course Overview Section -->
+    <section id="overview" class="section">
         <h2>Course Overview</h2>
-        <p>This course introduces you to the design and analysis of algorithms, enabling you to think critically and solve computational problems efficiently. You will learn about the core principles behind algorithm design and how to optimize solutions for better performance in terms of time and space complexity.</p>
-
-        <p>Through this course, you will gain knowledge about various data structures (such as trees, graphs, heaps, and hash tables) and their applications in algorithm design. You will also get hands-on experience solving problems in real-time scenarios using efficient algorithms.</p>
-
-        <h3>Key Topics Covered:</h3>
-        <ul class="course-list">
-            <li><strong>Introduction to Algorithms:</strong> Learn about algorithmic problem-solving techniques, the need for algorithmic efficiency, and basic computational concepts.</li>
-            <li><strong>Mathematical Foundations:</strong> Basics of time and space complexity, Big O notation, and analysis of algorithms.</li>
-            <li><strong>Sorting and Searching Algorithms:</strong> Deep dive into various sorting algorithms (Bubble Sort, Quick Sort, Merge Sort) and searching algorithms (Binary Search, Linear Search).</li>
-            <li><strong>Graph Algorithms:</strong> Explore algorithms for graph traversal (BFS, DFS), shortest path algorithms (Dijkstra’s), and minimum spanning tree algorithms (Prim’s, Kruskal’s).</li>
-            <li><strong>Dynamic Programming:</strong> Learn about dynamic programming techniques and how to break problems into subproblems (Knapsack problem, Fibonacci series).</li>
-            <li><strong>Greedy Algorithms:</strong> Study algorithms that make locally optimal choices at each stage (Activity Selection problem, Huffman Coding).</li>
-            <li><strong>Advanced Data Structures:</strong> Introduction to trees (Binary Search Trees, AVL Trees, Red-Black Trees), heaps, and hashing techniques for efficient data management.</li>
-            <li><strong>String Matching Algorithms:</strong> Explore advanced algorithms like KMP, Rabin-Karp, and Boyer-Moore for searching patterns in strings.</li>
-            <li><strong>Graph Theory and Networks:</strong> Delve into network flow algorithms, graph representation, and real-world applications.</li>
-            <li><strong>NP-Completeness and Approximation Algorithms:</strong> Understand the concept of NP-completeness, and explore problems that are intractable and their approximate solutions.</li>
+        <p>This course provides a deep dive into the core principles of algorithms and data structures. It equips students with the ability to analyze the efficiency of algorithms using concepts like time and space complexity, and how to apply the most effective algorithms to solve a variety of problems.</p>
+        <p>Key topics include:</p>
+        <ul>
+            <li>Time and Space Complexity</li>
+            <li>Sorting Algorithms</li>
+            <li>Graph Algorithms</li>
+            <li>Dynamic Programming</li>
+            <li>Tree and Graph Data Structures</li>
+            <li>NP-Completeness and Problem Solving</li>
         </ul>
-
-        <h3>Applications in Real Life:</h3>
-        <ul class="course-list">
-            <li><strong>Optimizing Routes:</strong> Use of shortest path algorithms like Dijkstra’s and A* for GPS navigation and routing systems.</li>
-            <li><strong>Data Compression:</strong> Huffman coding used in data compression (ZIP files, image compression, etc.).</li>
-            <li><strong>Network Traffic Management:</strong> Graph algorithms for routing and managing data in network systems.</li>
-            <li><strong>Artificial Intelligence:</strong> Heuristic search algorithms and dynamic programming for solving AI problems like chess and game theory.</li>
-            <li><strong>Bioinformatics:</strong> String matching and dynamic programming applied to genetic sequence alignment in DNA analysis.</li>
-            <li><strong>Financial Optimization:</strong> Optimization techniques for investment portfolios, maximizing returns while minimizing risk.</li>
-        </ul>
-
-        <h3>Why This Course is Essential:</h3>
-        <p>This course is essential for anyone pursuing a career in software engineering, data science, artificial intelligence, or computational problem-solving. Algorithms form the backbone of modern technology systems, from search engines to financial modeling to machine learning.</p>
-
-        <p>By mastering algorithms and data structures, you will be able to write optimized, efficient code that can handle real-world problems at scale. This course not only sharpens your problem-solving skills but also equips you with the ability to analyze and optimize solutions for performance and scalability.</p>
-
-        <a href="#course-details" class="btn">LEARN MORE ABOUT THIS COURSE</a>
     </section>
 
+    <!-- Use Cases Section -->
+    <section id="use-cases" class="section">
+        <h2>Real-World Use Cases</h2>
+        <p>Learn how algorithms apply to various real-world problems:</p>
+        <ul>
+            <li><strong>Smart City Design:</strong> Using algorithms to optimize traffic flow, resource management, and infrastructure planning.</li>
+            <li><strong>E-commerce:</strong> Efficient searching and sorting of products to enhance user experience.</li>
+            <li><strong>Cybersecurity:</strong> Implementing hashing and encryption algorithms to secure sensitive data.</li>
+            <li><strong>Machine Learning:</strong> Optimization techniques in training AI models and managing data.</li>
+            <li><strong>Routing Algorithms:</strong> Applying graph algorithms for optimal route planning in logistics.</li>
+        </ul>
+    </section>
+
+    <!-- Course Content Section -->
+    <section id="course-content" class="section">
+        <h2>Course Content</h2>
+        <p>The course covers the following key areas:</p>
+        <ul>
+            <li><strong>Sorting Algorithms:</strong> Bubble Sort, Merge Sort, Quick Sort, and Heap Sort</li>
+            <li><strong>Searching Algorithms:</strong> Binary Search, Linear Search</li>
+            <li><strong>Graph Algorithms:</strong> Dijkstra’s Shortest Path, Prim’s and Kruskal’s Minimum Spanning Tree</li>
+            <li><strong>Dynamic Programming:</strong> Knapsack Problem, Longest Common Subsequence</li>
+            <li><strong>NP-Completeness:</strong> Understanding computational limits and intractable problems</li>
+            <li><strong>Advanced Data Structures:</strong> AVL Trees, Red-Black Trees, Segment Trees, Heaps</li>
+        </ul>
+    </section>
+
+    <!-- Course Reflections Section -->
+    <section id="reflections" class="section">
+        <h2>Course Reflections</h2>
+        <p>By the end of this course, you’ll have a strong understanding of how to apply efficient algorithms to solve problems in software development, data science, and system design. The skills you gain will also prepare you for technical interviews and advanced problem-solving challenges.</p>
+        <p>This course bridges the gap between theory and practical application, equipping you with the tools to tackle real-world challenges with speed and precision.</p>
+    </section>
 </body>
 </html>
