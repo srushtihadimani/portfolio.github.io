@@ -1,201 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design and Analysis of Algorithms</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <title>Welcome to the Algorithms Course</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* General Styles */
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
         body {
-            font-family: "Arial", sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9fc;
+            background: linear-gradient(to bottom, #f0f5ff, #c3ddf3);
             color: #333;
-        }
-
-        /* Navigation Bar */
-        nav {
-            background-color: #343a40;
-            padding: 1em 0;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #f8f9fa;
-            font-weight: bold;
-            font-size: 1.1em;
-        }
-
-        nav ul li a:hover {
-            color: #ffc107;
+            line-height: 1.6;
         }
 
         /* Header Section */
         header {
-            background: linear-gradient(45deg, #6a1b9a, #8e44ad);
-            color: white;
-            padding: 60px 20px;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
             text-align: center;
+            padding: 2rem 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
 
         header h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
         }
 
-        header p {
-            font-size: 1.3em;
-            margin-top: 0;
+        header nav {
+            margin-top: 1rem;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #ffdd57;
         }
 
         /* Main Content */
         main {
-            padding: 40px 20px;
-            line-height: 1.6;
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        section {
-            margin-bottom: 40px;
-        }
-
-        h2 {
-            color: #6a1b9a;
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
-
-        ul {
-            margin-top: 15px;
-            padding-left: 20px;
-        }
-
-        ul li {
-            margin-bottom: 10px;
-        }
-
-        /* Call-to-Action Buttons */
-        .cta {
+        .intro {
             text-align: center;
-            margin: 40px 0;
+            margin-bottom: 2rem;
         }
 
-        .cta a {
-            text-decoration: none;
-            padding: 15px 30px;
-            font-size: 1.1em;
-            color: white;
-            background-color: #6a1b9a;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            font-weight: bold;
+        .intro p {
+            font-size: 1.3rem;
+            color: #555;
         }
 
-        .cta a:hover {
-            background-color: #8e44ad;
+        .section-title {
+            font-size: 2rem;
+            color: #2575fc;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #2575fc;
+            display: inline-block;
+            padding-bottom: 0.3rem;
         }
 
-        /* Footer */
+        .content-block {
+            margin-bottom: 2rem;
+        }
+
+        .content-block h2 {
+            color: #6a11cb;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .content-block p {
+            font-size: 1.1rem;
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            color: #2575fc;
+            margin-bottom: 1rem;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .card ul li {
+            margin: 0.5rem 0;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Footer Section */
         footer {
-            background-color: #343a40;
-            color: white;
             text-align: center;
-            padding: 10px 0;
+            padding: 1rem 0;
+            background: #333;
+            color: #fff;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #ffdd57;
+            text-decoration: none;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #6a11cb;
         }
     </style>
 </head>
-
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="projects.html">Business Cases and SDG Mapping</a></li>
-            <li><a href="contacts.html">Course Learning Reflections</a></li>
-        </ul>
-    </nav>
-
+    <!-- Header Section -->
     <header>
-        <h1>Welcome to the Design and Analysis of Algorithms</h1>
-        <p>Your gateway to mastering the logic and efficiency behind modern computing.</p>
+        <h1>Welcome to the Algorithms Course</h1>
+        <nav>
+            <a href="index.html">Project Overview</a>
+            <a href="projects.html">Business Use Cases</a>
+            <a href="contacts.html">Course Reflections</a>
+        </nav>
     </header>
 
+    <!-- Main Content Section -->
     <main>
-        <section>
-            <h2>What is this course about?</h2>
+        <div class="intro">
             <p>
-                This course dives deep into the fascinating world of algorithms and data structures. Whether you are
-                new to the subject or want to expand your expertise, we focus on teaching you how to design, analyze,
-                and implement efficient algorithms for solving complex problems. 
+                The **Design and Analysis of Algorithms** course provides a comprehensive foundation in algorithms, 
+                data structures, and computational thinking. Explore theoretical knowledge and practical applications 
+                that empower you to tackle real-world problems with efficiency and precision.
             </p>
-            <p>
-                Starting with foundational concepts such as time and space complexities, we move into advanced topics
-                including graph algorithms, optimization techniques, and real-world applications. 
-            </p>
-        </section>
+        </div>
 
-        <section>
-            <h2>Why study algorithms?</h2>
+        <!-- Key Topics Section -->
+        <div class="content-block">
+            <h2 class="section-title">What This Course Covers</h2>
             <p>
-                Algorithms are at the core of every major technology we use today, from search engines to transportation
-                systems. This course empowers you with the skills to:
+                This course takes you on a journey through:
             </p>
             <ul>
-                <li>Understand and evaluate the efficiency of solutions using mathematical foundations.</li>
-                <li>Analyze real-world problems and develop practical, efficient algorithms.</li>
-                <li>Excel in competitive programming and prepare for coding interviews.</li>
-                <li>Design scalable systems and software for future challenges.</li>
+                <li>Understanding the basics of algorithm efficiency, time complexity, and space analysis.</li>
+                <li>Learning fundamental and advanced data structures like arrays, linked lists, binary trees, and tries.</li>
+                <li>Mastering various sorting and searching algorithms, including Quick Sort and Binary Search.</li>
+                <li>Exploring real-world graph algorithms such as Dijkstra's and Prim's algorithms for optimization problems.</li>
+                <li>Discovering advanced concepts like NP-completeness and limitations of algorithmic power.</li>
             </ul>
-        </section>
+        </div>
 
-        <section>
-            <h2>What will you learn?</h2>
-            <p>By the end of the course, you’ll have mastered topics such as:</p>
-            <ul>
-                <li><strong>Core Concepts:</strong> Time complexity, recursion, backtracking.</li>
-                <li><strong>Advanced Data Structures:</strong> AVL Trees, Segment Trees, Red-Black Trees.</li>
-                <li><strong>Graph Algorithms:</strong> BFS, DFS, Dijkstra’s, and Minimum Spanning Trees.</li>
-                <li><strong>Optimization:</strong> Knapsack Problem, Union-Find, and Huffman Coding.</li>
-                <li><strong>Applications:</strong> Sorting large datasets, smart traffic systems, and resource allocation.</li>
-            </ul>
-        </section>
+        <!-- Cards Section -->
+        <div class="card-container">
+            <div class="card">
+                <h3>Linear Data Structures</h3>
+                <ul>
+                    <li>Arrays</li>
+                    <li>Stacks</li>
+                    <li>Queues</li>
+                </ul>
+            </div>
 
-        <div class="cta">
-            <p>Ready to begin your journey?</p>
-            <a href="about.html">Learn More About Me</a>
-            <a href="projects.html" style="margin-left: 15px;">Explore SDG Projects</a>
+            <div class="card">
+                <h3>Trees</h3>
+                <ul>
+                    <li>Binary Search Trees (BST)</li>
+                    <li>AVL Trees</li>
+                    <li>Red-Black Trees</li>
+                    <li>2-3 Trees</li>
+                    <li>Tries</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Graph Structures</h3>
+                <ul>
+                    <li>Adjacency Matrix and List Representations</li>
+                    <li>Directed and Undirected Graphs</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Specialized Structures</h3>
+                <ul>
+                    <li>Heaps</li>
+                    <li>Fenwick Trees (BIT)</li>
+                    <li>Segment Trees</li>
+                    <li>Skip Lists</li>
+                </ul>
+            </div>
         </div>
     </main>
 
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Aarzoo. All rights reserved.</p>
+        <p>&copy; 2024 Aarzoo. All Rights Reserved. | <a href="#">Contact</a> | <a href="#">Privacy Policy</a></p>
     </footer>
 </body>
-
 </html>
-
-           
-       
-           
-
-        
-
-        
-            
-           
-                
-   
