@@ -3,31 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design and Analysis of Algorithms</title>
+    <title>Design and Analysis of Algorithms - Home</title>
     <style>
-        /* General Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f4f4f4;
-            color: #333;
+        body, html {
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fa;
         }
 
         /* Navigation Bar Styling */
         nav {
-            background-color: #007BFF;
-            padding: 15px;
+            background-color: #003366;
             position: fixed;
             top: 0;
             width: 100%;
+            padding: 15px;
             z-index: 10;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
         nav ul {
@@ -37,7 +35,7 @@
         }
 
         nav ul li {
-            margin: 0 30px;
+            margin: 0 25px;
         }
 
         nav ul li a {
@@ -52,96 +50,94 @@
             color: #ff7f50;
         }
 
-        /* Header Section */
-        header {
-            height: 100vh;
-            background: url('https://images.unsplash.com/photo-1504182973457-cd97c71b51b2?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjQ1NzN8MHx8fGFsbHwxfHx8fHx8fHx8fDE2Mjk2OTI2NzI&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center;
+        /* Main Container Styling */
+        .container {
+            position: relative;
+            height: 100%;
+            padding-top: 80px; /* Adjusted for fixed nav */
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center center fixed;
             background-size: cover;
-            color: white;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.5);
         }
 
-        header h1 {
-            font-size: 4rem;
-            margin-bottom: 20px;
-        }
-
-        header p {
-            font-size: 1.5rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* Button Styling */
-        .cta-btn {
-            background-color: #ff7f50;
-            color: white;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            margin-top: 20px;
-            transition: background-color 0.3s ease;
-        }
-
-        .cta-btn:hover {
-            background-color: #e06f35;
-        }
-
-        /* Course Info Section */
-        #course-info {
-            background-color: #fff;
-            padding: 50px 0;
-            text-align: center;
-        }
-
-        #course-info h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        #course-info p {
-            font-size: 1.25rem;
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.8;
-        }
-
-        #course-info ul {
-            list-style-type: square;
-            margin: 20px auto;
-            max-width: 600px;
+        .content {
+            position: absolute;
+            top: 30%;
+            left: 10%;
+            transform: translate(-10%, -30%);
+            color: #fff;
+            z-index: 1;
+            padding: 20px;
             text-align: left;
         }
 
-        #course-info ul li {
+        h1 {
+            font-size: 3.5rem;
+            color: #ff7f50;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        p {
             font-size: 1.2rem;
-            margin: 10px 0;
+            color: #f1f1f1;
+            line-height: 1.8;
+            margin: 20px 0;
+        }
+
+        .cta-button {
+            background-color: #ff7f50;
+            padding: 12px 20px;
+            font-size: 1.2rem;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #e06f35;
+        }
+
+        /* Course Information Section */
+        .course-info {
+            padding: 40px 15%;
+            text-align: center;
+            background-color: #fff;
+            color: #003366;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-info h2 {
+            font-size: 2.5rem;
+            color: #003366;
+        }
+
+        .course-info p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        .course-info ul {
+            list-style: inside;
+            margin-top: 15px;
+        }
+
+        .course-info ul li {
+            font-size: 1.1rem;
+            margin: 5px 0;
         }
 
         /* Footer */
         footer {
-            background-color: #007BFF;
+            background-color: #003366;
             color: white;
             text-align: center;
-            padding: 20px 0;
+            padding: 10px;
             position: fixed;
             bottom: 0;
             width: 100%;
-        }
-
-        footer p {
-            font-size: 1rem;
-        }
-
-        /* Scroll Indicator */
-        html {
-            scroll-behavior: smooth;
         }
     </style>
 </head>
@@ -151,41 +147,44 @@
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#course-info">project overview</a></li>
+            <li><a href="#project-overview">Project Overview</a></li>
             <li><a href="#business-cases">Business Cases</a></li>
-            <li><a href="#course-reflections">Course Reflections</a></li>
+            <li><a href="#reflections">Reflections</a></li>
         </ul>
     </nav>
 
-    <!-- Header Section -->
-    <header id="home">
-        <h1>Design and Analysis of Algorithms</h1>
-        <p>Explore the world of algorithms and computational problem-solving. Learn how to design and optimize algorithms for various real-world applications.</p>
-        <a href="#course-info" class="cta-btn">Learn More About the Course</a>
-    </header>
+    <!-- Main Container with Background Image -->
+    <div id="home" class="container">
+        <div class="content">
+            <h1>Welcome to the Design and Analysis of Algorithms Course</h1>
+            <p>Master the art of algorithm design and analysis to solve complex, real-world problems efficiently.</p>
+            <a href="#course-info" class="cta-button">Explore the Course</a>
+        </div>
+    </div>
 
     <!-- Course Information Section -->
-    <section id="course-info">
-        <h2>Course Overview</h2>
-        <p>The Design and Analysis of Algorithms course focuses on the creation and optimization of algorithms used to solve problems efficiently. The course provides foundational knowledge and practical experience in designing algorithms for various types of problems, analyzing their efficiency, and understanding their limitations.</p>
-        
-        <h3>Key Topics Covered:</h3>
+    <div id="course-info" class="course-info">
+        <h2>What is the Course About?</h2>
+        <p>The Design and Analysis of Algorithms (DSA) course aims to equip students with the knowledge and skills needed to design and analyze algorithms to solve computational problems efficiently. This course provides a strong foundation in algorithmic techniques, problem-solving strategies, and the mathematical tools required to analyze algorithmic performance.</p>
+
+        <p>This course includes the following key topics:</p>
         <ul>
-            <li>Sorting Algorithms (Bubble Sort, Merge Sort, Quick Sort)</li>
-            <li>Searching Algorithms (Linear Search, Binary Search)</li>
-            <li>Greedy Algorithms and their Applications</li>
-            <li>Divide and Conquer Strategies</li>
-            <li>Graph Algorithms (DFS, BFS, Shortest Path)</li>
-            <li>Dynamic Programming and Backtracking</li>
-            <li>Algorithm Complexity Analysis (Big O Notation)</li>
+            <li><strong>Introduction to Algorithms:</strong> Learn what algorithms are, their importance, and how to approach algorithmic problem-solving.</li>
+            <li><strong>Algorithm Design Techniques:</strong> Master basic design techniques like Brute Force, Greedy Algorithms, Divide and Conquer, Dynamic Programming, and Backtracking.</li>
+            <li><strong>Time Complexity and Space Complexity:</strong> Understand Big-O notation, time and space complexity analysis, and how to compare the efficiency of different algorithms.</li>
+            <li><strong>Sorting and Searching:</strong> Study classic algorithms like Bubble Sort, Merge Sort, Quick Sort, Binary Search, and their use cases.</li>
+            <li><strong>Graph Algorithms:</strong> Dive into graph traversal methods like Depth First Search (DFS), Breadth First Search (BFS), and algorithms like Dijkstra's and Kruskal's for solving shortest path and minimum spanning tree problems.</li>
+            <li><strong>Advanced Topics:</strong> Learn about NP-Complete problems, approximation algorithms, and techniques for optimization.</li>
         </ul>
-        
-        <p>This course is designed for individuals looking to strengthen their problem-solving skills through algorithmic thinking. Whether you're a beginner or an advanced student, you'll develop essential skills to approach and solve complex computational problems.</p>
-    </section>
+
+        <p>The course will be both theoretical and practical, allowing students to apply algorithmic techniques to real-world problems. You will be introduced to key concepts, learn to analyze algorithmic efficiency, and understand how to implement solutions to complex problems using the most efficient methods.</p>
+
+        <p>By the end of this course, you will be proficient in designing algorithms, analyzing their time and space complexities, and selecting the best algorithm for a given problem. You will also develop problem-solving skills that will help you tackle computational challenges across various domains.</p>
+    </div>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Design and Analysis of Algorithms. All rights reserved.</p>
+        <!-- No text here as per your request -->
     </footer>
 
 </body>
