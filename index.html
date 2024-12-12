@@ -96,16 +96,42 @@
             width: 100%;
             bottom: 0;
         }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 768px) {
+            nav {
+                padding: 10px 0;
+            }
+
+            nav a {
+                font-size: 1rem;
+                padding: 8px 15px;
+            }
+
+            header {
+                font-size: 2.5rem;
+                padding: 60px 20px;
+            }
+
+            .section-box {
+                padding: 30px;
+            }
+
+            footer {
+                font-size: 0.9rem;
+                padding: 0.5rem;
+            }
+        }
     </style>
 </head>
 <body>
 
 <!-- Navigation Bar -->
 <nav>
-    <a href="#home" class="active">Home</a>
-    <a href="business-cases.html">Business Cases</a>
-    <a href="project-overview.html">Project Overview</a>
-    <a href="course-reflections.html">Course Reflections</a>
+    <a href="index.html" class="active">Home</a>
+    <a href="project.html">Business Cases</a>
+    <a href="about.html">Project Overview</a>
+    <a href="contact.html">Course Reflections</a>
 </nav>
 
 <!-- Header -->
@@ -166,6 +192,7 @@
 
 <!-- Footer -->
 <footer>
+    &copy; 2024 Design and Analysis of Algorithms Course | All rights reserved
 </footer>
 
 </body>
