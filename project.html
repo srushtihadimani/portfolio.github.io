@@ -1,5 +1,4 @@
-
-<!DOCTYPE html>
+p.<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,16 +9,14 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f2f5; /* Soft background color */
-            color: #333;
+            background-color: #f4f7fa;
         }
 
         /* Navigation Bar Styles */
         nav {
-            background-color: #6a1b9a; /* Purple color for navigation */
-            padding: 15px 0;
+            background-color: #007bff;
+            padding: 10px;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         nav a {
@@ -28,170 +25,160 @@
             text-decoration: none;
             font-weight: bold;
             font-size: 18px;
-            transition: color 0.3s ease;
         }
 
         nav a:hover {
-            color: #ffcc00; /* Yellow hover color */
+            color: #d1ecf1;
         }
 
-        /* Business Cases Section */
+        /* Business Case Section Styling */
         .business-cases-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 30px;
-            padding: 20px;
+            gap: 20px;
             margin: 20px;
+            padding: 20px;
         }
 
         .business-case-card {
-            background-color: #ffffff;
+            background-color: #fff;
             border-radius: 15px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            width: 280px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 250px;
             padding: 20px;
-            text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
+            text-align: center;
         }
 
         .business-case-card:hover {
             transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
         .business-case-card h3 {
-            font-size: 22px;
             color: #333;
+            font-size: 18px;
+            margin-bottom: 10px;
             font-weight: bold;
-            margin-bottom: 15px;
         }
 
         .business-case-card p {
-            font-size: 14px;
             color: #555;
+            font-size: 14px;
             margin: 5px 0;
         }
 
         .sdg {
-            background-color: #4caf50; /* Green for SDG badge */
-            padding: 8px;
-            border-radius: 5px;
-            color: white;
-            font-weight: bold;
             margin-top: 10px;
+            padding: 8px;
+            background-color: #6c757d;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 5px;
         }
 
         .sdg:hover {
-            background-color: #388e3c;
+            background-color: #343a40;
+        }
+
+        .indicator {
+            background-color: #f1f1f1;
+            padding: 5px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 12px;
+            color: #777;
         }
 
         .icon {
             font-size: 50px;
-            color: #e91e63;
+            color: #007bff;
             margin-bottom: 10px;
         }
-
-        .sdg-info {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        }
-
-        /* Link Section Style */
-        .github-link {
-            text-align: center;
-            margin: 40px;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        .github-link a {
-            color: #6a1b9a;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .github-link a:hover {
-            color: #ffcc00;
-        }
-
-        /* JavaScript for toggling details */
-        function toggleDetails(id) {
-            const details = document.getElementById(id);
-            if (details.style.display === "none") {
-                details.style.display = "block";
-            } else {
-                details.style.display = "none";
-            }
-        }
-
     </style>
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav>
-        <a href="index.html">Home</a>
-        <a href="project.html">Business Cases</a>
-        <a href="about.html">Project Overview</a>
-        <a href="contact.html">Course Reflections</a>
+        <a href="#home">Home</a>
+        <a href="#business-cases">Business Cases</a>
+        <a href="#project-overview">Project Overview</a>
+        <a href="#reflection">Reflection</a>
     </nav>
 
     <!-- Business Cases Section -->
     <div id="business-cases" class="business-cases-container">
         <!-- Optimal Road Network Design Card -->
-        <div class="business-case-card" onclick="toggleDetails('roadDetails')">
+        <div class="business-case-card">
             <div class="icon">🚗</div>
             <h3>Optimal Road Network Design</h3>
             <p><strong>Relevant SDG:</strong> Sustainable Cities and Communities (11)</p>
             <p><strong>Target:</strong> 11.2 - Provide access to safe, affordable, and sustainable transport systems</p>
             <p class="indicator"><strong>Indicator:</strong> 11.2.1 - Proportion of population with convenient access to public transport</p>
-            <p><strong>SDGs undertaken by Aarzoo Chikkodi:</strong> Sustainable Cities and Communities</p>
             <div class="sdg">SDG 11</div>
-            <div id="roadDetails" class="sdg-info" style="display: none;">
-                <p><strong>How to Solve:</strong> Implement Kruskal's Algorithm for finding the Minimum Spanning Tree (MST) to design an optimal road network that minimizes transportation costs.</p>
-                <p><a href="https://github.com/Aarzoochikkodi/kruskal-algorithm" target="_blank">View Kruskal's Algorithm Code</a></p>
-            </div>
         </div>
 
         <!-- Smart Public Transportation Scheduling Card -->
-        <div class="business-case-card" onclick="toggleDetails('transportDetails')">
+        <div class="business-case-card">
             <div class="icon">🚌</div>
             <h3>Smart Public Transportation Scheduling</h3>
             <p><strong>Relevant SDG:</strong> Sustainable Cities and Communities (11)</p>
             <p><strong>Target:</strong> 11.2 - Ensure sustainable transport systems for all</p>
             <p class="indicator"><strong>Indicator:</strong> 11.2.1 - Percentage of urban areas covered by public transport</p>
-            <p><strong>SDGs undertaken by Aarzoo Chikkodi:</strong> Sustainable Cities and Communities</p>
             <div class="sdg">SDG 11</div>
-            <div id="transportDetails" class="sdg-info" style="display: none;">
-                <p><strong>How to Solve:</strong> Use optimization algorithms like Genetic Algorithms or Simulated Annealing for scheduling public transportation in a way that minimizes delays and maximizes coverage.</p>
-                <p><a href="https://github.com/Aarzoochikkodi/genetic-algorithm-public-transport" target="_blank">View Genetic Algorithm Code</a></p>
-            </div>
         </div>
 
         <!-- Waste and Water Management System Card -->
-        <div class="business-case-card" onclick="toggleDetails('wasteWaterDetails')">
+        <div class="business-case-card">
             <div class="icon">💧</div>
             <h3>Waste and Water Management System</h3>
             <p><strong>Relevant SDG:</strong> Clean Water and Sanitation (6)</p>
             <p><strong>Target:</strong> 6.3 - Improve water quality and reduce pollution</p>
             <p class="indicator"><strong>Indicator:</strong> 6.3.1 - Proportion of wastewater safely treated</p>
-            <p><strong>SDGs undertaken by Aarzoo Chikkodi:</strong> Clean Water and Sanitation</p>
             <div class="sdg">SDG 6</div>
-            <div id="wasteWaterDetails" class="sdg-info" style="display: none;">
-                <p><strong>How to Solve:</strong> Use machine learning models to predict and optimize water treatment processes, or utilize real-time data to monitor water quality and treatment effectiveness.</p>
-                <p><a href="https://github.com/Aarzoochikkodi/water-treatment-prediction" target="_blank">View Water Treatment Prediction Code</a></p>
-            </div>
+        </div>
+
+        <!-- Interactive City Entertainment Map Card -->
+        <div class="business-case-card">
+            <div class="icon">🎭</div>
+            <h3>Interactive City Entertainment Map</h3>
+            <p><strong>Relevant SDG:</strong> Sustainable Cities and Communities (11)</p>
+            <p><strong>Target:</strong> 11.4 - Strengthen efforts to protect and safeguard cultural heritage</p>
+            <p class="indicator"><strong>Indicator:</strong> 11.4.1 - Public and private expenditure on cultural heritage preservation</p>
+            <div class="sdg">SDG 11</div>
+        </div>
+
+        <!-- Holographic Live Streaming Card -->
+        <div class="business-case-card">
+            <div class="icon">📡</div>
+            <h3>Holographic Live Streaming</h3>
+            <p><strong>Relevant SDG:</strong> Industry, Innovation, and Infrastructure (9)</p>
+            <p><strong>Target:</strong> 9.5 - Promote innovation through technological advancement</p>
+            <p class="indicator"><strong>Indicator:</strong> 9.5.1 - Research and development expenditure as a proportion of GDP</p>
+            <div class="sdg">SDG 9</div>
+        </div>
+
+        <!-- Citizen Feedback Portal Card -->
+        <div class="business-case-card">
+            <div class="icon">💬</div>
+            <h3>Citizen Feedback Portal (Smart Governance)</h3>
+            <p><strong>Relevant SDG:</strong> Peace, Justice, and Strong Institutions (16)</p>
+            <p><strong>Target:</strong> 16.6 - Strengthen effective, accountable institutions</p>
+            <p class="indicator"><strong>Indicator:</strong> 16.6.2 - Proportion of population satisfied with public services</p>
+            <div class="sdg">SDG 16</div>
+        </div>
+
+        <!-- Real-Time Disaster Response System Card -->
+        <div class="business-case-card">
+            <div class="icon">🌍</div>
+            <h3>Real-Time Disaster Response System</h3>
+            <p><strong>Relevant SDG:</strong> Sustainable Cities and Communities (11)</p>
+            <p><strong>Target:</strong> 11.5 - Mitigate the impact of disasters on people and property</p>
+            <p class="indicator"><strong>Indicator:</strong> 11.5.1 - Number of deaths, missing persons, and directly affected persons attributed to disasters per 100,000 population</p>
+            <div class="sdg">SDG 11</div>
         </div>
     </div>
-
-    <!-- GitHub Link Section -->
-    <div class="github-link">
-        <p><a href="https://github.com/Aarzoochikkodi" target="_blank">Visit my GitHub Profile</a></p>
-    </div>
-
 </body>
 </html>
