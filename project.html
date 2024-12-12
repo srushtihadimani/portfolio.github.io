@@ -42,7 +42,7 @@
         }
 
         .business-case-card {
-            background-color: #fff;
+            background-color: #ffffff;
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             width: 250px;
@@ -70,32 +70,49 @@
             margin: 5px 0;
         }
 
+        /* Updated SDG Badge Styles */
         .sdg {
             margin-top: 10px;
             padding: 8px;
-            background-color: #6c757d;
+            background-color: #4caf50; /* Green for SDG 11, more vibrant */
             color: #fff;
             font-weight: bold;
             border-radius: 5px;
         }
 
         .sdg:hover {
-            background-color: #343a40;
+            background-color: #388e3c;
         }
 
         .indicator {
-            background-color: #f1f1f1;
+            background-color: #e7f1f7; /* Lighter blue background for better readability */
             padding: 5px;
             border-radius: 5px;
             margin-top: 10px;
             font-size: 12px;
-            color: #777;
+            color: #333;
         }
 
+        /* Icon Styles */
         .icon {
             font-size: 50px;
             color: #007bff;
             margin-bottom: 10px;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 50px;
+            margin: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -108,8 +125,14 @@
         <a href="#reflection">Reflection</a>
     </nav>
 
+    <!-- Home Section -->
+    <div id="home" class="section">
+        <h2>Welcome to Business Cases and SDG Mapping</h2>
+        <p>This project focuses on aligning business cases with the Sustainable Development Goals (SDGs), addressing various global challenges with innovative solutions.</p>
+    </div>
+
     <!-- Business Cases Section -->
-    <div id="business-cases" class="business-cases-container">
+    <div id="business-cases" class="section business-cases-container">
         <!-- Optimal Road Network Design Card -->
         <div class="business-case-card">
             <div class="icon">🚗</div>
@@ -179,6 +202,18 @@
             <p class="indicator"><strong>Indicator:</strong> 11.5.1 - Number of deaths, missing persons, and directly affected persons attributed to disasters per 100,000 population</p>
             <div class="sdg">SDG 11</div>
         </div>
+    </div>
+
+    <!-- Project Overview Section -->
+    <div id="project-overview" class="section">
+        <h2>Project Overview</h2>
+        <p>This project aligns real-world business cases with the UN’s SDGs. The goal is to integrate sustainable solutions into urban development and innovation to address key global challenges.</p>
+    </div>
+
+    <!-- Reflection Section -->
+    <div id="reflection" class="section">
+        <h2>Reflection</h2>
+        <p>This project has provided insights into how technological advancements can contribute to achieving sustainable development. It highlighted the importance of SDG mapping for business solutions.</p>
     </div>
 </body>
 </html>
