@@ -113,27 +113,32 @@
 
         .business-case {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
         }
 
         .business-case-item {
-            background-color: #16a085;
+            background: linear-gradient(135deg, #16a085, #1abc9c);
             color: white;
-            padding: 20px;
-            border-radius: 10px;
+            padding: 30px;
+            border-radius: 15px;
             text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
+            position: relative;
+            overflow: hidden;
         }
 
         .business-case-item:hover {
             transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
 
         .business-case-item h4 {
             font-size: 1.6rem;
             margin-bottom: 10px;
+            text-transform: uppercase;
         }
 
         .business-case-item p {
@@ -144,6 +149,26 @@
         .business-case-item .icon {
             font-size: 3rem;
             margin-bottom: 15px;
+        }
+
+        .business-case-item::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .business-case-item:hover::before {
+            opacity: 1;
+        }
+
+        .business-case-item:hover .icon {
+            transform: scale(1.2);
         }
 
     </style>
@@ -202,7 +227,7 @@
         <p>The project was inspired by insights from the white paper authored by Prakash Hegde and addressed challenges related to traffic management, tourism, food production, public transport, technology, and community well-being.</p>
 
         <h3>Business Cases for Aurangabad Smart City</h3>
-        <!-- Business Cases with icons -->
+        <!-- Business Cases with new design -->
         <div class="business-case">
             <div class="business-case-item">
                 <div class="icon">🚗</div>
