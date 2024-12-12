@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Overview - Design and Analysis of Algorithms</title>
     <style>
-        /* Reset and basic styles */
+        /* Global Styles */
         * {
             margin: 0;
             padding: 0;
@@ -46,15 +46,17 @@
             padding: 20px;
         }
 
-        /* Team Info Header */
+        /* Unique Team Info Box Styles */
         .team-info-header {
             text-align: center;
-            font-size: 2rem;
-            margin-bottom: 30px;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
             color: #333;
+            font-family: 'Verdana', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
-        /* Innovative Team Info Boxes with distinct colors */
         .team-info-box {
             display: flex;
             flex-direction: column;
@@ -64,31 +66,27 @@
             padding: 20px;
             margin: 20px 0;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            animation: slideIn 1s ease-out;
             transform: translateY(20px);
+            animation: fadeInBox 1s ease-out;
         }
 
         .team-info-box:nth-child(1) {
-            background: linear-gradient(45deg, #1abc9c, #16a085);
+            background: #1abc9c;
         }
 
         .team-info-box:nth-child(2) {
-            background: linear-gradient(45deg, #3498db, #2980b9);
+            background: #3498db;
         }
 
         .team-info-box:nth-child(3) {
-            background: linear-gradient(45deg, #9b59b6, #8e44ad);
-        }
-
-        .team-info-box:hover {
-            transform: translateY(0);
-            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+            background: #9b59b6;
         }
 
         .team-info-box h3 {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             margin-bottom: 10px;
             color: #fff;
+            font-family: 'Arial', sans-serif;
         }
 
         .team-info-box p {
@@ -97,33 +95,59 @@
             color: #fff;
         }
 
-        /* Animation for team info */
-        @keyframes slideIn {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Problem Definition Box */
-        .problem-definition-box {
-            background-color: #9b59b6;
+        /* Problem Statement Styles */
+        .problem-statement-box {
+            background-color: #e74c3c;
             color: white;
             border-radius: 12px;
-            padding: 25px;
+            padding: 30px;
             margin: 40px 0;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            animation: fadeIn 1s ease-out;
             transform: translateY(20px);
+            animation: slideInBox 1s ease-out;
         }
 
-        .problem-definition-box:hover {
-            transform: translateY(0);
-            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+        .problem-statement-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .problem-statement-box p {
+            font-size: 1.2rem;
+        }
+
+        /* Findings from White Paper Box Styles */
+        .findings-box {
+            background-color: #f39c12;
+            color: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(20px);
+            animation: slideInBox 1s ease-out;
+        }
+
+        .findings-box h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+        }
+
+        .findings-box p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        /* Problem Definition Box Styles */
+        .problem-definition-box {
+            background-color: #2ecc71;
+            color: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(20px);
+            animation: slideInBox 1s ease-out;
         }
 
         .problem-definition-box h3 {
@@ -136,8 +160,56 @@
             margin-bottom: 10px;
         }
 
-        /* Animation for Problem Definition */
-        @keyframes fadeIn {
+        /* Business Cases Section Styles */
+        .business-case-header {
+            text-align: center;
+            font-size: 2rem;
+            margin: 50px 0;
+            color: #2c3e50;
+            font-family: 'Helvetica', sans-serif;
+        }
+
+        .business-cases {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .business-cases li {
+            background-color: #2ecc71;
+            color: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+            animation: fadeInCase 1s ease-out;
+        }
+
+        .business-cases li:hover {
+            transform: translateY(-5px);
+        }
+
+        .business-cases li h4 {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+
+        .business-cases li p {
+            font-size: 1.2rem;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 40px;
+        }
+
+        /* Animations */
+        @keyframes fadeInBox {
             0% {
                 opacity: 0;
                 transform: translateY(20px);
@@ -148,30 +220,26 @@
             }
         }
 
-        /* Hover effects for buttons and links */
-        .btn {
-            background-color: #2980b9;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 1rem;
-            display: inline-block;
-            transition: transform 0.3s, background-color 0.3s;
+        @keyframes slideInBox {
+            0% {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
 
-        .btn:hover {
-            background-color: #3498db;
-            transform: translateY(-3px);
-        }
-
-        /* Footer Styles */
-        footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 40px;
+        @keyframes fadeInCase {
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Responsive Design */
@@ -185,7 +253,7 @@
                 padding: 10px;
             }
 
-            .team-info-box, .problem-definition-box {
+            .team-info-box, .problem-statement-box, .problem-definition-box, .findings-box, .business-cases li {
                 padding: 15px;
             }
         }
@@ -231,69 +299,70 @@
     </div>
 </div>
 
-<!-- Project Overview Section -->
+<!-- Problem Statement Section -->
 <div class="container">
-    <h2>Project Overview</h2>
-    <p>This section provides an overview of the projects undertaken during the Design and Analysis of Algorithms course. It includes detailed insights into the problem-solving techniques, the algorithms implemented, and their real-world applications.</p>
-    <p>Each project is designed to solidify your understanding of algorithmic principles and their applications in diverse fields such as data science, optimization, and software development.</p>
-
-    <h3>Aurangabad Smart City Project</h3>
-    <p>Aurangabad, our smart city project, was conceptualized to create a city that is not just infrastructure-efficient but also functionally smart. The goal was to ensure seamless functioning, improve the quality of life, and generate sustainable revenue streams.</p>
-    <p>The project was inspired by insights from the white paper authored by Prakash Hegde and addressed challenges related to traffic management, tourism, food production, public transport, technology, and community well-being.</p>
-
-    <h3>Key Findings from the White Paper</h3>
-    <ul>
-        <li><strong>Urban Dynamics and Street Life:</strong> Inspired by Mumbai’s vibrant street life, Aurangabad will incorporate art, culture, and public spaces reflecting the residents' dynamic urban life.</li>
-        <li><strong>City Design and Smart Cities:</strong> Drawing lessons from Matheran’s vehicle-free model, Aurangabad will prioritize sustainability and cultural heritage over mere technological advancements.</li>
-        <li><strong>Commuting and City Connectivity:</strong> Inspired by Mumbai’s local trains, Aurangabad will focus on efficient and eco-friendly public transport systems.</li>
-    </ul>
-
-    <h3>Business Cases for Aurangabad Smart City</h3>
-    <ul class="business-cases">
-        <li>
-            <strong>Optimal Road Network Design</strong>
-            <p>By utilizing data analytics and AI algorithms, the road network design will not only improve traffic flow but also reduce congestion during peak hours. Dynamic traffic signals and automated rerouting will ensure optimal traffic management across the city. Additionally, real-time monitoring systems will continuously adjust the road networks for ongoing improvements and efficiency.</p>
-        </li>
-
-        <li>
-            <strong>Smart Public Transportation Scheduling</strong>
-            <p>Leveraging IoT and machine learning, the transportation system will predict traffic patterns and adjust schedules in real-time, ensuring minimal delays. Passengers will have access to an app providing live updates, route recommendations, and peak-time alerts, making public transportation more reliable and accessible. Smart buses will adapt their routes based on demand, reducing wait times and enhancing overall efficiency.</p>
-        </li>
-
-        <li>
-            <strong>Waste and Water Management System</strong>
-            <p>With smart sensors and IoT, waste collection will be optimized, directing trucks only to full bins, and recycling systems will identify and sort waste autonomously. Water management will use smart meters and real-time sensors to detect leaks, track consumption, and provide data-driven insights for sustainable water usage. This will ensure cleaner streets, lower costs, and more sustainable practices in managing resources.</p>
-        </li>
-
-        <li>
-            <strong>Interactive City Entertainment Map</strong>
-            <p>Utilizing augmented reality (AR), residents and visitors will experience a dynamic, interactive city map that highlights nearby cultural events, restaurants, and entertainment options in real time. A personal assistant feature will suggest customized itineraries based on preferences, time, and location, making exploration more engaging. Integration with local businesses and event organizers will enable instant bookings and reservations directly through the app.</p>
-        </li>
-
-        <li>
-            <strong>Holographic Live Streaming</strong>
-            <p>By incorporating holographic technology, residents can watch events like concerts, city council meetings, or live performances from home in 3D. This immersive experience will bring people closer to events, bridging the gap between the physical and virtual worlds. Businesses can leverage this for advertising, offering interactive and futuristic displays that captivate potential customers in a whole new way.</p>
-        </li>
-
-        <li>
-            <strong>Citizen Feedback Portal (Smart Governance)</strong>
-            <p>This portal will enable citizens to actively participate in governance, providing real-time feedback on city services, infrastructure, and policies. AI-driven sentiment analysis will allow city leaders to understand public opinion, prioritize issues, and respond effectively. A gamified feedback system will encourage engagement, offering rewards or recognition for active contributions, making governance more transparent and community-oriented.</p>
-        </li>
-
-        <li>
-            <strong>Real-Time Disaster Response System</strong>
-            <p>Equipped with AI and machine learning, this system will predict potential disasters (floods, fires, earthquakes) and deploy emergency services automatically based on real-time data. Drones and autonomous vehicles will assist in delivering aid, surveying damaged areas, and providing timely updates to the public. Integrated with a citizen notification system, the city will ensure rapid response and minimize risks during emergency situations.</p>
-        </li>
-    </ul>
-
-    <h3>Problem Definition</h3>
-    <p>Aurangabad aims to tackle urban challenges by focusing on efficient infrastructure, sustainability, and economic viability. Key aspects include optimizing traffic management, integrating smart public transport, enhancing the flow of goods and people, and preserving ecological balance.</p>
-    <p>The city combines human-centered design with ecological preservation and sustainable growth through tech parks, logistics hubs, tourism, and leveraging its coastal location for ports.</p>
+    <div class="problem-statement-box">
+        <h3>Problem Statement</h3>
+        <p>Aurangabad, a city known for its rich cultural heritage, is facing challenges in managing urban infrastructure, optimizing transportation, improving sustainability, and increasing citizen engagement. The city lacks an integrated approach to address issues like traffic congestion, inefficient public transportation, waste management, and overall citizen governance. There is a need for intelligent, data-driven solutions that promote sustainable growth, enhance quality of life, and streamline services.</p>
+    </div>
 </div>
 
-<!-- Call to Action Button -->
+<!-- Findings from White Paper Section -->
 <div class="container">
-    <a href="contact.html" class="btn">Learn More</a>
+    <div class="findings-box">
+        <h3>Findings from White Paper</h3>
+        <p>The findings highlight the city's issues related to urban planning, the lack of a unified traffic management system, insufficient public transportation, and ineffective waste management practices. The paper also emphasized the need for sustainable development, the integration of smart technologies, and citizen-centric policies to create a smarter, greener city.</p>
+    </div>
+</div>
+
+<!-- Problem Definition Section -->
+<div class="container">
+    <div class="problem-definition-box">
+        <h3>Problem Definition</h3>
+        <p>Aurangabad aims to tackle urban challenges by focusing on efficient infrastructure, sustainability, and economic viability. Key aspects include optimizing traffic management, integrating smart public transport, enhancing the flow of goods and people, and preserving ecological balance.</p>
+        <p>The city combines human-centered design with ecological preservation and sustainable growth through tech parks, logistics hubs, tourism, and leveraging its coastal location for ports.</p>
+    </div>
+</div>
+
+<!-- Business Cases Section -->
+<div class="container">
+    <h2 class="business-case-header">Business Cases for Aurangabad Smart City</h2>
+    <ul class="business-cases">
+        <li>
+            <h4>Optimal Road Network Design</h4>
+            <p>By utilizing data analytics and AI algorithms, the road network design will improve traffic flow and reduce congestion. Dynamic traffic signals and automated rerouting will optimize traffic management across the city.</p>
+        </li>
+
+        <li>
+            <h4>Smart Public Transportation Scheduling</h4>
+            <p>Leveraging IoT and machine learning, the transportation system will predict traffic patterns and adjust schedules in real-time, ensuring minimal delays.</p>
+        </li>
+
+        <li>
+            <h4>Waste and Water Management System</h4>
+            <p>Smart sensors and IoT will optimize waste collection and water usage. Real-time data will detect leaks and ensure sustainable resource management.</p>
+        </li>
+
+        <li>
+            <h4>Interactive City Entertainment Map</h4>
+            <p>AR technology will create an interactive map, guiding residents and visitors to nearby cultural events, restaurants, and entertainment options in real-time.</p>
+        </li>
+
+        <li>
+            <h4>Holographic Live Streaming</h4>
+            <p>Holographic technology will enable 3D viewing of events, creating an immersive experience for residents and visitors alike.</p>
+        </li>
+
+        <li>
+            <h4>Citizen Feedback Portal (Smart Governance)</h4>
+            <p>This portal will enable citizens to actively participate in governance, providing real-time feedback on city services and infrastructure.</p>
+        </li>
+
+        <li>
+            <h4>Real-Time Disaster Response System</h4>
+            <p>AI-driven systems will predict and respond to disasters in real-time, deploying emergency services and assisting in recovery efforts.</p>
+        </li>
+    </ul>
 </div>
 
 <!-- Footer -->
