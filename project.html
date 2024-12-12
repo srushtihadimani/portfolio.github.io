@@ -36,26 +36,23 @@
 
         /* Home Section */
         #home {
-            background: linear-gradient(135deg, #3f51b5, #7986cb); /* Indigo gradient background */
-            padding: 80px 20px;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Warm gradient background */
+            padding: 60px 20px;
             text-align: center;
-            border-radius: 15px;
+            border-radius: 10px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             color: white;
-            margin: 40px auto;
-            width: 80%;
         }
 
         #home h2 {
-            font-size: 40px;
+            font-size: 36px;
             font-weight: bold;
             margin-bottom: 20px;
         }
 
         #home p {
             font-size: 18px;
-            line-height: 1.8;
-            margin-top: 10px;
+            line-height: 1.6;
         }
 
         /* SDG Mapping, Targets, and Indicators Sections */
@@ -71,25 +68,41 @@
             font-size: 30px;
             color: #6a1b9a;
             margin-bottom: 20px;
+            text-align: center;
         }
 
+        /* Styling for Targets and Indicators info boxes */
         .sdg-info {
-            background-color: #f9f9f9;
-            padding: 20px;
+            background-color: #f0f8ff; /* Soft light blue background */
+            padding: 25px;
             border-radius: 8px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .sdg-info:hover {
+            transform: translateY(-5px); /* Subtle hover effect */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deep shadow on hover */
         }
 
         .sdg-info h4 {
-            font-size: 22px;
-            color: #e91e63; /* Pink color */
+            font-size: 24px;
+            color: #6a1b9a; /* Purple for better contrast */
             margin-bottom: 15px;
+            text-align: center;
+            font-weight: bold;
+            background-color: #6a1b9a;
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
         }
 
         .sdg-info p {
             font-size: 16px;
             color: #333;
+            line-height: 1.6;
+            text-align: justify;
         }
 
         /* Business Cases Section */
@@ -172,7 +185,7 @@
     <!-- Home Section -->
     <div id="home">
         <h2>Welcome to Business Cases and SDG Mapping</h2>
-        <p>This project focuses on aligning business cases with the Sustainable Development Goals (SDGs), addressing various global challenges with innovative solutions. We aim to create impactful contributions to society and the environment through strategic business solutions.</p>
+        <p>This project focuses on aligning business cases with the Sustainable Development Goals (SDGs), addressing various global challenges with innovative solutions.</p>
     </div>
 
     <!-- SDG Mapping, Targets, and Indicators Sections -->
