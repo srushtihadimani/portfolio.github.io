@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+a.<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Overview - Design and Analysis of Algorithms</title>
     <style>
-        /* Global Styles */
+        /* Reset and basic styles */
         * {
             margin: 0;
             padding: 0;
@@ -31,13 +31,12 @@
             font-size: 1.2rem;
             margin: 0 20px;
             padding: 10px 20px;
-            transition: background-color 0.3s, transform 0.3s;
+            transition: background-color 0.3s;
         }
 
         nav a:hover {
             background-color: #2980b9;
             border-radius: 5px;
-            transform: translateY(-5px);
         }
 
         .container {
@@ -46,139 +45,31 @@
             padding: 20px;
         }
 
-        /* Unique Team Info Box Styles */
-        .team-info-header {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            color: #333;
-            font-family: 'Verdana', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .team-info-box {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .content-box {
+            background: #34495e;
             color: white;
-            border-radius: 12px;
-            padding: 20px;
+            border-radius: 10px;
+            padding: 40px;
             margin: 20px 0;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            transform: translateY(20px);
-            animation: fadeInBox 1s ease-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .team-info-box:nth-child(1) {
-            background: #1abc9c;
-        }
-
-        .team-info-box:nth-child(2) {
-            background: #3498db;
-        }
-
-        .team-info-box:nth-child(3) {
-            background: #9b59b6;
-        }
-
-        .team-info-box h3 {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-            color: #fff;
-            font-family: 'Arial', sans-serif;
-        }
-
-        .team-info-box p {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            color: #fff;
-        }
-
-        /* Key Findings from White Paper Styles */
-        .findings-box {
-            background-color: #f39c12;
-            color: white;
-            border-radius: 12px;
-            padding: 30px;
-            margin: 40px 0;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            transform: translateY(20px);
-            animation: slideInBox 1s ease-out;
-        }
-
-        .findings-box h3 {
-            font-size: 1.6rem;
-            margin-bottom: 15px;
-        }
-
-        .findings-box p {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        /* Business Cases Section Styles */
-        .business-case-header {
+        .content-box h2 {
             text-align: center;
-            font-size: 2rem;
-            margin: 50px 0;
-            color: #2c3e50;
-            font-family: 'Helvetica', sans-serif;
+            font-size: 2.2rem;
         }
 
-        .business-cases {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+        .content-box h3 {
+            font-size: 1.8rem;
+            margin-top: 30px;
         }
 
-        .business-cases li {
-            background-color: #2ecc71;
-            color: white;
-            border-radius: 12px;
-            padding: 25px;
-            margin-bottom: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s;
-            animation: fadeInCase 1s ease-out;
-        }
-
-        .business-cases li:hover {
-            transform: translateY(-5px);
-        }
-
-        .business-cases li h4 {
-            font-size: 1.6rem;
-            margin-bottom: 10px;
-        }
-
-        .business-cases li p {
+        .content-box p, .content-box ul {
             font-size: 1.2rem;
+            line-height: 1.8;
+            margin-top: 15px;
         }
 
-        /* Problem Definition Styles */
-        .problem-definition-box {
-            background-color: #e74c3c;
-            color: white;
-            border-radius: 12px;
-            padding: 30px;
-            margin: 40px 0;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            transform: translateY(20px);
-            animation: slideInBox 1s ease-out;
-        }
-
-        .problem-definition-box h3 {
-            font-size: 1.6rem;
-            margin-bottom: 15px;
-        }
-
-        .problem-definition-box p {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        /* Footer Styles */
         footer {
             background: #2c3e50;
             color: white;
@@ -187,54 +78,55 @@
             margin-top: 40px;
         }
 
-        /* Animations */
-        @keyframes fadeInBox {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .team, .business-cases {
+            margin-top: 30px;
         }
 
-        @keyframes slideInBox {
-            0% {
-                opacity: 0;
-                transform: translateX(-30px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateX(0);
-            }
+        .team ul, .business-cases ul {
+            list-style-type: none;
+            padding-left: 0;
         }
 
-        @keyframes fadeInCase {
-            0% {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .team li, .business-cases li {
+            font-size: 1.2rem;
+            margin: 10px 0;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            nav a {
-                font-size: 1rem;
-                margin: 0 15px;
-            }
+        .team-box {
+            background: #e74c3c;
+            color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-            .container {
-                padding: 10px;
-            }
+        .team-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
 
-            .team-info-box, .problem-statement-box, .problem-definition-box, .findings-box, .business-cases li {
-                padding: 15px;
-            }
+        .team-box h3 {
+            font-size: 1.8rem;
+        }
+
+        .team-box p {
+            font-size: 1.2rem;
+        }
+
+        /* Animation for team info */
+        .team-box {
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .business-cases li {
+            margin-bottom: 15px;
         }
 
     </style>
@@ -249,92 +141,95 @@
     <a href="contact.html">Course Reflections</a>
 </nav>
 
-<!-- Team Information Section -->
+<!-- Team Information -->
 <div class="container">
-    <h2 class="team-info-header">Meet Our Team</h2>
-
-    <div class="team-info-box">
-        <h3>Aarzoo Chikkodi</h3>
-        <p><strong>SRN:</strong> 01fe23bcs276</p>
-        <p><strong>Course Instructor:</strong> Prakash Hegde</p>
-        <p><strong>University:</strong> KLE Technological University</p>
-        <p><strong>Portfolio Topic/Domain:</strong> Agricultural and Power Generation Sector</p>
+    <div class="team-box">
+        <h3>Team Information</h3>
+        <ul>
+            <li><strong>Aarzoo Chikkodi</strong> <br> SRN: 01fe23bcs276 <br> Course Instructor: Prakash Hegde <br> University: KLE Technological University <br> Portfolio Topic/Domain: Agricultural and Power Generation Sector</li>
+        </ul>
     </div>
 
-    <div class="team-info-box">
-        <h3>Srushti Hadimani</h3>
-        <p><strong>SRN:</strong> 01fe23bcs260</p>
-        <p><strong>Course Instructor:</strong> Prakash Hegde</p>
-        <p><strong>University:</strong> KLE Technological University</p>
-        <p><strong>Portfolio Topic/Domain:</strong> Digital Governance for City</p>
+    <div class="team-box">
+        <h3>Team Information</h3>
+        <ul>
+            <li><strong>Srushti Hadimani</strong> <br> SRN: 01fe23bcs260 <br> Course Instructor: Prakash Hegde <br> University: KLE Technological University <br> Portfolio Topic/Domain: Digital Governance for City</li>
+        </ul>
     </div>
 
-    <div class="team-info-box">
-        <h3>Shifa</h3>
-        <p><strong>SRN:</strong> 01fe23bcs046</p>
-        <p><strong>Course Instructor:</strong> Prakash Hegde</p>
-        <p><strong>University:</strong> KLE Technological University</p>
-        <p><strong>Portfolio Topic/Domain:</strong> Smart Entertainment in City</p>
+    <div class="team-box">
+        <h3>Team Information</h3>
+        <ul>
+            <li><strong>Shifa</strong> <br> SRN: 01fe23bcs046 <br> Course Instructor: Prakash Hegde <br> University: KLE Technological University <br> Portfolio Topic/Domain: Smart Entertainment in City</li>
+        </ul>
     </div>
 </div>
 
-<!-- Key Findings from White Paper Section -->
+<!-- Main content container -->
 <div class="container">
-    <div class="findings-box">
+    <div class="content-box" id="project-overview">
+        <h2>Project Overview</h2>
+        <p>This section provides an overview of the projects undertaken during the Design and Analysis of Algorithms course. It includes detailed insights into the problem-solving techniques, the algorithms implemented, and their real-world applications.</p>
+        <p>Each project is designed to solidify your understanding of algorithmic principles and their applications in diverse fields such as data science, optimization, and software development.</p>
+
+        <h3>Aurangabad Smart City Project</h3>
+        <p>Aurangabad, our smart city project, was conceptualized to create a city that is not just infrastructure-efficient but also functionally smart. The goal was to ensure seamless functioning, improve the quality of life, and generate sustainable revenue streams.</p>
+        <p>The project was inspired by insights from the white paper authored by Prakash Hegde and addressed challenges related to traffic management, tourism, food production, public transport, technology, and community well-being.</p>
+
         <h3>Key Findings from the White Paper</h3>
-        <p><strong>Urban Dynamics and Street Life:</strong> Drawing inspiration from Mumbai’s vibrant street culture, Aurangabad aims to integrate urban art and cultural heritage into public spaces. By enhancing the city's vibrancy, the design will foster inclusivity and engagement, turning public areas into dynamic hubs of activity. A pedestrian-centric approach will redefine the street experience, blending tradition with modernity for an immersive urban environment.</p>
-        <p><strong>City Design for Sustainability and Technological Innovation:</strong> Following the model of Matheran’s vehicle-free design, Aurangabad will prioritize environmental sustainability through sustainable transportation networks and green architecture. The focus will be on blending cutting-edge technology with eco-friendly design to create a smart city where sustainability and culture coalesce. This approach will ensure a balance between modern infrastructure and the preservation of the city’s natural and cultural assets.</p>
-        <p><strong>Connectivity and Smart Commuting Solutions:</strong> By studying Mumbai’s efficient local train systems, Aurangabad is set to revolutionize urban mobility. The city will introduce a multi-modal transport network, featuring integrated smart buses, electric vehicles, and smart traffic systems. Real-time data and AI-driven algorithms will optimize traffic flow, reduce congestion, and improve the overall commuter experience. The goal is to create a connected and responsive transport ecosystem that evolves with the city's growing demands.</p>
-    </div>
-</div>
+        <ul>
+            <li><strong>Urban Dynamics and Street Life:</strong> Inspired by Mumbai’s vibrant street life, Aurangabad will incorporate art, culture, and public spaces reflecting the residents' dynamic urban life.</li>
+            <li><strong>City Design and Smart Cities:</strong> Drawing lessons from Matheran’s vehicle-free model, Aurangabad will prioritize sustainability and cultural heritage over mere technological advancements.</li>
+            <li><strong>Commuting and City Connectivity:</strong> Inspired by Mumbai’s local trains, Aurangabad will focus on efficient and eco-friendly public transport systems.</li>
+        </ul>
 
-<!-- Business Cases for Aurangabad Smart City Section -->
-<div class="container">
-    <h2 class="business-case-header">Business Cases for Aurangabad Smart City</h2>
-    <ul class="business-cases">
-        <li>
-            <h4>Intelligent Road Network Optimization</h4>
-            <p>The development of an intelligent road network for Aurangabad will be underpinned by real-time data analytics and AI-driven decision-making. Dynamic traffic management systems, predictive algorithms, and integrated sensors will allow for adaptive signalization and traffic flow management, ensuring that congestion is minimized, even during peak hours. The road network will also integrate with autonomous vehicle technology, providing a forward-thinking solution to urban mobility.</p>
-        </li>
+        <h3>Business Cases for Aurangabad Smart City</h3>
+        <ul>
+            <li>
+                <strong>Optimal Road Network Design</strong>
+                <p>By utilizing data analytics and AI algorithms, the road network design will not only improve traffic flow but also reduce congestion during peak hours. Dynamic traffic signals and automated rerouting will ensure optimal traffic management across the city. Additionally, real-time monitoring systems will continuously adjust the road networks for ongoing improvements and efficiency.</p>
+            </li>
 
-        <li>
-            <h4>Smart Public Transport Ecosystem</h4>
-            <p>Leveraging Internet of Things (IoT) and machine learning, Aurangabad’s public transport system will be transformed into a fully integrated and adaptive network. By analyzing historical data and real-time traffic conditions, buses and other public transport modes will adjust their routes and schedules dynamically. The system will offer passengers seamless access to live updates and allow for predictive journey planning, making commuting not only efficient but also user-friendly.</p>
-        </li>
+            <li>
+                <strong>Smart Public Transportation Scheduling</strong>
+                <p>Leveraging IoT and machine learning, the transportation system will predict traffic patterns and adjust schedules in real-time, ensuring minimal delays. Passengers will have access to an app providing live updates, route recommendations, and peak-time alerts, making public transportation more reliable and accessible. Smart buses will adapt their routes based on demand, reducing wait times and enhancing overall efficiency.</p>
+            </li>
 
-        <li>
-            <h4>Sustainable Waste and Water Management</h4>
-            <p>IoT-based sensors and AI algorithms will form the backbone of a smart waste and water management system. For waste, AI-powered analytics will optimize waste collection routes, track recycling efforts, and monitor the effectiveness of sustainability programs. On the water side, smart meters and real-time data collection will minimize waste and inefficiencies, providing insights into consumption patterns, and detecting leaks automatically, leading to improved conservation and resource management.</p>
-        </li>
+            <li>
+                <strong>Waste and Water Management System</strong>
+                <p>With smart sensors and IoT, waste collection will be optimized, directing trucks only to full bins, and recycling systems will identify and sort waste autonomously. Water management will use smart meters and real-time sensors to detect leaks, track consumption, and provide data-driven insights for sustainable water usage. This will ensure cleaner streets, lower costs, and more sustainable practices in managing resources.</p>
+            </li>
 
-        <li>
-            <h4>Augmented Reality-Based Cultural Exploration</h4>
-            <p>Leveraging augmented reality (AR), residents and visitors will experience a dynamic, interactive city map that highlights nearby cultural events, restaurants, and entertainment options in real time. A personal assistant feature will suggest customized itineraries based on preferences, time, and location, making exploration more engaging. Integration with local businesses and event organizers will enable instant bookings and reservations directly through the app.</p>
-        </li>
+            <li>
+                <strong>Interactive City Entertainment Map</strong>
+                <p>Utilizing augmented reality (AR), residents and visitors will experience a dynamic, interactive city map that highlights nearby cultural events, restaurants, and entertainment options in real time. A personal assistant feature will suggest customized itineraries based on preferences, time, and location, making exploration more engaging. Integration with local businesses and event organizers will enable instant bookings and reservations directly through the app.</p>
+            </li>
 
-        <li>
-            <h4>Holographic Live Streaming</h4>
-            <p>By incorporating holographic technology, residents can watch events like concerts, city council meetings, or live performances from home in 3D. This immersive experience will bring people closer to events, bridging the gap between the physical and virtual worlds. Businesses can leverage this for advertising, offering interactive and futuristic displays that captivate potential customers in a whole new way.</p>
-        </li>
+            <li>
+                <strong>Holographic Live Streaming</strong>
+                <p>By incorporating holographic technology, residents can watch events like concerts, city council meetings, or live performances from home in 3D. This immersive experience will bring people closer to events, bridging the gap between the physical and virtual worlds. Businesses can leverage this for advertising, offering interactive and futuristic displays that captivate potential customers in a whole new way.</p>
+            </li>
 
-        <li>
-            <h4>Citizen Feedback Portal (Smart Governance)</h4>
-            <p>This portal will enable citizens to actively participate in governance, providing real-time feedback on city services, infrastructure, and policies. AI-driven sentiment analysis will allow city leaders to understand public opinion, prioritize issues, and respond effectively. A gamified feedback system will encourage engagement, offering rewards or recognition for active contributions, making governance more inclusive and transparent.</p>
-        </li>
-    </ul>
-</div>
+            <li>
+                <strong>Citizen Feedback Portal (Smart Governance)</strong>
+                <p>This portal will enable citizens to actively participate in governance, providing real-time feedback on city services, infrastructure, and policies. AI-driven sentiment analysis will allow city leaders to understand public opinion, prioritize issues, and respond effectively. A gamified feedback system will encourage engagement, offering rewards or recognition for active contributions, making governance more transparent and community-oriented.</p>
+            </li>
 
-<!-- Problem Definition Section -->
-<div class="container">
-    <div class="problem-definition-box">
+            <li>
+                <strong>Real-Time Disaster Response System</strong>
+                <p>Equipped with AI and machine learning, this system will predict potential disasters (floods, fires, earthquakes) and deploy emergency services automatically based on real-time data. Drones and autonomous vehicles will assist in delivering aid, surveying damaged areas, and providing timely updates to the public. Integrated with a citizen notification system, the city will ensure rapid response and minimize risks during emergency situations.</p>
+            </li>
+        </ul>
+
         <h3>Problem Definition</h3>
-        <p>The primary challenge faced by Aurangabad is managing rapid urbanization while ensuring sustainable growth. The city's infrastructure is under strain from increasing population density, traffic congestion, and environmental degradation. With limited resources, the city must address the need for improved transportation, waste management, energy efficiency, and citizen engagement. Furthermore, urban sprawl and inadequate public services have exacerbated issues related to health, safety, and accessibility. This project aims to leverage advanced technologies to create innovative solutions that enhance the quality of urban life, streamline governance, and promote sustainability.</p>
+        <p>Aurangabad aims to tackle urban challenges by focusing on efficient infrastructure, sustainability, and economic viability. Key aspects include optimizing traffic management, integrating smart public transport, enhancing the flow of goods and people, and preserving ecological balance.</p>
+        <p>The city combines human-centered design with ecological preservation and sustainable growth through tech parks, logistics hubs, tourism, and leveraging its coastal location for ports.</p>
     </div>
 </div>
 
 <!-- Footer -->
 <footer>
-    <p>&copy; 2024 KLE Technological University. All Rights Reserved.</p>
+    <p>All Rights Reserved.</p>
 </footer>
 
 </body>
