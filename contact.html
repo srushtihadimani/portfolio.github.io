@@ -4,30 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course Learning Reflections</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            background-color: #f5f5f5;
             font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
         }
-        table {
-            width: 80%;
-            margin: 20px auto;
-            border-collapse: collapse;
-            background-color: #ffffff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-around;
         }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
+        nav ul li {
+            display: inline;
         }
-        th {
-            background-color: #4CAF50;
+        nav ul li a {
+            display: block;
             color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+        main {
+            padding: 20px;
         }
         h1, h2 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #fff;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            text-align: left;
+            padding: 12px;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .highlight {
+            background-color: #e0f7fa;
+        }
+        footer {
             text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
@@ -46,22 +84,18 @@
         <p>Welcome to the Course Learning Reflections page. This page is dedicated to sharing insights and personal growth gained throughout the course.</p>
 
         <table>
-            <thead>
-                <tr>
-                    <th>Section</th>
-                    <th>Content</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Key Takeaways</td>
-                    <td>Here, I will reflect on the major learning points and experiences from my journey. Content coming soon!</td>
-                </tr>
-                <tr>
-                    <td><a href="https://srushtihadimani.github.io/coursereflection.github.io/">Srushti Hadimani</a></td>
-                    <td>Explore an in-depth discussion about algorithms and data structures by Srushti Hadimani.</td>
-                </tr>
-            </tbody>
+            <tr class="highlight">
+                <th>Reflection</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td>Key Takeaways</td>
+                <td>Here, I will reflect on the major learning points and experiences from my journey. Content coming soon!</td>
+            </tr>
+            <tr class="highlight">
+                <td><a href="https://srushtihadimani.github.io/coursereflection.github.io/">Srushti Hadimani</a></td>
+                <td>Explore an in-depth discussion about algorithms and data structures by Srushti Hadimani.</td>
+            </tr>
         </table>
     </main>
 
