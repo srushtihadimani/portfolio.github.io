@@ -243,7 +243,7 @@
             </div>
         </div>
 
-        
+
 
         <!-- SDGs undertaken by Srushti Hadimani -->
         <div class="group-heading">Business cases undertaken by Srushti Hadimani</div>
@@ -470,6 +470,38 @@ int main() {
         </div>
 
     </div>
+                
+<script>
+    // Function to toggle the display of SDG details
+    function toggleSDGDetails(sdgId) {
+        var details = document.getElementById(sdgId);
+        
+        // Check if the details for this SDG are currently visible
+        if (details.style.display === 'block') {
+            // Hide the details if it's already visible
+            details.style.display = 'none';
+        } else {
+            // Show the details for the clicked SDG
+            details.style.display = 'block';
+        }
+    }
+
+    // Function to toggle the visibility of other SDG details
+    function hideOtherSDGDetails(exceptId) {
+        var allDetails = document.querySelectorAll('.sdg-details');
+        allDetails.forEach(function (detail) {
+            if (detail.id !== exceptId) {
+                detail.style.display = 'none';
+            }
+        });
+    }
+
+    // Function to handle SDG click (shows details and hides others)
+    function handleSDGClick(sdgId) {
+        toggleSDGDetails(sdgId);
+        hideOtherSDGDetails(sdgId);
+    }
+</script>
 
 </body>
 </html>
