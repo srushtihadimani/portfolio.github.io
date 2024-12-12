@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Overview - Design and Analysis of Algorithms</title>
     <style>
-        /* Add your styles here */
+        /* Reset and basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Arial', sans-serif;
             background: #f8f8f8;
             color: #333;
             line-height: 1.6;
-            margin: 0;
-            padding: 0;
         }
-        
+
         nav {
             background: #34495e;
             padding: 15px 0;
@@ -87,6 +91,44 @@
             font-size: 1.2rem;
             margin: 10px 0;
         }
+
+        .team-box {
+            background: #e74c3c;
+            color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-box h3 {
+            font-size: 1.8rem;
+        }
+
+        .team-box p {
+            font-size: 1.2rem;
+        }
+
+        /* Animation for team info */
+        .team-box {
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .business-cases li {
+            margin-bottom: 15px;
+        }
+
     </style>
 </head>
 <body>
@@ -98,6 +140,30 @@
     <a href="about.html">Project Overview</a>
     <a href="contact.html">Course Reflections</a>
 </nav>
+
+<!-- Team Information -->
+<div class="container">
+    <div class="team-box">
+        <h3>Team Information</h3>
+        <ul>
+            <li><strong>Aarzoo Chikkodi</strong> <br> SRN: 01fe23bcs276 <br> Course Instructor: Prakash Hegde <br> University: KLE Technological University <br> Portfolio Topic/Domain: Agricultural and Power Generation Sector</li>
+        </ul>
+    </div>
+
+    <div class="team-box">
+        <h3>Team Information</h3>
+        <ul>
+            <li><strong>Srushti Hadimani</strong> <br> SRN: 01fe23bcs260 <br> Course Instructor: Prakash Hegde <br> University: KLE Technological University <br> Portfolio Topic/Domain: Digital Governance for City</li>
+        </ul>
+    </div>
+
+    <div class="team-box">
+        <h3>Team Information</h3>
+        <ul>
+            <li><strong>Shifa</strong> <br> SRN: 01fe23bcs046 <br> Course Instructor: Prakash Hegde <br> University: KLE Technological University <br> Portfolio Topic/Domain: Smart Entertainment in City</li>
+        </ul>
+    </div>
+</div>
 
 <!-- Main content container -->
 <div class="container">
@@ -119,13 +185,40 @@
 
         <h3>Business Cases for Aurangabad Smart City</h3>
         <ul>
-            <li><strong>Optimal Road Network Design</strong></li>
-            <li><strong>Smart Public Transportation Scheduling</strong></li>
-            <li><strong>Waste and Water Management System</strong></li>
-            <li><strong>Interactive City Entertainment Map</strong></li>
-            <li><strong>Holographic Live Streaming</strong></li>
-            <li><strong>Citizen Feedback Portal (Smart Governance)</strong></li>
-            <li><strong>Real-Time Disaster Response System</strong></li>
+            <li>
+                <strong>Optimal Road Network Design</strong>
+                <p>By utilizing data analytics and AI algorithms, the road network design will not only improve traffic flow but also reduce congestion during peak hours. Dynamic traffic signals and automated rerouting will ensure optimal traffic management across the city. Additionally, real-time monitoring systems will continuously adjust the road networks for ongoing improvements and efficiency.</p>
+            </li>
+
+            <li>
+                <strong>Smart Public Transportation Scheduling</strong>
+                <p>Leveraging IoT and machine learning, the transportation system will predict traffic patterns and adjust schedules in real-time, ensuring minimal delays. Passengers will have access to an app providing live updates, route recommendations, and peak-time alerts, making public transportation more reliable and accessible. Smart buses will adapt their routes based on demand, reducing wait times and enhancing overall efficiency.</p>
+            </li>
+
+            <li>
+                <strong>Waste and Water Management System</strong>
+                <p>With smart sensors and IoT, waste collection will be optimized, directing trucks only to full bins, and recycling systems will identify and sort waste autonomously. Water management will use smart meters and real-time sensors to detect leaks, track consumption, and provide data-driven insights for sustainable water usage. This will ensure cleaner streets, lower costs, and more sustainable practices in managing resources.</p>
+            </li>
+
+            <li>
+                <strong>Interactive City Entertainment Map</strong>
+                <p>Utilizing augmented reality (AR), residents and visitors will experience a dynamic, interactive city map that highlights nearby cultural events, restaurants, and entertainment options in real time. A personal assistant feature will suggest customized itineraries based on preferences, time, and location, making exploration more engaging. Integration with local businesses and event organizers will enable instant bookings and reservations directly through the app.</p>
+            </li>
+
+            <li>
+                <strong>Holographic Live Streaming</strong>
+                <p>By incorporating holographic technology, residents can watch events like concerts, city council meetings, or live performances from home in 3D. This immersive experience will bring people closer to events, bridging the gap between the physical and virtual worlds. Businesses can leverage this for advertising, offering interactive and futuristic displays that captivate potential customers in a whole new way.</p>
+            </li>
+
+            <li>
+                <strong>Citizen Feedback Portal (Smart Governance)</strong>
+                <p>This portal will enable citizens to actively participate in governance, providing real-time feedback on city services, infrastructure, and policies. AI-driven sentiment analysis will allow city leaders to understand public opinion, prioritize issues, and respond effectively. A gamified feedback system will encourage engagement, offering rewards or recognition for active contributions, making governance more transparent and community-oriented.</p>
+            </li>
+
+            <li>
+                <strong>Real-Time Disaster Response System</strong>
+                <p>Equipped with AI and machine learning, this system will predict potential disasters (floods, fires, earthquakes) and deploy emergency services automatically based on real-time data. Drones and autonomous vehicles will assist in delivering aid, surveying damaged areas, and providing timely updates to the public. Integrated with a citizen notification system, the city will ensure rapid response and minimize risks during emergency situations.</p>
+            </li>
         </ul>
 
         <h3>Problem Definition</h3>
@@ -136,7 +229,7 @@
 
 <!-- Footer -->
 <footer>
-    &copy; 2024 Design and Analysis of Algorithms. All rights reserved.
+    <p>All Rights Reserved.</p>
 </footer>
 
 </body>
