@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Design and Analysis of Algorithms</title>
+    <title>Design and Analysis of Algorithms</title>
     <style>
         /* Reset and basic styles */
         * {
@@ -50,8 +50,8 @@
             background: linear-gradient(135deg, #3498db, #8e44ad);
             color: white;
             text-align: center;
-            padding: 100px 20px; /* Increased padding to make header larger */
-            font-size: 4rem; /* Increased font size */
+            padding: 80px 20px;
+            font-size: 3rem;
             font-family: 'Quicksand', sans-serif;
             font-weight: 600;
             text-transform: uppercase;
@@ -72,28 +72,20 @@
             z-index: -1;
         }
 
-        /* Divider between header and content */
-        .divider {
-            width: 100%;
-            height: 2px;
-            background-color: #3498db;
-            margin: 20px 0;
-        }
-
         /* Main content container */
         .container {
             max-width: 1200px;
-            margin: 40px auto; /* Reduced margin to bring content closer */
+            margin: 140px auto;
             padding: 20px;
         }
 
         /* Section Box Styles with lighter and more modern colors */
         .section-box {
-            background: #e3f2fd; /* Light blue shade */
+            background: #e3f2fd;
             color: #333;
             border-radius: 10px;
             padding: 30px;
-            margin: 15px 0; /* Reduced margin */
+            margin: 15px 0;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -144,7 +136,7 @@
 
             header {
                 font-size: 2.5rem;
-                padding: 80px 20px;
+                padding: 60px 20px;
             }
 
             .section-box {
@@ -163,78 +155,60 @@
     </style>
 </head>
 <body>
-
-<!-- Navigation Bar -->
-<nav>
-    <a href="index.html" class="active">Home</a>
-    <a href="project.html">Business Cases</a>
-    <a href="about.html">Project Overview</a>
-    <a href="contact.html">Course Reflections</a>
-</nav>
-
-<!-- Header -->
-<header>
-    Welcome to the Design and Analysis of Algorithms Course
-</header>
-
-<!-- Divider between header and content -->
-<div class="divider"></div>
-
-<!-- Main content -->
-<div class="container">
-    <!-- Home Section -->
-    <div id="home" class="section-box">
-        <h2>About the Course</h2>
-        <p>This course is designed to teach you the fundamentals of algorithms and data structures, which are the core of computer science. Through understanding the design, analysis, and application of algorithms, you will be equipped to solve complex computational problems efficiently.</p>
-        <p>The course covers topics like time and space complexity analysis, recursion, sorting algorithms, and graph algorithms. As you progress, you'll explore advanced data structures such as trees, heaps, and graphs, and solve problems using techniques like dynamic programming and greedy algorithms.</p>
-    </div>
-
-    <!-- Key Concepts Covered -->
-    <div class="section-box" style="background: #c5cae9;">
-        <h2>Key Concepts Covered</h2>
+    <!-- Header -->
+    <header>
+        <h1>Hello, We are:</h1>
         <ul>
-            <li><strong>Time and Space Complexity:</strong> Learn how to evaluate the efficiency of algorithms using Big O notation.</li>
-            <li><strong>Sorting Algorithms:</strong> Explore sorting algorithms like QuickSort, MergeSort, and HeapSort.</li>
-            <li><strong>Graph Algorithms:</strong> Study algorithms for graph traversal and optimization, such as Dijkstra’s and Prim’s.</li>
-            <li><strong>Advanced Data Structures:</strong> Dive into AVL Trees, Red-Black Trees, Segment Trees, and more.</li>
+            <li>Srushti Hadimani</li>
+            <li>Aarzoo</li>
+            <li>Shifa Afnan</li>
+            <li>👋😎</li>
         </ul>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#home" class="active">Home</a>
+        <a href="#business-cases">Business Cases</a>
+        <a href="#reflections">Course Reflections</a>
+    </nav>
+
+    <!-- Main content -->
+    <div class="container">
+        <!-- Home Section -->
+        <div id="home" class="section-box">
+            <h2>About the Course</h2>
+            <p>This course is designed to teach you the fundamentals of algorithms and data structures...</p>
+        </div>
+
+        <!-- Business Cases Section -->
+        <div id="business-cases" class="section-box" style="background: #c5cae9;">
+            <h2>Case Study 1: Optimizing Delivery Routes</h2>
+            <p>Using graph algorithms to optimize delivery routes for a logistics company...</p>
+        </div>
+
+        <div id="business-cases" class="section-box" style="background: #c5cae9;">
+            <h2>Case Study 2: E-Commerce Search Algorithms</h2>
+            <p>Application of search algorithms to improve product search ranking...</p>
+        </div>
+
+        <!-- Reflections Section -->
+        <div id="reflections" class="section-box" style="background: #bbdefb;">
+            <h2>What We Learned</h2>
+            <p>Throughout the course, we gained a deep understanding of how algorithms can be used...</p>
+        </div>
+        <div id="reflections" class="section-box" style="background: #bbdefb;">
+            <h2>Key Takeaways</h2>
+            <ul>
+                <li>Understanding algorithm complexity is essential for optimizing solutions.</li>
+                <li>Applying theory to practical scenarios helps in solving real-world problems.</li>
+            </ul>
+        </div>
     </div>
 
-    <!-- Why This Course Matters -->
-    <div class="section-box" style="background: #bbdefb;">
-        <h2>Why This Course Matters</h2>
-        <ul>
-            <li><strong>Real-World Applications:</strong> Algorithms are crucial for solving real-world problems in areas like transportation, finance, and healthcare.</li>
-            <li><strong>Competitive Programming:</strong> Develop skills to excel in coding competitions with problem-solving strategies.</li>
-            <li><strong>Optimization:</strong> Apply algorithms to optimize resource usage in systems, networks, and software applications.</li>
-        </ul>
-    </div>
-
-    <!-- Real-World Applications -->
-    <div class="section-box" style="background: #e8f5e9;">
-        <h2>Real-World Applications</h2>
-        <ul>
-            <li><strong>Smart City Design:</strong> Use graph algorithms to optimize traffic, public transport, and resource management in urban environments.</li>
-            <li><strong>Data Analysis:</strong> Efficiently process and analyze large datasets using sorting and searching algorithms.</li>
-            <li><strong>Cybersecurity:</strong> Hashing algorithms play a key role in securing data, such as password encryption.</li>
-        </ul>
-    </div>
-
-    <!-- Course Highlights -->
-    <div class="section-box" style="background: #e1f5fe;">
-        <h2>Course Highlights</h2>
-        <ul>
-            <li><strong>Comprehensive Coverage:</strong> From basic algorithms to advanced problem-solving techniques.</li>
-            <li><strong>Practical Focus:</strong> Apply the concepts learned through real-world projects and case studies.</li>
-            <li><strong>Industry Relevance:</strong> Gain skills that are highly valued in the tech industry for roles in software development and beyond.</li>
-        </ul>
-    </div>
-</div>
-
-<!-- Footer -->
-<footer>
-    &copy; 2024 Design and Analysis of Algorithms Course | All rights reserved
-</footer>
-
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Design and Analysis of Algorithms Course | All rights reserved
+    </footer>
 </body>
 </html>
