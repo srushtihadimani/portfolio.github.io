@@ -13,8 +13,8 @@
         }
 
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f1f1f1;
+            font-family: 'Arial', sans-serif;
+            background: #f8f8f8;
             color: #333;
             line-height: 1.6;
         }
@@ -36,80 +36,97 @@
             margin: 0 15px;
             font-size: 1.1rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: bold;
         }
 
-        nav a:hover, nav a.active {
+        nav a:hover {
             background: #16a085;
             border-radius: 5px;
         }
 
-        /* Header with modern background */
+        /* Header */
         header {
-            background: linear-gradient(135deg, #3498db, #8e44ad);
+            background: #2980b9;
             color: white;
             text-align: center;
             padding: 80px 20px;
             font-size: 3rem;
-            font-family: 'Quicksand', sans-serif;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            position: relative;
-        }
-
-        /* Header overlay */
-        header::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.4);
-            opacity: 0.4;
-            z-index: -1;
+            font-weight: bold;
+            letter-spacing: 2px;
         }
 
         /* Main content container */
         .container {
             max-width: 1200px;
-            margin: 140px auto;
+            margin: 100px auto;
             padding: 20px;
         }
 
-        /* Section Box Styles with lighter and more modern colors */
-        .section-box {
-            background: #e3f2fd;
-            color: #333;
+        /* Main box */
+        .main-box {
+            background: #34495e;
+            color: white;
             border-radius: 10px;
-            padding: 30px;
-            margin: 15px 0;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 40px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .section-box:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-        }
-
-        .section-box h2 {
-            margin-bottom: 10px;
+        .main-box h2 {
+            text-align: center;
             font-size: 2.5rem;
-            color: #2c3e50;
         }
 
-        .section-box p {
+        .main-box p {
             font-size: 1.1rem;
             line-height: 1.8;
+            margin-bottom: 20px;
         }
 
-        .section-box ul {
-            list-style: disc;
-            margin-left: 20px;
+        /* Trembling animation effect for boxes */
+        @keyframes tremble {
+            0% { transform: translateX(0); }
+            10% { transform: translateX(-5px); }
+            20% { transform: translateX(5px); }
+            30% { transform: translateX(-5px); }
+            40% { transform: translateX(5px); }
+            50% { transform: translateX(0); }
+        }
+
+        .sub-box {
+            background: #e74c3c;
+            color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: tremble 0.5s ease-in-out;
+        }
+
+        .sub-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .sub-box ul {
             font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .sub-box .icon {
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        /* Two-column layout for sub-topic boxes */
+        .sub-boxes-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .sub-boxes-container .sub-box {
+            width: 48%;
+            margin-bottom: 20px;
         }
 
         /* Footer */
@@ -123,92 +140,78 @@
             bottom: 0;
         }
 
-        /* Media Queries for responsiveness */
-        @media (max-width: 768px) {
-            nav {
-                padding: 10px 0;
-            }
-
-            nav a {
-                font-size: 1rem;
-                padding: 8px 15px;
-            }
-
-            header {
-                font-size: 2.5rem;
-                padding: 60px 20px;
-            }
-
-            .section-box {
-                padding: 25px;
-            }
-
-            footer {
-                font-size: 0.9rem;
-                padding: 0.5rem;
-            }
-        }
-
-        /* Importing fonts */
-        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <h1>Hello, We are:</h1>
-        <ul>
-            <li>Srushti Hadimani</li>
-            <li>Aarzoo</li>
-            <li>Shifa Afnan</li>
-            <li>👋😎</li>
-        </ul>
-    </header>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <a href="#home" class="active">Home</a>
-        <a href="#business-cases">Business Cases</a>
-        <a href="#reflections">Course Reflections</a>
-    </nav>
+<!-- Navigation Bar -->
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#business-cases">Business Cases</a>
+    <a href="#course-reflections">Course Reflections</a>
+</nav>
 
-    <!-- Main content -->
-    <div class="container">
-        <!-- Home Section -->
-        <div id="home" class="section-box">
-            <h2>About the Course</h2>
-            <p>This course is designed to teach you the fundamentals of algorithms and data structures...</p>
-        </div>
+<!-- Header -->
+<header>
+    Welcome to the Design and Analysis of Algorithms Course
+</header>
 
-        <!-- Business Cases Section -->
-        <div id="business-cases" class="section-box" style="background: #c5cae9;">
-            <h2>Case Study 1: Optimizing Delivery Routes</h2>
-            <p>Using graph algorithms to optimize delivery routes for a logistics company...</p>
-        </div>
+<!-- Main content -->
+<div class="container">
+    <div id="home" class="main-box">
+        <h2>What is this Course About?</h2>
+        <p>This course is designed to teach you the fundamentals of algorithms and data structures, which are the core of computer science. Through understanding the design, analysis, and application of algorithms, you will be equipped to solve complex computational problems efficiently.</p>
+        <p>The course covers topics like time and space complexity analysis, recursion, sorting algorithms, and graph algorithms. As you progress, you'll explore advanced data structures such as trees, heaps, and graphs, and solve problems using techniques like dynamic programming and greedy algorithms.</p>
+    </div>
 
-        <div id="business-cases" class="section-box" style="background: #c5cae9;">
-            <h2>Case Study 2: E-Commerce Search Algorithms</h2>
-            <p>Application of search algorithms to improve product search ranking...</p>
-        </div>
-
-        <!-- Reflections Section -->
-        <div id="reflections" class="section-box" style="background: #bbdefb;">
-            <h2>What We Learned</h2>
-            <p>Throughout the course, we gained a deep understanding of how algorithms can be used...</p>
-        </div>
-        <div id="reflections" class="section-box" style="background: #bbdefb;">
-            <h2>Key Takeaways</h2>
+    <!-- Sub-topic boxes side-by-side -->
+    <div class="sub-boxes-container">
+        <div class="sub-box">
+            <h3>Key Concepts Covered</h3>
             <ul>
-                <li>Understanding algorithm complexity is essential for optimizing solutions.</li>
-                <li>Applying theory to practical scenarios helps in solving real-world problems.</li>
+                <li><strong>Time and Space Complexity:</strong> Learn how to evaluate the efficiency of algorithms using Big O notation.</li>
+                <li><strong>Sorting Algorithms:</strong> Explore sorting algorithms like QuickSort, MergeSort, and HeapSort.</li>
+                <li><strong>Graph Algorithms:</strong> Study algorithms for graph traversal and optimization, such as Dijkstra’s and Prim’s.</li>
+                <li><strong>Advanced Data Structures:</strong> Dive into AVL Trees, Red-Black Trees, Segment Trees, and more.</li>
+            </ul>
+        </div>
+
+        <div class="sub-box">
+            <h3>Why This Course Matters</h3>
+            <ul>
+                <li><strong>Real-World Applications:</strong> Algorithms are crucial for solving real-world problems in areas like transportation, finance, and healthcare.</li>
+                <li><strong>Competitive Programming:</strong> Develop skills to excel in coding competitions with problem-solving strategies.</li>
+                <li><strong>Optimization:</strong> Apply algorithms to optimize resource usage in systems, networks, and software applications.</li>
             </ul>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        &copy; 2024 Design and Analysis of Algorithms Course | All rights reserved
-    </footer>
+    <div class="sub-boxes-container">
+        <div class="sub-box">
+            <h3>Real-World Applications</h3>
+            <ul>
+                <li><strong>Smart City Design:</strong> Use graph algorithms to optimize traffic, public transport, and resource management in urban environments.</li>
+                <li><strong>Data Analysis:</strong> Efficiently process and analyze large datasets using sorting and searching algorithms.</li>
+                <li><strong>Cybersecurity:</strong> Hashing algorithms play a key role in securing data, such as password encryption.</li>
+            </ul>
+        </div>
+
+        <div class="sub-box">
+            <h3>Course Highlights</h3>
+            <ul>
+                <li><strong>Comprehensive Coverage:</strong> From basic algorithms to advanced problem-solving techniques.</li>
+                <li><strong>Practical Focus:</strong> Apply the concepts learned through real-world projects and case studies.</li>
+                <li><strong>Industry Relevance:</strong> Gain skills that are highly valued in the tech industry for roles in software development, data science, and more.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    &copy; 2024 Design and Analysis of Algorithms. All rights reserved.
+</footer>
+
 </body>
 </html>
