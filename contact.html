@@ -5,71 +5,144 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course Learning Reflections</title>
     <style>
+        /* Global Styles */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fc;
             margin: 0;
             padding: 0;
+            color: #333;
         }
+
+        /* Header and Navigation Styles */
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
         nav ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
             background-color: #333;
-            overflow: hidden;
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
         }
+
         nav ul li {
             display: inline;
         }
+
         nav ul li a {
             display: block;
             color: white;
             text-align: center;
-            padding: 14px 20px;
+            padding: 15px 25px;
             text-decoration: none;
+            font-size: 1em;
         }
+
         nav ul li a:hover {
             background-color: #575757;
         }
+
+        /* Main Content Styling */
         main {
+            max-width: 1200px;
+            margin: 50px auto;
             padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
-        h1, h2 {
+
+        h1 {
             color: #333;
+            font-size: 2.5em;
+            margin-bottom: 20px;
         }
+
+        h2 {
+            color: #4CAF50;
+            font-size: 1.75em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Table Styling */
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
-            background-color: #fff;
         }
+
         table, th, td {
             border: 1px solid #ddd;
         }
+
         th, td {
+            padding: 15px;
             text-align: left;
-            padding: 12px;
+            font-size: 1.1em;
         }
+
         th {
             background-color: #f4f4f4;
+            color: #555;
         }
+
+        td {
+            background-color: #fafafa;
+        }
+
+        td a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        td a:hover {
+            text-decoration: underline;
+        }
+
         .highlight {
-            background-color: #e0f7fa;
+            background-color: #f9f9f9;
         }
+
+        /* Footer Styling */
         footer {
-            text-align: center;
-            padding: 10px;
             background-color: #333;
             color: white;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 1em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            main {
+                margin: 20px;
+            }
         }
     </style>
 </head>
 <body>
+
+    <header>
+        Course Learning Reflections
+    </header>
+
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -81,8 +154,9 @@
 
     <main>
         <h1>Course Learning Reflections</h1>
-        <p>Welcome to the Course Learning Reflections page. This page is dedicated to sharing insights and personal growth gained throughout the course.</p>
+        <p>Welcome to the Course Learning Reflections page. This page highlights the insights, personal growth, and key takeaways I gained throughout the course.</p>
 
+        <h2>Reflections</h2>
         <table>
             <tr class="highlight">
                 <th>Reflection</th>
@@ -90,13 +164,12 @@
             </tr>
             <tr>
                 <td>Key Takeaways</td>
-                <td>Here, I will reflect on the major learning points and experiences from my journey. Content coming soon!</td>
+                <td>In this section, I reflect on the major learning points and experiences from my journey. Stay tuned for updates!</td>
             </tr>
             <tr class="highlight">
                 <td><a href="https://srushtihadimani.github.io/coursereflection.github.io/">Srushti Hadimani</a></td>
                 <td>Explore an in-depth discussion about algorithms and data structures by Srushti Hadimani.</td>
             </tr>
-            <!-- Added your name and reflection link in the same format as Srushti's -->
             <tr class="highlight">
                 <td><a href="https://github.com/Aarzoochikkodi/course-learning-reflections">Aarzoo Chikkodi</a></td>
                 <td>Explore my personal reflections on the course and the key learnings I gained throughout the experience.</td>
@@ -105,7 +178,8 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Aarzoo. All rights reserved.</p>
+        <p>&copy; 2024 Aarzoo Chikkodi. All rights reserved.</p>
     </footer>
+
 </body>
 </html>
