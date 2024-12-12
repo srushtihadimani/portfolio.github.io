@@ -45,19 +45,30 @@
 
         /* Header */
         header {
-            background: linear-gradient(135deg, rgba(100, 149, 237, 0.8), rgba(72, 61, 139, 0.8)),
+            background: linear-gradient(135deg, rgba(33, 150, 243, 0.7), rgba(255, 64, 129, 0.7)),
                         url('https://www.transparenttextures.com/patterns/diagonal-stripes.png');
             background-size: cover;
             color: white;
             text-align: center;
-            padding: 100px 20px;
+            padding: 120px 20px;
             font-size: 4rem;
-            font-family: 'Great Vibes', cursive; /* Elegant handwriting-style font */
-            font-weight: 600;
-            letter-spacing: 3px;
+            font-family: 'Dancing Script', cursive; /* Stylish handwriting font */
+            font-weight: bold;
+            letter-spacing: 4px;
             text-transform: uppercase;
             position: relative;
-            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4); /* Light text shadow for readability */
+            text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow for readability */
+            animation: shine 1.5s infinite alternate; /* Glowing animation */
+        }
+
+        /* Glowing effect animation */
+        @keyframes shine {
+            0% {
+                text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5), 0px 0px 15px rgba(255, 255, 255, 0.3);
+            }
+            100% {
+                text-shadow: 0px 0px 30px rgba(255, 255, 255, 1), 0px 0px 50px rgba(255, 255, 255, 0.7);
+            }
         }
 
         /* Optional decorative overlay for visual interest */
@@ -69,7 +80,7 @@
             right: 0;
             bottom: 0;
             background: rgba(0, 0, 0, 0.2); /* Dark overlay for contrast */
-            opacity: 0.5;
+            opacity: 0.4;
         }
 
         /* Main content container */
@@ -142,7 +153,7 @@
         }
 
         /* Importing elegant handwriting font */
-        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
     </style>
 </head>
 <body>
