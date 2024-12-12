@@ -124,6 +124,7 @@
             background: #e74c3c; /* Strong Red */
         }
 
+        /* Business Cases Section */
         .business-case {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -132,7 +133,7 @@
         }
 
         .business-case-item {
-            background: linear-gradient(135deg, #16a085, #1abc9c);
+            background: linear-gradient(135deg, #1abc9c, #16a085); /* Fresh Teal */
             color: white;
             padding: 30px;
             border-radius: 15px;
@@ -143,25 +144,43 @@
             overflow: hidden;
         }
 
+        .business-case-item:nth-child(2) {
+            background: linear-gradient(135deg, #f39c12, #e67e22); /* Warm Yellow */
+        }
+
+        .business-case-item:nth-child(3) {
+            background: linear-gradient(135deg, #8e44ad, #9b59b6); /* Soft Purple */
+        }
+
+        .business-case-item:nth-child(4) {
+            background: linear-gradient(135deg, #3498db, #2980b9); /* Clean Blue */
+        }
+
+        .business-case-item:nth-child(5) {
+            background: linear-gradient(135deg, #e74c3c, #c0392b); /* Vibrant Red */
+        }
+
+        .business-case-item:nth-child(6) {
+            background: linear-gradient(135deg, #16a085, #1abc9c); /* Refreshing Green */
+        }
+
+        .business-case-item:nth-child(7) {
+            background: linear-gradient(135deg, #f39c12, #e67e22); /* Golden Yellow */
+        }
+
         .business-case-item:hover {
             transform: scale(1.05);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
 
-        .business-case-item h4 {
-            font-size: 1.6rem;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-
-        .business-case-item p {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-        }
-
         .business-case-item .icon {
             font-size: 3rem;
             margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .business-case-item:hover .icon {
+            transform: scale(1.2);
         }
 
         .business-case-item::before {
@@ -178,10 +197,6 @@
 
         .business-case-item:hover::before {
             opacity: 1;
-        }
-
-        .business-case-item:hover .icon {
-            transform: scale(1.2);
         }
 
     </style>
