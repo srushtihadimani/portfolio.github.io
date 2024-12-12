@@ -1,3 +1,4 @@
+SSSSSSSSSSSSSSSSSSSSSSSSSSS
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -154,11 +155,6 @@
             margin: 10px 0;
         }
 
-        /* Srushti's Business Cases Styling */
-        .srushti-cases .business-case-card {
-            background-color: #d4f4fc; /* Light Blue background */
-        }
-
         /* GitHub Button */
         .github-link {
             text-align: center;
@@ -182,13 +178,9 @@
         }
     </style>
     <script>
-        function toggleContent(id) {
-            var content = document.getElementById(id);
-            if (content.style.display === "block") {
-                content.style.display = "none";
-            } else {
-                content.style.display = "block";
-            }
+        function showDynamicContent() {
+            document.getElementById('dynamic-content').style.display = 'block';
+            window.scrollTo({ top: document.getElementById('dynamic-content').offsetTop, behavior: 'smooth' });
         }
     </script>
 </head>
@@ -213,6 +205,7 @@
 
         <!-- SDGs undertaken by Aarzoo Chikkodi -->
         <div class="group-heading">Business cases undertaken by Aarzoo Chikkodi</div>
+        <!-- GitHub Button for Aarzoo Chikkodi -->
         <div class="github-link">
             <a href="https://github.com/Aarzoochikkodi/business-cases" target="_blank">
                 <button>Click Here to Explore All Business Cases of Aarzoo Chikkodi on GitHub</button>
@@ -220,7 +213,7 @@
         </div>
         
         <div class="team-cases">
-            <!-- Example of Business Case Cards (as before for Aarzoo) -->
+            <!-- Optimal Road Network Design Card -->
             <div class="business-case-card">
                 <div class="icon">🚗</div>
                 <h3>Optimal Road Network Design</h3>
@@ -229,8 +222,8 @@
                 <p class="indicator"><strong>Indicator:</strong> 11.2.1 - Proportion of population with convenient access to public transport</p>
                 <div class="sdg">SDG 11</div>
             </div>
-            
-             <!-- Smart Public Transportation Scheduling Card -->
+
+            <!-- Smart Public Transportation Scheduling Card -->
             <div class="business-case-card">
                 <div class="icon">🚌</div>
                 <h3>Smart Public Transportation Scheduling</h3>
@@ -239,8 +232,8 @@
                 <p class="indicator"><strong>Indicator:</strong> 11.2.1 - Percentage of urban areas covered by public transport</p>
                 <div class="sdg">SDG 11</div>
             </div>
-            
-             <!-- Waste and Water Management System Card -->
+
+            <!-- Waste and Water Management System Card -->
             <div class="business-case-card">
                 <div class="icon">💧</div>
                 <h3>Waste and Water Management System</h3>
@@ -249,16 +242,16 @@
                 <p class="indicator"><strong>Indicator:</strong> 6.3.1 - Proportion of wastewater safely treated</p>
                 <div class="sdg">SDG 6</div>
             </div>
-
-
         </div>
+
+        
 
         <!-- SDGs undertaken by Srushti Hadimani -->
         <div class="group-heading">Business cases undertaken by Srushti Hadimani</div>
 
-        <div class="team-cases srushti-cases">
+        <div class="team-cases">
             <!-- Citizen Feedback Portal Card -->
-            <div class="business-case-card" onclick="toggleContent('citizen-feedback-details')">
+            <div class="business-case-card">
                 <div class="icon">💬</div>
                 <h3>Citizen Feedback Portal (Smart Governance)</h3>
                 <p><strong>Relevant SDG:</strong> Peace, Justice, and Strong Institutions (16)</p>
@@ -267,15 +260,7 @@
                 <div class="sdg">SDG 16</div>
             </div>
 
-        <!-- Detailed Citizen Feedback Portal Section -->
-        <div id="citizen-feedback-details" class="dynamic-content">
-            <h1>Citizen Feedback Portal & SDGs</h1>
-            <p>A Citizen Feedback Portal plays an essential role in improving governance and ensuring public services meet citizens' needs. When integrating it with SDGs, targets, and indicators, it becomes an effective tool for assessing and aligning public policies with global sustainability frameworks.</p>
-            <h2>SDG 16: Peace, Justice, and Strong Institutions</h2>
-            <p><strong>Target:</strong> 16.7 - Ensure responsive, inclusive, participatory, and representative decision-making at all levels.</p>
-            <p><strong>Indicator:</strong> 16.7.1 - Proportion of population who believe decision-making is inclusive and responsive, by sex, age, disability, and population group.</p>
-        </div>
-              <!-- Citizen Feedback Portal Detailed Section -->
+    <!-- Citizen Feedback Portal Detailed Section -->
     <div id="citizen-feedback-details">
         <h1>Citizen Feedback Portal & SDGs</h1>
         <p>A Citizen Feedback Portal plays an essential role in improving governance and ensuring public services meet citizens' needs. When integrating it with Sustainable Development Goals (SDGs), targets, and indicators, the portal becomes an effective tool for assessing and aligning public policies with global sustainability frameworks.</p>
@@ -314,7 +299,8 @@
             <p>This helps streamline feedback processing, ensuring timely responses and effective governance.</p>
         </div>
     </div>
- <!-- E-Government service -->
+
+                  <!-- E-Government service -->
             <div class="business-case-card">
                 <div class="icon">🏛💻📲</div>
                 <h3>E-Government service</h3>
@@ -416,7 +402,6 @@
         </div>
 
     </div>
-
 
 </body>
 </html>
