@@ -45,13 +45,26 @@
 
         /* Header */
         header {
-            background: url('images/image.png') no-repeat center center/cover; /* Correct path to image */
+            background: linear-gradient(135deg, #2980b9, #2ecc71); /* Gradient Background */
             color: white;
             text-align: center;
             padding: 80px 20px;
             font-size: 3rem;
             font-weight: bold;
             letter-spacing: 2px;
+            background-size: cover;
+            position: relative;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://www.transparenttextures.com/patterns/diagonal-stripes-light.png'); /* Optional: pattern overlay */
+            opacity: 0.3;
         }
 
         /* Main content container */
