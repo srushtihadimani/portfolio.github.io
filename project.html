@@ -1,61 +1,268 @@
-/* SDG Mapping, Targets, and Indicators Sections */
-.sdg-section {
-    margin: 60px 20px;
-    background-color: #ffffff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Cases and SDG Mapping</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5; /* Soft background color */
+            color: #333;
+        }
 
-.sdg-section h3 {
-    font-size: 30px;
-    color: #6a1b9a;
-    margin-bottom: 20px;
-    text-align: center;
-}
+        /* Navigation Bar Styles */
+        nav {
+            background-color: #6a1b9a; /* Purple color for navigation */
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-/* Styling for Targets and Indicators info boxes */
-.sdg-info {
-    background-color: #f0f8ff; /* Soft light blue background */
-    padding: 25px;
-    border-radius: 8px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
 
-.sdg-info:hover {
-    transform: translateY(-5px); /* Subtle hover effect */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deep shadow on hover */
-}
+        nav a:hover {
+            color: #ffcc00; /* Yellow hover color */
+        }
 
-.sdg-info h4 {
-    font-size: 24px;
-    color: #6a1b9a; /* Purple for better contrast */
-    margin-bottom: 15px;
-    text-align: center;
-    font-weight: bold;
-}
+        /* Home Section */
+        #home {
+            background: linear-gradient(135deg, #3f51b5, #7986cb); /* Indigo gradient background */
+            padding: 80px 20px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            color: white;
+            margin: 40px auto;
+            width: 80%;
+        }
 
-.sdg-info p {
-    font-size: 16px;
-    color: #333;
-    line-height: 1.6;
-    text-align: justify;
-}
+        #home h2 {
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
 
-/* Border and background color for the "Target" and "Indicator" titles */
-.sdg-info h4 {
-    background-color: #6a1b9a;
-    padding: 10px;
-    border-radius: 5px;
-    color: white;
-}
+        #home p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-top: 10px;
+        }
 
-/* Add an icon or symbol for visual appeal */
-.sdg-info .icon {
-    font-size: 30px;
-    color: #e91e63;
-    text-align: center;
-    margin-bottom: 15px;
-}
+        /* SDG Mapping, Targets, and Indicators Sections */
+        .sdg-section {
+            margin: 60px 20px;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .sdg-section h3 {
+            font-size: 30px;
+            color: #6a1b9a;
+            margin-bottom: 20px;
+        }
+
+        .sdg-info {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .sdg-info h4 {
+            font-size: 22px;
+            color: #e91e63; /* Pink color */
+            margin-bottom: 15px;
+        }
+
+        .sdg-info p {
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* Business Cases Section */
+        .business-cases-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .business-case-card {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            width: 280px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .business-case-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .business-case-card h3 {
+            font-size: 22px;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .business-case-card p {
+            font-size: 14px;
+            color: #555;
+            margin: 5px 0;
+        }
+
+        .sdg {
+            background-color: #4caf50; /* Green for SDG badge */
+            padding: 8px;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .sdg:hover {
+            background-color: #388e3c;
+        }
+
+        .icon {
+            font-size: 50px;
+            color: #e91e63;
+            margin-bottom: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .business-cases-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="project.html">Business Cases</a>
+        <a href="about.html">Project Overview</a>
+        <a href="contact.html">Course Reflections</a>
+    </nav>
+
+    <!-- Home Section -->
+    <div id="home">
+        <h2>Welcome to Business Cases and SDG Mapping</h2>
+        <p>This project focuses on aligning business cases with the Sustainable Development Goals (SDGs), addressing various global challenges with innovative solutions. We aim to create impactful contributions to society and the environment through strategic business solutions.</p>
+    </div>
+
+    <!-- SDG Mapping, Targets, and Indicators Sections -->
+    <div class="sdg-section">
+        <h3>SDG Mapping</h3>
+        <p>Our business cases are strategically aligned with the relevant Sustainable Development Goals (SDGs), contributing to sustainable and impactful solutions globally.</p>
+
+        <div class="sdg-info">
+            <h4>Targets</h4>
+            <p>Each business case targets specific SDG objectives aimed at improving social, environmental, and economic outcomes worldwide.</p>
+        </div>
+
+        <div class="sdg-info">
+            <h4>Indicators</h4>
+            <p>Indicators are essential for measuring the progress of achieving these targets, ensuring that the impact of each business case is effectively assessed and tracked.</p>
+        </div>
+    </div>
+
+    <!-- Business Cases Section -->
+    <div class="business-cases-container">
+        <!-- Optimal Road Network Design Card -->
+        <div class="business-case-card">
+            <div class="icon">🚗</div>
+            <h3>Optimal Road Network Design</h3>
+            <div class="sdg">SDG 11</div>
+            <p><strong>Relevant SDG:</strong> Sustainable Cities and Communities (11)</p>
+            <p><strong>Target:</strong> 11.2 - Provide access to safe, affordable, and sustainable transport systems</p>
+            <p class="indicator"><strong>Indicator:</strong> 11.2.1 - Proportion of population with convenient access to public transport</p>
+        </div>
+
+        <!-- Smart Public Transportation Scheduling Card -->
+        <div class="business-case-card">
+            <div class="icon">🚌</div>
+            <h3>Smart Public Transportation Scheduling</h3>
+            <div class="sdg">SDG 11</div>
+            <p><strong>Relevant SDG:</strong> Sustainable Cities and Communities (11)</p>
+            <p><strong>Target:</strong> 11.2 - Ensure sustainable transport systems for all</p>
+            <p class="indicator"><strong>Indicator:</strong> 11.2.1 - Percentage of urban areas covered by public transport</p>
+        </div>
+
+        <!-- Waste and Water Management System Card -->
+        <div class="business-case-card">
+            <div class="icon">💧</div>
+            <h3>Waste and Water Management System</h3>
+            <div class="sdg">SDG 6</div>
+            <p><strong>Relevant SDG:</strong> Clean Water and Sanitation (6)</p>
+            <p><strong>Target:</strong> 6.3 - Improve water quality and reduce pollution</p>
+            <p class="indicator"><strong>Indicator:</strong> 6.3.1 - Proportion of wastewater safely treated</p>
+        </div>
+
+        <!-- Interactive City Entertainment Map Card -->
+        <div class="business-case-card">
+            <div class="icon">🎭</div>
+            <h3>Interactive City Entertainment Map</h3>
+            <div class="sdg">SDG 11</div>
+            <p><strong>Relevant SDG:</strong> Sustainable Cities and Communities (11)</p>
+            <p><strong>Target:</strong> 11.4 - Strengthen efforts to protect and safeguard cultural heritage</p>
+            <p class="indicator"><strong>Indicator:</strong> 11.4.1 - Public and private expenditure on cultural heritage preservation</p>
+        </div>
+
+        <!-- Holographic Live Streaming Card -->
+        <div class="business-case-card">
+            <div class="icon">📡</div>
+            <h3>Holographic Live Streaming</h3>
+            <div class="sdg">SDG 9</div>
+            <p><strong>Relevant SDG:</strong> Industry, Innovation, and Infrastructure (9)</p>
+            <p><strong>Target:</strong> 9.5 - Promote innovation through technological advancement</p>
+            <p class="indicator"><strong>Indicator:</strong> 9.5.1 - Research and development expenditure as a proportion of GDP</p>
+        </div>
+
+        <!-- Citizen Feedback Portal Card -->
+        <div class="business-case-card">
+            <div class="icon">💬</div>
+            <h3>Citizen Feedback Portal (Smart Governance)</h3>
+            <div class="sdg">SDG 16</div>
+            <p><strong>Relevant SDG:</strong> Peace, Justice, and Strong Institutions (16)</p>
+            <p><strong>Target:</strong> 16.6 - Strengthen effective, accountable institutions</p>
+            <p class="indicator"><strong>Indicator:</strong> 16.6.2 - Proportion of population satisfied with public services</p>
+        </div>
+
+        <!-- Real-Time Disaster Response System Card -->
+        <div class="business-case-card">
+            <div class="icon">🌍</div>
+            <h3>Real-Time Disaster Response System</h3>
+            <div class="sdg">SDG 11</div>
+            <p><strong>Relevant SDG:</strong> Sustainable Cities and Communities (11)</p>
+            <p><strong>Target:</strong> 11.5 - Mitigate the impact of disasters on people and property</p>
+            <p class="indicator"><strong>Indicator:</strong> 11.5.1 - Number of deaths, missing persons, and directly affected persons attributed to disasters per 100,000 population</p>
+        </div>
+    </div>
+
+</body>
+</html>
