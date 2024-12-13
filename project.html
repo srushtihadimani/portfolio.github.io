@@ -446,66 +446,7 @@ int main() {
               </div>
 
         
-            <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real-Time Disaster Response System</title>
-    <style>
-        /* Basic Styling */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-        }
-        h1 {
-            color: #333;
-        }
-        .section {
-            background-color: #fff;
-            margin: 20px;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .sdg {
-            background-color: #4CAF50;
-            color: white;
-            padding: 5px;
-            border-radius: 5px;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 10px;
-        }
-        .icon {
-            font-size: 50px;
-            text-align: center;
-        }
-        .advantages ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-        .merge-sort pre {
-            background-color: #eee;
-            padding: 15px;
-            border-radius: 8px;
-            font-family: "Courier New", Courier, monospace;
-        }
-        .merge-sort h2 {
-            cursor: pointer;
-            color: #007bff;
-        }
-        .merge-sort code {
-            font-family: "Courier New", Courier, monospace;
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Real-Time Disaster Response System Card -->
-    <h1 onclick="toggleDetails('tourismDetails')">Real-Time Disaster Response System</h1>
+           <h1 onclick="toggleDetails('tourismDetails')">Real-Time Disaster Response System</h1>
     <div id="tourismDetails" style="display: none;">
         <div class="section">
             <div class="icon">🌍</div>
@@ -533,7 +474,7 @@ int main() {
 
         <div class="advantages">
             <h2>Advantages of Real-Time Disaster Response Systems in Citizen Feedback Portals</h2>
-            <ul>
+            <ul class="advantage-list">
                 <li><strong>Faster Response:</strong> Real-time data allows authorities to make immediate, data-driven decisions, providing help where it's most needed during a disaster.</li>
                 <li><strong>Improved Resource Allocation:</strong> Feedback from citizens can help prioritize areas with the greatest need, ensuring that resources like food, water, and medical supplies are distributed efficiently.</li>
                 <li><strong>Increased Transparency:</strong> Citizen feedback systems make government actions more transparent by allowing people to see updates in real time and track how their concerns are being addressed.</li>
@@ -545,7 +486,6 @@ int main() {
         <div class="merge-sort">
             <h2>Applying Merge Sort in Real-Time Disaster Response Systems</h2>
             <p>In a Real-Time Disaster Response System, Merge Sort can be applied to efficiently sort and prioritize large volumes of real-time data (e.g., feedback, incident reports, or resource requests). Here's how:</p>
-
             <ul>
                 <li><strong>Data Sorting:</strong> Incoming disaster-related data (e.g., citizen feedback, damage reports) can be sorted by priority (severity, time, or location). Merge Sort divides the data into smaller chunks, sorts them, and merges them in an organized order.</li>
                 <li><strong>Efficient Resource Allocation:</strong> By sorting the data (e.g., urgent medical requests or flood reports), authorities can prioritize resources and respond to the most critical areas first.</li>
@@ -629,19 +569,19 @@ int main() {
     </div>
 
     <script>
+        // Function to toggle the visibility of the detailed sections
         function toggleDetails(id) {
-            var element = document.getElementById(id);
-            if (element.style.display === "none") {
-                element.style.display = "block";
+            var section = document.getElementById(id);
+            if (section.style.display === "none") {
+                section.style.display = "block";
             } else {
-                element.style.display = "none";
+                section.style.display = "none";
             }
         }
     </script>
 
 </body>
 </html>
-
 
         <!-- SDGs undertaken by Shifa Afnan -->
         <div class="group-heading">Business cases undertaken by Shifa Afnan</div>
