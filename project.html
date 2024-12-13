@@ -446,60 +446,109 @@ int main() {
               </div>
 
         
-            <!-- Real-Time Disaster Response System Card -->
-           =     <h1 onclick="toggleDetails('tourismDetails')">Real-Time Disaster Response System</h1>
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Disaster Response System</title>
+    <style>
+        .dynamic-content {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .merge-sort {
+            margin-top: 20px;
+        }
+        .sdg {
+            background-color: #f4f4f4;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        h1 {
+            cursor: pointer;
+            color: #007bff;
+        }
+        #mergeSortCode {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            display: none;
+        }
+    </style>
+    <script>
+        // JavaScript function to toggle visibility of Merge Sort code
+        function toggleDetails(id) {
+            var element = document.getElementById(id);
+            if (element.style.display === "none") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 onclick="toggleDetails('tourismDetails')">Real-Time Disaster Response System</h1>
+
     <div id="tourismDetails" style="display: none;">
         <div class="section">
-                <div class="icon">🌍</div>
-                <h3>Real-Time Disaster Response System</h3>
-                <p><strong>Relevant SDG:</strong> Sustainable Cities and Communities (11)</p>
-                <p><strong>Target:</strong> 11.5 - Mitigate the impact of disasters on people and property</p>
-                <p class="indicator"><strong>Indicator:</strong> 11.5.1 - Number of deaths, missing persons, and directly affected persons attributed to disasters per 100,000 population</p>
-                <div class="sdg">SDG 11</div>
-            </div>
+            <div class="icon">🌍</div>
+            <h3>Real-Time Disaster Response System</h3>
+            <p><strong>Relevant SDG:</strong> Sustainable Cities and Communities (11)</p>
+            <p><strong>Target:</strong> 11.5 - Mitigate the impact of disasters on people and property</p>
+            <p class="indicator"><strong>Indicator:</strong> 11.5.1 - Number of deaths, missing persons, and directly affected persons attributed to disasters per 100,000 population</p>
+            <div class="sdg">SDG 11</div>
         </div>
-        <!-- Dynamic Content Section -->
-        <div id="dynamic-content" class="dynamic-content">
-            <h1>Real-Time Disaster Response System and Merge Sort</h1>
-
-            <div class="sdg">
-                <h2>SDGs Related to Real-Time Disaster Response System</h2>
-                <p>Real-time disaster response systems, especially when combined with Citizen Feedback Portals, play a vital role in responding to emergencies and ensuring that communities are resilient in the face of natural disasters. These systems contribute directly to achieving several SDGs:</p>
-
-                <h3>SDG 11: Sustainable Cities and Communities</h3>
-                <p><strong>Target 11.5:</strong> Significantly reduce the number of deaths and the number of people affected and substantially decrease the direct economic losses relative to GDP caused by disasters.</p>
-                <p><strong>Indicator 11.5.2:</strong> Direct economic loss in relation to global GDP, including disaster damage to critical infrastructure and disruption of basic services.</p>
-                <p><strong>Example:</strong> A real-time disaster response system can monitor affected areas and collect citizen feedback, allowing authorities to respond quickly to mitigate economic losses and direct impacts on communities during a disaster.</p>
-            </div>
-
-            <div class="advantages">
-                <h2>Advantages of Real-Time Disaster Response Systems in Citizen Feedback Portals</h2>
-                <ul>
-                    <li><strong>Faster Response:</strong> Real-time data allows authorities to make immediate, data-driven decisions, providing help where it's most needed during a disaster.</li>
-                    <li><strong>Improved Resource Allocation:</strong> Feedback from citizens can help prioritize areas with the greatest need, ensuring that resources like food, water, and medical supplies are distributed efficiently.</li>
-                    <li><strong>Increased Transparency:</strong> Citizen feedback systems make government actions more transparent by allowing people to see updates in real time and track how their concerns are being addressed.</li>
-                    <li><strong>Community Engagement:</strong> Engaging citizens through feedback portals increases trust in the disaster response system, as people feel their voices are being heard.</li>
-                    <li><strong>Resilience Building:</strong> Analyzing citizen feedback can help communities and governments identify vulnerabilities and plan future disaster mitigation strategies.</li>
-                </ul>
-            </div>
-              <div class="merge-sort">
-        <h2>Applying Merge Sort in Real-Time Disaster Response Systems</h2>
-        <p>In a Real-Time Disaster Response System, Merge Sort can be applied to efficiently sort and prioritize large volumes of real-time data (e.g., feedback, incident reports, or resource requests). Here's how:</p>
-
-        <ul>
-            <li><strong>Data Sorting:</strong> Incoming disaster-related data (e.g., citizen feedback, damage reports) can be sorted by priority (severity, time, or location). Merge Sort divides the data into smaller chunks, sorts them, and merges them in an organized order.</li>
-            <li><strong>Efficient Resource Allocation:</strong> By sorting the data (e.g., urgent medical requests or flood reports), authorities can prioritize resources and respond to the most critical areas first.</li>
-            <li><strong>Handling Large Datasets:</strong> Merge Sort’s O(n log n) complexity ensures it can efficiently process large volumes of data as new reports come in, maintaining real-time performance.</li>
-            <li><strong>Categorization:</strong> Merge Sort helps in grouping similar reports (e.g., medical emergencies or infrastructure damage) by urgency, enabling quicker response.</li>
-        </ul>
-
-        <p>In essence, Merge Sort ensures that disaster response teams can process and prioritize large datasets efficiently, enabling quick and effective decision-making.</p>
     </div>
+
+    <div id="dynamic-content" class="dynamic-content">
+        <h1>Real-Time Disaster Response System and Merge Sort</h1>
+        <div class="sdg">
+            <h2>SDGs Related to Real-Time Disaster Response System</h2>
+            <p>Real-time disaster response systems, especially when combined with Citizen Feedback Portals, play a vital role in responding to emergencies and ensuring that communities are resilient in the face of natural disasters. These systems contribute directly to achieving several SDGs:</p>
+
+            <h3>SDG 11: Sustainable Cities and Communities</h3>
+            <p><strong>Target 11.5:</strong> Significantly reduce the number of deaths and the number of people affected and substantially decrease the direct economic losses relative to GDP caused by disasters.</p>
+            <p><strong>Indicator 11.5.2:</strong> Direct economic loss in relation to global GDP, including disaster damage to critical infrastructure and disruption of basic services.</p>
+            <p><strong>Example:</strong> A real-time disaster response system can monitor affected areas and collect citizen feedback, allowing authorities to respond quickly to mitigate economic losses and direct impacts on communities during a disaster.</p>
+        </div>
+
+        <div class="advantages">
+            <h2>Advantages of Real-Time Disaster Response Systems in Citizen Feedback Portals</h2>
+            <ul>
+                <li><strong>Faster Response:</strong> Real-time data allows authorities to make immediate, data-driven decisions, providing help where it's most needed during a disaster.</li>
+                <li><strong>Improved Resource Allocation:</strong> Feedback from citizens can help prioritize areas with the greatest need, ensuring that resources like food, water, and medical supplies are distributed efficiently.</li>
+                <li><strong>Increased Transparency:</strong> Citizen feedback systems make government actions more transparent by allowing people to see updates in real time and track how their concerns are being addressed.</li>
+                <li><strong>Community Engagement:</strong> Engaging citizens through feedback portals increases trust in the disaster response system, as people feel their voices are being heard.</li>
+                <li><strong>Resilience Building:</strong> Analyzing citizen feedback can help communities and governments identify vulnerabilities and plan future disaster mitigation strategies.</li>
+            </ul>
+        </div>
+
+        <div class="merge-sort">
+            <h2>Applying Merge Sort in Real-Time Disaster Response Systems</h2>
+            <p>In a Real-Time Disaster Response System, Merge Sort can be applied to efficiently sort and prioritize large volumes of real-time data (e.g., feedback, incident reports, or resource requests). Here's how:</p>
+            <ul>
+                <li><strong>Data Sorting:</strong> Incoming disaster-related data (e.g., citizen feedback, damage reports) can be sorted by priority (severity, time, or location). Merge Sort divides the data into smaller chunks, sorts them, and merges them in an organized order.</li>
+                <li><strong>Efficient Resource Allocation:</strong> By sorting the data (e.g., urgent medical requests or flood reports), authorities can prioritize resources and respond to the most critical areas first.</li>
+                <li><strong>Handling Large Datasets:</strong> Merge Sort’s O(n log n) complexity ensures it can efficiently process large volumes of data as new reports come in, maintaining real-time performance.</li>
+                <li><strong>Categorization:</strong> Merge Sort helps in grouping similar reports (e.g., medical emergencies or infrastructure damage) by urgency, enabling quicker response.</li>
+            </ul>
+            <p>In essence, Merge Sort ensures that disaster response teams can process and prioritize large datasets efficiently, enabling quick and effective decision-making.</p>
+        </div>
+
         <div class="section">
-    <h2 onclick="toggleDetails('mergeSortCode')" style="cursor: pointer; color: #007bff;">Click to view Merge Sort Code</h2>
-    <div id="mergeSortCode" style="display: none;">
-        <h2>Code Example</h2>
-        <pre>
+            <h2 onclick="toggleDetails('mergeSortCode')" style="cursor: pointer; color: #007bff;">Click to view Merge Sort Code</h2>
+            <div id="mergeSortCode" style="display: none;">
+                <h2>Code Example</h2>
+                <pre>
 #include <iostream>
 #include <vector>
 
@@ -562,11 +611,13 @@ int main() {
 
     return 0;
 }
-           </pre>
-          </div>
+                </pre>
+            </div>
         </div>
     </div>
-              </div>
+
+</body>
+</html>
 
   
 
