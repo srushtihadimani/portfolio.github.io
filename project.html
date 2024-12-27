@@ -443,8 +443,78 @@ int main() {
        </ul>
         
       </div>
+               <div class="section">
+    <h2 onclick="toggleDetails('mergeSortCode')" style="cursor: pointer; color: #007bff;">Click to view Merge Sort Code</h2>
+    <div id="mergeSortCode" style="display: none;">
+        <h2>Code Example</h2>
+        <pre>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+void Merge(const vector<int> &B, const vector<int> &C, vector<int> &A) {
+    int p = B.size();
+    int q = C.size();
+    int i = 0, j = 0, k = 0;
+
+    while (i < p && j < q) {
+        if (B[i] <= C[j]) {
+            A[k++] = B[i++];
+        } else {
+            A[k++] = C[j++];
+        }
+    }
+
+    while (i < p) {
+        A[k++] = B[i++];
+    }
+
+    while (j < q) {
+        A[k++] = C[j++];
+    }
+}
+
+void MergeSort(vector<int> &A) {
+    int n = A.size();
+
+    if (n <= 1) {
+        return;
+    }
+
+    int mid = n / 2;
+    vector<int> B(A.begin(), A.begin() + mid);
+    vector<int> C(A.begin() + mid, A.end());
+
+    MergeSort(B);
+    MergeSort(C);
+    Merge(B, C, A);
+}
+
+int main() {
+    vector<int> A = {38, 27, 43, 3, 9, 82, 10};
+
+    cout << "Original Array: ";
+    for (int num : A) {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    MergeSort(A);
+
+    cout << "Sorted Array: ";
+    for (int num : A) {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
+           </pre>
+          </div>
         </div>
     </div>
+              </div>
               </div>
         <!-- Real-Time Disaster Response System Card -->
             <div class="business-case-card">
