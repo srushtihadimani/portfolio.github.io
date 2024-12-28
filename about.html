@@ -200,16 +200,6 @@
         }
 
     </style>
-    @media (max-width: 768px) {
-            .business-case {
-                grid-template-columns: 1fr;  /* Stack the business case items on smaller screens */
-            }
-
-            .team-box {
-                margin: 10px;
-                padding: 15px;
-            }
-        }
 </head>
 <body>
 
@@ -252,41 +242,44 @@
         <p>Portfolio Topic/Domain: Smart Entertainment in City</p>
     </div>
 </div>
-    <div class="container">
+   <!-- Problem Space and How It Was Arrived At -->
+<div class="container">
     <div class="problem-space-container">
         <h2>Problem Space and How It Was Arrived At</h2>
-        <p>The concept for Aurangabad's smart city project was developed by identifying key challenges affecting urban areas today, combined with the future demands of an evolving city. Our approach focused on leveraging technology to address problems systematically and sustainably.</p>
+        <p>The Aurangabad Smart City project is born from the need to address the city's critical urban challenges. Through extensive research and collaboration with local stakeholders, our team identified the following urban issues:</p>
         
-        <p>To achieve this, we followed a comprehensive, data-driven approach to problem-solving. We started by conducting an in-depth analysis of the city's current infrastructure, including traffic congestion, waste management issues, and inadequate public transportation systems. The aim was to ensure that our solutions were not just innovative but also practical and scalable for long-term growth.</p>
+        <div class="interactive-map">
+            <h3>Interactive Problem Space Map</h3>
+            <p>Explore Aurangabad's current urban challenges and how they were identified.</p>
+            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1ErwYrJmC5s1yJZZKM6l-6R1y2Y2vbw3z" frameborder="0"></iframe>
+        </div>
+
+        <p>Our approach was systematic, leveraging technology to solve the city's key challenges:</p>
+
+        <div class="problem-evolution">
+            <h3>How the Problem Space Evolved</h3>
+            <ul class="timeline">
+                <li class="timeline-item">2000: Rapid Urbanization - Population growth outpacing infrastructure development.</li>
+                <li class="timeline-item">2010: Traffic Congestion Becomes a Major Concern - The growing number of vehicles in a city with outdated road networks.</li>
+                <li class="timeline-item">2015: Waste Management Crisis - Inadequate disposal systems leading to pollution.</li>
+                <li class="timeline-item">2018: Initiating Research - Global smart city initiatives informed our next steps.</li>
+                <li class="timeline-item">2020: Prototype Smart Solutions - Testing AI-based traffic management, IoT waste solutions.</li>
+                <li class="timeline-item">2024: Full-Scale Smart City Implementation - Comprehensive solutions put into place, optimizing Aurangabad's urban ecosystem.</li>
+            </ul>
+        </div>
+
+        <p>Through continuous research, feedback from residents, and global smart city case studies, we identified key areas where technology could make the most significant impact:</p>
         
-        <p>Our team extensively researched the latest advancements in smart city technology and integrated ideas from international case studies of cities that have successfully adopted similar solutions. Through this research, we identified key areas where technology could make a significant impact. We also consulted with local stakeholders, including government agencies, businesses, and residents, to ensure the solutions would align with their needs and expectations.</p>
-        
-        <p>We then mapped out these problems and formulated a strategy to address them using innovative solutions, such as AI-based traffic management systems, IoT-enabled waste management solutions, and eco-friendly infrastructure for the future. The goal was not just to address the problems but to future-proof the city by creating an adaptable and sustainable infrastructure.</p>
+        <ul>
+            <li><strong>Traffic Management:</strong> Leveraging AI to optimize traffic flow and reduce congestion.</li>
+            <li><strong>Waste Management:</strong> Utilizing IoT-enabled sensors for smarter waste collection systems.</li>
+            <li><strong>Public Transportation:</strong> Machine learning models for dynamic scheduling of buses based on real-time demand.</li>
+            <li><strong>Governance:</strong> Citizen feedback portals for improving public services and fostering collaboration between residents and the government.</li>
+        </ul>
+
+        <p>In collaboration with local government agencies, businesses, and residents, we established a vision to transform Aurangabad into a smart city, where technology enhances the quality of life for all citizens.</p>
     </div>
 </div>
-
-<!-- Timeline -->
-<div class="timeline-container">
-    <h3>Problem Space Evolution Timeline</h3>
-    <ul class="timeline">
-        <li class="timeline-item">2000: Rapid Urbanization</li>
-        <li class="timeline-item">2010: Traffic Congestion Identified as Key Challenge</li>
-        <li class="timeline-item">2015: Waste Management and Water Shortages Become Major Concerns</li>
-        <li class="timeline-item">2018: Initiating Smart City Research</li>
-        <li class="timeline-item">2020: First Prototype Solutions for Smart Traffic and Waste Management</li>
-        <li class="timeline-item">2024: Full-Scale Implementation of Smart City Solutions</li>
-    </ul>
-</div>
-
-<!-- Interactive Map -->
-<div class="map-container">
-    <h3>Interactive City Map</h3>
-    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1ErwYrJmC5s1yJZZKM6l-6R1y2Y2vbw3z" frameborder="0"></iframe>
-</div>
-    
-
-    
-
 
 <!-- Findings from the White Paper -->
 <div class="container">
@@ -336,7 +329,7 @@
                 <p>Machine learning for dynamic scheduling of buses to reduce wait times.</p>
             </div>
             <div class="business-case-item">
-                <div class="icon">♻️</div>
+                <div class="icon">♻</div>
                 <h4>Waste and Water Management System</h4>
                 <p>Smart sensors for optimizing waste collection and sustainable water use.</p>
             </div>
@@ -351,7 +344,7 @@
                 <p>3D holographic streaming of events, enhancing public engagement.</p>
             </div>
             <div class="business-case-item">
-                <div class="icon">🗣️</div>
+                <div class="icon">🗣</div>
                 <h4>Citizen Feedback Portal</h4>
                 <p>AI-driven portal to gather and analyze citizen feedback for better governance.</p>
             </div>
