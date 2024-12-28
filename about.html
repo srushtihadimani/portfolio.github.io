@@ -124,27 +124,53 @@
             background: #e74c3c; /* Strong Red */
         }
         /* Update the color for the problem space box with a more professional aesthetic */
+        /* Problem Space and How It Was Arrived At Box */
 #problem-space {
-    background-color: #f4f6f9; /* Light Gray */
-    color: #2c3e50; /* Dark Blue for contrast */
-    border-radius: 10px;
+    background-color: #ecf0f1; /* Light, soft gray for a clean background */
+    color: #2c3e50; /* Dark Blue for high contrast and readability */
+    border-radius: 15px;
     padding: 40px;
-    margin: 20px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 30px 0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Softer, professional shadow for depth */
+    transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+#problem-space:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
 }
 
 #problem-space h2 {
     text-align: center;
-    font-size: 2.2rem;
-    color: #34495e; /* Slightly darker shade for title */
+    font-size: 2.4rem;
+    color: #1abc9c; /* Elegant teal for the heading to stand out */
+    font-weight: 600; /* Make the heading bolder */
+    margin-bottom: 20px;
 }
 
 #problem-space p {
     font-size: 1.2rem;
     line-height: 1.8;
     margin-top: 15px;
-    color: #7f8c8d; /* Soft gray for text */
+    color: #7f8c8d; /* Soft gray for easy readability */
+    font-weight: 400; /* Lighter font weight for body text */
 }
+
+/* Add a subtle gradient to the background of the entire page for an elevated feel */
+body {
+    background: linear-gradient(135deg, #f4f6f9, #ffffff); /* Smooth light gradient */
+}
+
+/* Ensure the container and content box are well-defined */
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+
+
+
 
 
 
