@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Business Cases and SDG Mapping</title>
     <style>
-         body {
+        body {
             font-family: 'Roboto', sans-serif;
             background-color: #f1f1f1;
             margin: 0;
@@ -25,7 +25,7 @@
 
         h1 {
             text-align: center;
-            color: #3498db;
+            color: #2980b9; /* Changed from green to blue */
             font-size: 36px;
             margin-bottom: 40px;
         }
@@ -34,8 +34,61 @@
             color: #2c3e50;
             font-size: 28px;
             margin-bottom: 15px;
-            border-bottom: 2px solid #3498db;
+            border-bottom: 2px solid #2980b9; /* Blue theme */
             padding-bottom: 10px;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            transition: background-color 0.3s;
+        }
+
+        th {
+            background-color: #2980b9; /* Blue theme */
+            color: white;
+            font-weight: bold;
+        }
+
+        td {
+            background-color: #f9f9f9;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover td {
+            background-color: #ecf0f1;
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            table {
+                width: 100%;
+                font-size: 14px;
+            }
+
+            th, td {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
         }
 
         /* Table Styles */
