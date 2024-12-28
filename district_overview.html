@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>District Overview - Vyomadri Smart City</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and Fonts */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1, h2 {
+            color: #2d3e50;
+        }
+
+        /* Navigation Bar Styling */
+        .navbar {
+            background-color: #2d3e50;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 15px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #4a5d75;
+            border-radius: 5px;
+        }
+
+        /* Header Styling */
+        .header {
+            background-color: #2d3e50;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .intro {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        /* District Details Section */
+        .district-details {
+            background-color: white;
+            padding: 30px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .details-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+        }
+
+        .detail-box {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            width: 220px;
+            text-align: center;
+        }
+
+        .detail-box h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        /* Revenue Model Table */
+        .revenue-model {
+            background-color: white;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .revenue-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .revenue-table th, .revenue-table td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        .revenue-table th {
+            background-color: #2d3e50;
+            color: white;
+        }
+
+        .revenue-table tr:nth-child(even) {
+            background-color: #f4f4f4;
+        }
+
+        .total {
+            font-weight: bold;
+            background-color: #e0e0e0;
+        }
+
+        /* Core Development Areas Section */
+        .core-development {
+            background-color: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Zone Allocation Section */
+        .zone-allocation {
+            background-color: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="district_overview.html" class="active">Cityscape Design</a>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="header">
+        <h1>District Overview: Aurangabad</h1>
+        <p class="intro">Explore the city's infrastructure, economy, and development phases.</p>
+    </header>
+
+    <!-- District Details Section -->
+    <section class="district-details">
+        <h2>District Information</h2>
+        <div class="details-container">
+            <div class="detail-box">
+                <h3>City Name</h3>
+                <p>Aurangabad</p>
+            </div>
+            <div class="detail-box">
+                <h3>Total Area</h3>
+                <p>1500 sq. km</p>
+            </div>
+            <div class="detail-box">
+                <h3>Population</h3>
+                <p>6,50,000</p>
+            </div>
+            <div class="detail-box">
+                <h3>Total Budget</h3>
+                <p>₹1.5 Lakh Crore</p>
+            </div>
+            <div class="detail-box">
+                <h3>Pin Code</h3>
+                <p>431001</p>
+            </div>
+            <div class="detail-box">
+                <h3>STD Code</h3>
+                <p>0240</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Revenue Model Section -->
+    <section class="revenue-model">
+        <h2>Revenue Model</h2>
+        <table class="revenue-table">
+            <thead>
+                <tr>
+                    <th>Sl. No.</th>
+                    <th>Sector</th>
+                    <th>Annual Revenue Estimate (₹ Crore)</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Property Tax and Residential Fees</td>
+                    <td>₹8,500</td>
+                    <td>Revenue from residential property taxes and sales.</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Business Taxation</td>
+                    <td>₹10,000</td>
+                    <td>Taxes from retail businesses and corporate offices.</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Industrial Sector</td>
+                    <td>₹13,000</td>
+                    <td>Revenue from factories, production, and logistics.</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Maritime and Transport Fees</td>
+                    <td>₹7,500</td>
+                    <td>Income from port activities and shipping services.</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Tourism and Attractions Revenue</td>
+                    <td>₹6,000</td>
+                    <td>Revenue from tourism and leisure spots.</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Renewable Energy Revenue</td>
+                    <td>₹3,200</td>
+                    <td>Earnings from solar and wind energy initiatives.</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Health and Education Services</td>
+                    <td>₹2,800</td>
+                    <td>Revenue from public healthcare and educational services.</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Recreation and Green Spaces</td>
+                    <td>₹1,400</td>
+                    <td>Income from parks, recreational areas, and green spaces.</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Cultural and Heritage Sites</td>
+                    <td>₹1,000</td>
+                    <td>Revenue from cultural events and heritage sites.</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Public Transit and Utility Fees</td>
+                    <td>₹4,200</td>
+                    <td>Earnings from public transport and utilities.</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Sustainable Agriculture Income</td>
+                    <td>₹1,800</td>
+                    <td>Revenue from greenhouses, farms, and organic agriculture.</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Research and Tech Development</td>
+                    <td>₹2,500</td>
+                    <td>Revenue from innovation centers and R&D labs.</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Smart City Services</td>
+                    <td>₹3,200</td>
+                    <td>Earnings from IoT and smart services for the city.</td>
+                </tr>
+                <tr class="total">
+                    <td colspan="2">Total Annual Revenue</td>
+                    <td>₹60,600</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Phase 1: Core Development Areas Section -->
+    <section class="core-development">
+        <h2>Phase 1: Core Development Areas</h2>
+        <table class="revenue-table">
+            <thead>
+                <tr>
+                    <th>Zone Type</th>
+                    <th>Revised Area (Phase 1)</th>
+                    <th>Phase 1 Budget (₹ Crore)</th>
+                    <th>Key Focus</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>High-Density Residential Zones</td>
+                    <td>110 sq. km</td>
+                    <td>₹26,000</td>
+                    <td>Urbanized areas for affordable housing near commercial centers.</td>
+                </tr>
+                <tr>
+                    <td>Mid-Density Residential Zones</td>
+                    <td>85 sq. km</td>
+                    <td>₹17,500</td>
+                    <td>Suburban housing with good connectivity to schools and healthcare.</td>
+                </tr>
+                <tr>
+                    <td>Low-Density Residential Zones</td>
+                    <td>75 sq. km</td>
+                    <td>₹13,500</td>
+                    <td>Eco-friendly and low-rise housing communities.</td>
+                </tr>
+                <tr>
+                    <td>Commercial and Retail Zones</td>
+                    <td>40 sq. km</td>
+                    <td>₹10,500</td>
+                    <td>Establishing business hubs, shopping districts, and office spaces.</td>
+                </tr>
+                <!-- Add other rows for each zone -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Zone Allocation Section -->
+    <section class="zone-allocation">
+        <h2>Zone Allocation</h2>
+        <table class="revenue-table">
+            <thead>
+                <tr>
+                    <th>Sl. No.</th>
+                    <th>Zone Type</th>
+                    <th>Area Allocation (%)</th>
+                    <th>Area (sq. km)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>High-Density Residential Zones</td>
+                    <td>14%</td>
+                    <td>210</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Medium-Density Residential Zones</td>
+                    <td>10%</td>
+                    <td>150</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Low-Density Residential Zones</td>
+                    <td>7%</td>
+                    <td>105</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Commercial and Retail Zones</td>
+                    <td>4%</td>
+                    <td>60</td>
+                </tr>
+                <!-- Add other rows for each zone -->
+            </tbody>
+        </table>
+    </section>
+
+</body>
+</html>
