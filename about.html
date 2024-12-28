@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Overview - Design and Analysis of Algorithms</title>
+    <title>Project Overview - Design and Analysis of Algorithms</title> 
     <style>
         /* Reset and basic styles */
         * {
@@ -17,6 +17,7 @@
             background: #f8f8f8;
             color: #333;
             line-height: 1.6;
+            text-align: justify; /* Justify text for the entire body */
         }
 
         nav {
@@ -68,6 +69,7 @@
             font-size: 1.2rem;
             line-height: 1.8;
             margin-top: 15px;
+            text-align: justify; /* Justify text in the content-box */
         }
 
         footer {
@@ -126,70 +128,72 @@
         /* Update the color for the problem space box with a more professional aesthetic */
         /* Problem Space and How It Was Arrived At Box */
         /* Updated styling for the Problem Space Box */
-#problem-space {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    background-color: #ecf0f1; /* Light, soft gray for a clean background */
-    color: #2c3e50; /* Dark Blue for high contrast and readability */
-    border-radius: 15px;
-    padding: 40px;
-    margin: 30px 0;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Softer, professional shadow for depth */
-    transition: all 0.3s ease; /* Smooth hover effect */
-}
+        #problem-space {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            background-color: #ecf0f1; /* Light, soft gray for a clean background */
+            color: #2c3e50; /* Dark Blue for high contrast and readability */
+            border-radius: 15px;
+            padding: 40px;
+            margin: 30px 0;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Softer, professional shadow for depth */
+            transition: all 0.3s ease; /* Smooth hover effect */
+        }
 
-#problem-space:hover {
-    transform: translateY(-5px); /* Subtle lift on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
-}
+        #problem-space:hover {
+            transform: translateY(-5px); /* Subtle lift on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+        }
 
-#problem-space h2 {
-    text-align: center;
-    font-size: 2.4rem;
-    color: #1abc9c; /* Elegant teal for the heading to stand out */
-    font-weight: 600; /* Make the heading bolder */
-    margin-bottom: 20px;
-    grid-column: span 2;
-}
+        #problem-space h2 {
+            text-align: center;
+            font-size: 2.4rem;
+            color: #1abc9c; /* Elegant teal for the heading to stand out */
+            font-weight: 600; /* Make the heading bolder */
+            margin-bottom: 20px;
+            grid-column: span 2;
+        }
 
-#problem-space .intro, #problem-space .details {
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+        #problem-space .intro, #problem-space .details {
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-#problem-space .intro {
-    color: #7f8c8d; /* Soft gray for easy readability */
-    font-weight: 400;
-}
+        #problem-space .intro {
+            color: #7f8c8d; /* Soft gray for easy readability */
+            font-weight: 400;
+            text-align: justify;
+        }
 
-#problem-space .details ul {
-    list-style-type: none;
-}
+        #problem-space .details ul {
+            list-style-type: none;
+        }
 
-#problem-space .details ul li {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin-top: 15px;
-    color: #7f8c8d; /* Soft gray for easy readability */
-    font-weight: 400;
-}
+        #problem-space .details ul li {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-top: 15px;
+            color: #7f8c8d; /* Soft gray for easy readability */
+            font-weight: 400;
+            text-align: justify;
+        }
 
-#problem-space .details h3 {
-    font-size: 1.6rem;
-    margin-top: 30px;
-    color: #1abc9c; /* Elegant teal for subheadings */
-}
+        #problem-space .details h3 {
+            font-size: 1.6rem;
+            margin-top: 30px;
+            color: #1abc9c; /* Elegant teal for subheadings */
+        }
 
-/* Add hover effects for the individual boxes */
-#problem-space .intro:hover, #problem-space .details:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
+        /* Add hover effects for the individual boxes */
+        #problem-space .intro:hover, #problem-space .details:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
 
- /* Business Cases Section */
+        /* Business Cases Section */
         .business-case {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -317,8 +321,7 @@
     </div>
 </div>
 
-
-<!-- Findings from the White Paper -->
+    <!-- Findings from the White Paper -->
 <div class="container">
     <div class="content-box" id="findings-from-white-paper">
         <h2>Findings from the White Paper</h2>
