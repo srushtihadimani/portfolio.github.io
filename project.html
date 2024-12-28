@@ -7,6 +7,61 @@
     <title>Business Cases and SDG Mapping</title>
     <style>
          body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2980b9;
+        }
+        h2 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #2980b9;
+            color: white;
+        }
+        td {
+            background-color: #f9f9f9;
+        }
+        tr:nth-child(even) td {
+            background-color: #f2f2f2;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            table {
+                width: 100%;
+                font-size: 14px;
+            }
+            th, td {
+                padding: 8px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+        body {
             font-family: 'Roboto', sans-serif;
             background-color: #f7f7f7; /* Light gray background */
             margin: 0;
@@ -443,6 +498,126 @@
                 </tr>
             </tbody>
         </table>
+    </div>
+
+         <div class="container">
+        <h1>Implementation Analysis</h1>
+        
+        <h2>Algorithm/Data Structure</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Algorithm/Data Structure</th>
+                    <th>Used? (Yes/No)</th>
+                    <th>How and Where?</th>
+                    <th>Space Efficiency</th>
+                    <th>Time Efficiency</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Arrays</td>
+                    <td>Yes</td>
+                    <td>Used for adjacency matrices in Floyd-Warshall and Bellman-Ford.</td>
+                    <td>O(n<sup>2</sup>)</td>
+                    <td>O(n<sup>3</sup>) for Floyd-Warshall.</td>
+                </tr>
+                <tr>
+                    <td>Structures</td>
+                    <td>No</td>
+                    <td>Not specifically used.</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>List</td>
+                    <td>Yes</td>
+                    <td>Used to store graph edges in Bellman-Ford and Dijkstra.</td>
+                    <td>O(E)</td>
+                    <td>Efficient for edge traversal.</td>
+                </tr>
+                <tr>
+                    <td>Queue</td>
+                    <td>Yes</td>
+                    <td>Used in BFS for exploring traffic or transport flows.</td>
+                    <td>O(V)</td>
+                    <td>O(V + E)</td>
+                </tr>
+                <tr>
+                    <td>Heap</td>
+                    <td>Yes</td>
+                    <td>Used in Dijkstra for priority queue implementation and Heap Sort.</td>
+                    <td>O(V)</td>
+                    <td>O(log V) per operation for Dijkstra and O(n log n) for Heap Sort.</td>
+                </tr>
+                <tr>
+                    <td>DFS</td>
+                    <td>Yes</td>
+                    <td>Used for depth-first exploration in traffic analysis.</td>
+                    <td>O(V + E)</td>
+                    <td>O(V + E)</td>
+                </tr>
+                <tr>
+                    <td>BFS</td>
+                    <td>Yes</td>
+                    <td>Used for exploring shortest paths in unweighted graphs.</td>
+                    <td>O(V + E)</td>
+                    <td>O(V + E)</td>
+                </tr>
+                <tr>
+                    <td>Heap Sort</td>
+                    <td>Yes</td>
+                    <td>Used to efficiently sort data in road networks for scheduling.</td>
+                    <td>O(n)</td>
+                    <td>O(n log n)</td>
+                </tr>
+                <tr>
+                    <td>Dijkstra</td>
+                    <td>Yes</td>
+                    <td>Used for optimal road network design.</td>
+                    <td>O(V)</td>
+                    <td>O(V<sup>2</sup>)</td>
+                </tr>
+                <tr>
+                    <td>Floyd-Warshall</td>
+                    <td>Yes</td>
+                    <td>Used for water and waste management systems.</td>
+                    <td>O(n<sup>2</sup>)</td>
+                    <td>O(n<sup>3</sup>)</td>
+                </tr>
+                <tr>
+                    <td>Bellman-Ford</td>
+                    <td>Yes</td>
+                    <td>Used for scheduling smart public transport systems.</td>
+                    <td>O(VE)</td>
+                    <td>O(VE)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Other Parameters</h2>
+        <p><strong>Number of Lines of Code Written:</strong> Approx. 500 (Adjust based on your codebase).</p>
+        <p><strong>Number of Functions:</strong> Approx. 10-15 (Depends on modular implementation).</p>
+
+        <h2>Design Techniques and Principles used:</h2>
+        <ul>
+            <li>Greedy Technique (Dijkstra)</li>
+            <li>Dynamic Programming (Floyd-Warshall)</li>
+            <li>Space-Time Tradeoff (Adjacency matrix in Floyd-Warshall)</li>
+            <li>Divide and Conquer</li>
+        </ul>
+
+        <h2>SDG Connect:</h2>
+        <ul>
+            <li><strong>SDG 9:</strong> Industry, Innovation, and Infrastructure (Optimal road network design).</li>
+            <li><strong>SDG 11:</strong> Sustainable Cities and Communities (Smart public transport scheduling and water management).</li>
+        </ul>
+
+        <h2>Reflections:</h2>
+        <ul>
+            <li>This project helped understand the practical applications of algorithms like Dijkstra, Bellman-Ford, and Floyd-Warshall in solving real-world problems.</li>
+            <li>Improved skills in modular problem-solving, graph representations, and algorithm efficiency.</li>
+        </ul>
     </div>
 
 
