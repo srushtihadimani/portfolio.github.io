@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Cases for Smart City</title>
+    <title>Business Cases for Smart City with Graphs</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vis-network@9.0.0/dist/vis-network.min.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -54,6 +54,8 @@
         .graph-container {
             margin-top: 40px;
             text-align: center;
+            width: 100%;
+            height: 500px;
         }
     </style>
 </head>
@@ -119,8 +121,8 @@
 
     <!-- Graph for Optimal Road Network Design -->
     <div class="graph-container">
-        <h3>Graph: Travel Cost for Optimal Road Network</h3>
-        <canvas id="roadNetworkChart" width="400" height="200"></canvas>
+        <h3>Graph: Optimal Road Network Design</h3>
+        <div id="roadNetworkGraph"></div>
     </div>
 </section>
 
@@ -178,10 +180,10 @@
         </tbody>
     </table>
 
-    <!-- Graph for Smart Public Transportation Scheduling -->
+    <!-- Graph for Public Transportation Scheduling -->
     <div class="graph-container">
-        <h3>Graph: Travel Cost for Public Transportation Routes</h3>
-        <canvas id="transportChart" width="400" height="200"></canvas>
+        <h3>Graph: Public Transportation Scheduling</h3>
+        <div id="transportGraph"></div>
     </div>
 </section>
 
@@ -241,80 +243,89 @@
 
     <!-- Graph for Waste and Water Management -->
     <div class="graph-container">
-        <h3>Graph: Travel Cost for Waste and Water Management</h3>
-        <canvas id="waterManagementChart" width="400" height="200"></canvas>
+        <h3>Graph: Waste and Water Management</h3>
+        <div id="waterManagementGraph"></div>
     </div>
 </section>
 
 <script>
-    // Graph for Optimal Road Network Design
-    var ctx1 = document.getElementById('roadNetworkChart').getContext('2d');
-    var roadNetworkChart = new Chart(ctx1, {
-        type: 'bar',
-        data: {
-            labels: ['Route 1', 'Route 2', 'Route 3', 'Route 4', 'Route 5'],
-            datasets: [{
-                label: 'Travel Cost (Units)',
-                data: [120, 180, 240, 200, 150],
-                backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                borderColor: 'rgba(54, 162, 235, 1)',
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
+    // Data for Optimal Road Network Design (Nodes and Edges)
+    var nodes1 = new vis.DataSet([
+        { id: 1, label: 'Hospital 1' },
+        { id: 2, label: 'School 1' },
+        { id: 3, label: 'Agricultural Board 3' },
+        { id: 4, label: 'Hospital 2' },
+        { id: 5, label: 'Electric Board' },
+        { id: 6, label: 'Agricultural Board 5' },
+        { id: 7, label: 'Post Office 1' },
+        { id: 8, label: 'School 3' },
+        { id: 9, label: 'Hospital 5' }
+    ]);
+    var edges1 = new vis.DataSet([
+        { from: 1, to: 2, label: '120 units' },
+        { from: 2, to: 3, label: '180 units' },
+        { from: 4, to: 5, label: '240 units' },
+        { from: 6, to: 7, label: '200 units' },
+        { from: 8, to: 9, label: '150 units' }
+    ]);
 
-    // Graph for Public Transportation Scheduling
-    var ctx2 = document.getElementById('transportChart').getContext('2d');
-    var transportChart = new Chart(ctx2, {
-        type: 'bar',
-        data: {
-            labels: ['Skyline Route', 'Horizon Route', 'Blossom Route', 'Sunset Route', 'Sunrise Route'],
-            datasets: [{
-                label: 'Travel Cost (Units)',
-                data: [150, 200, 120, 240, 180],
-                backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                borderColor: 'rgba(75, 192, 192, 1)',
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
+    var container1 = document.getElementById('roadNetworkGraph');
+    var data1 = { nodes: nodes1, edges: edges1 };
+    var options1 = {
+        nodes: { shape: 'dot', size: 20 },
+        edges: { width: 2, arrows: 'to' },
+        physics: true
+    };
+    var network1 = new vis.Network(container1, data1, options1);
 
-    // Graph for Waste and Water Management
-    var ctx3 = document.getElementById('waterManagementChart').getContext('2d');
-    var waterManagementChart = new Chart(ctx3, {
-        type: 'bar',
-        data: {
-            labels: ['Route 1', 'Route 2', 'Route 3', 'Route 4', 'Route 5'],
-            datasets: [{
-                label: 'Travel Cost (Units)',
-                data: [100, 140, 200, 180, 150],
-                backgroundColor: 'rgba(255, 159, 64, 0.2)',
-                borderColor: 'rgba(255, 159, 64, 1)',
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
+    // Data for Public Transportation Scheduling (Nodes and Edges)
+    var nodes2 = new vis.DataSet([
+        { id: 1, label: 'City Central' },
+        { id: 2, label: 'School 1' },
+        { id: 3, label: 'Hospital 2' },
+        { id: 4, label: 'Market 5' },
+        { id: 5, label: 'Electric Board' },
+        { id: 6, label: 'Post Office' }
+    ]);
+    var edges2 = new vis.DataSet([
+        { from: 1, to: 2, label: '150 units' },
+        { from: 3, to: 4, label: '200 units' },
+        { from: 2, to: 5, label: '120 units' },
+        { from: 4, to: 6, label: '240 units' }
+    ]);
+
+    var container2 = document.getElementById('transportGraph');
+    var data2 = { nodes: nodes2, edges: edges2 };
+    var options2 = {
+        nodes: { shape: 'dot', size: 20 },
+        edges: { width: 2, arrows: 'to' },
+        physics: true
+    };
+    var network2 = new vis.Network(container2, data2, options2);
+
+    // Data for Waste and Water Management (Nodes and Edges)
+    var nodes3 = new vis.DataSet([
+        { id: 1, label: 'Residential Zone 1' },
+        { id: 2, label: 'Commercial Zone 2' },
+        { id: 3, label: 'Industrial Zone 4' },
+        { id: 4, label: 'Agricultural Zone 5' },
+        { id: 5, label: 'Residential Zone 2' }
+    ]);
+    var edges3 = new vis.DataSet([
+        { from: 1, to: 2, label: '100 units' },
+        { from: 3, to: 4, label: '140 units' },
+        { from: 4, to: 5, label: '200 units' },
+        { from: 2, to: 5, label: '150 units' }
+    ]);
+
+    var container3 = document.getElementById('waterManagementGraph');
+    var data3 = { nodes: nodes3, edges: edges3 };
+    var options3 = {
+        nodes: { shape: 'dot', size: 20 },
+        edges: { width: 2, arrows: 'to' },
+        physics: true
+    };
+    var network3 = new vis.Network(container3, data3, options3);
 </script>
 
 </body>
