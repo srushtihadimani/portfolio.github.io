@@ -1,1 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Government Service - Digital Disaster Risk Reduction Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .content {
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .table-container {
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .algorithm-section {
+            margin-top: 30px;
+        }
+        .algorithm {
+            margin-bottom: 15px;
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>E-Government Service</h1>
+    <p>Goal: Develop a Digital Disaster Risk Reduction Platform</p>
+</header>
+
+<div class="content">
+    <h2>SDG Goal: 11 - Sustainable Cities and Communities</h2>
+    <p><strong>Target:</strong> 11.b</p>
+    <p><strong>Indicator:</strong> 11.b.2</p>
+
+    <h2>Nodes</h2>
+    <ul>
+        <li>Transport Hubs: T1, T2, T3</li>
+        <li>Schools: S1, S2, S3, S4</li>
+        <li>Hospitals: H1, H2</li>
+    </ul>
+
+    <h2>Distance Matrix (in km)</h2>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>From/To</th>
+                    <th>T1</th>
+                    <th>T2</th>
+                    <th>T3</th>
+                    <th>S1</th>
+                    <th>S2</th>
+                    <th>S3</th>
+                    <th>S4</th>
+                    <th>H1</th>
+                    <th>H2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>T1</td>
+                    <td>0</td>
+                    <td>12</td>
+                    <td>18</td>
+                    <td>10</td>
+                    <td>15</td>
+                    <td>22</td>
+                    <td>25</td>
+                    <td>8</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>T2</td>
+                    <td>12</td>
+                    <td>0</td>
+                    <td>10</td>
+                    <td>15</td>
+                    <td>18</td>
+                    <td>20</td>
+                    <td>28</td>
+                    <td>22</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>T3</td>
+                    <td>18</td>
+                    <td>10</td>
+                    <td>0</td>
+                    <td>20</td>
+                    <td>25</td>
+                    <td>15</td>
+                    <td>12</td>
+                    <td>25</td>
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>S1</td>
+                    <td>10</td>
+                    <td>15</td>
+                    <td>20</td>
+                    <td>0</td>
+                    <td>8</td>
+                    <td>12</td>
+                    <td>18</td>
+                    <td>10</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>S2</td>
+                    <td>15</td>
+                    <td>18</td>
+                    <td>25</td>
+                    <td>8</td>
+                    <td>0</td>
+                    <td>10</td>
+                    <td>15</td>
+                    <td>12</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>S3</td>
+                    <td>22</td>
+                    <td>20</td>
+                    <td>15</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>0</td>
+                    <td>5</td>
+                    <td>15</td>
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>S4</td>
+                    <td>25</td>
+                    <td>28</td>
+                    <td>12</td>
+                    <td>18</td>
+                    <td>15</td>
+                    <td>5</td>
+                    <td>0</td>
+                    <td>20</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>H1</td>
+                    <td>8</td>
+                    <td>22</td>
+                    <td>25</td>
+                    <td>10</td>
+                    <td>12</td>
+                    <td>15</td>
+                    <td>20</td>
+                    <td>0</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>H2</td>
+                    <td>20</td>
+                    <td>12</td>
+                    <td>18</td>
+                    <td>22</td>
+                    <td>20</td>
+                    <td>18</td>
+                    <td>10</td>
+                    <td>8</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="algorithm-section">
+        <h2>Algorithms</h2>
+
+        <div class="algorithm">
+            <h3>Dijkstra's Algorithm (For Shortest Path Calculations)</h3>
+            <p><strong>Objective:</strong> Find the shortest path from one node to another in the network, ensuring fast access to key locations like hospitals in the event of a disaster.</p>
+            <p><strong>Application:</strong> This algorithm can help determine the quickest routes between transport hubs, schools, and hospitals, ensuring that disaster response teams can reach critical areas quickly.</p>
+        </div>
+
+        <div class="algorithm">
+            <h3>Prim's Algorithm (For Minimum Spanning Tree)</h3>
+            <p><strong>Objective:</strong> Ensure all the nodes in the network are connected in the most cost-efficient way, helping to reduce the overall risk of disaster response inefficiency.</p>
+            <p><strong>Application:</strong> Prim’s algorithm can be used to design a robust road network that connects all important nodes (e.g., transport hubs, hospitals, and schools) at the minimum cost, ensuring accessibility even during emergencies.</p>
+        </div>
+
+        <div class="algorithm">
+            <h3>Kruskal's Algorithm (For Minimum Spanning Tree)</h3>
+            <p><strong>Objective:</strong> Similar to Prim's algorithm, Kruskal's algorithm can also help connect all important nodes while minimizing the total connection cost.</p>
+            <p><strong>Application:</strong> Kruskal's algorithm can be used to build a disaster response network that optimizes road connectivity between transport hubs, schools, and hospitals, ensuring that resources and teams can be deployed efficiently during emergencies.</p>
+        </div>
+
+        <div class="algorithm">
+            <h3>Floyd-Warshall Algorithm (For All-Pairs Shortest Paths)</h3>
+            <p><strong>Objective:</strong> Calculate the shortest paths between every pair of nodes.</p>
+            <p><strong>Application:</strong> This algorithm is useful if the platform needs to provide shortest-path information between all possible combinations of nodes (e.g., from any transport hub to any hospital or school).</p>
+        </div>
+    </div>
+
+    <h2>Use Case Example: Dijkstra's Algorithm</h2>
+    <p>To prioritize quick response times in case of a disaster, Dijkstra's Algorithm would be ideal for determining the shortest paths from a transport hub to various hospitals, schools, and other important locations. Here's a breakdown of how you can apply it to your network:</p>
+
+    <h3>Input: Distance Matrix</h3>
+    <p>Example: Shortest path from T1 (Transport Hub 1) to H1 (Hospital 1) = T1 → H1 = 8 km.</p>
+
+    <h3>Outcome:</h3>
+    <p>This approach can help optimize the disaster risk reduction platform by ensuring that transport hubs, schools, and hospitals are well-connected, and response times are minimized in times of emergency.</p>
+</div>
+
+<footer>
+    <p>&copy; 2024 E-Government Service</p>
+</footer>
+
+</body>
+</html>
 
