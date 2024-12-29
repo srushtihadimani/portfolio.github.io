@@ -368,10 +368,10 @@ using namespace std;
 
 class Graph {
 public:
-    vector&lt;vector&lt;int&gt;&gt; adjMatrix; // Adjacency matrix for the graph
-    vector&lt;string&gt; nodes; // List of node names
+    vector&lt;vector&lt;int&gt;&gt; adjMatrix; 
+    vector&lt;string&gt; nodes; 
 
-    // Constructor: Initialize the graph with nodes and adjacency matrix
+    
     Graph() {
         nodes = {"T1", "T2", "T3", "S1", "S2", "S3", "S4", "H1", "H2"};
         adjMatrix = {
@@ -387,15 +387,15 @@ public:
         };
     }
 
-    // Function to run Dijkstra's algorithm
+    
     void dijkstra(int start) {
         int n = nodes.size();
-        vector&lt;int&gt; dist(n, INT_MAX); // Distance from start node to all other nodes
-        vector&lt;bool&gt; visited(n, false); // To track if a node is processed
+        vector&lt;int&gt; dist(n, INT_MAX); 
+        vector&lt;bool&gt; visited(n, false); 
 
         dist[start] = 0;
 
-        // Min-heap priority queue to store (distance, node)
+       
         priority_queue&lt;pair&lt;int, int&gt;, vector&lt;pair&lt;int, int&gt;&gt;, greater&lt;pair&lt;int, int&gt;&gt;&gt; pq;
         pq.push({0, start}); // Push the starting node with distance 0
 
@@ -403,11 +403,11 @@ public:
             int u = pq.top().second; // Get the node with the smallest distance
             pq.pop();
 
-            // If this node is already visited, skip it
+           
             if (visited[u]) continue;
             visited[u] = true;
 
-            // Update the distances of adjacent nodes
+           
             for (int v = 0; v &lt; n; ++v) {
                 if (!visited[v] && adjMatrix[u][v] != 0) {
                     int newDist = dist[u] + adjMatrix[u][v];
@@ -419,7 +419,7 @@ public:
             }
         }
 
-        // Print the shortest distances from the start node
+       
         cout &lt;&lt; "Shortest paths from " &lt;&lt; nodes[start] &lt;&lt; ":\n";
         for (int i = 0; i &lt; n; ++i) {
             if (dist[i] == INT_MAX) {
@@ -432,19 +432,19 @@ public:
 };
 
 int main() {
-    // Create the graph with the distance matrix
+   
     Graph g;
 
-    // Ask the user for the starting node
+   
     string startNode;
     cout &lt;&lt; "Enter the starting node (e.g., T1, T2, S1, H1, etc.): ";
     cin &gt;&gt; startNode;
 
-    // Map the starting node to an index
+   
     vector&lt;string&gt; nodeList = {"T1", "T2", "T3", "S1", "S2", "S3", "S4", "H1", "H2"};
     int startIndex = -1;
 
-    // Find the index of the starting node
+  
     for (int i = 0; i &lt; nodeList.size(); ++i) {
         if (nodeList[i] == startNode) {
             startIndex = i;
@@ -452,9 +452,9 @@ int main() {
         }
     }
 
-    // Check if the node exists in the graph
+  
     if (startIndex != -1) {
-        // Run Dijkstra's algorithm for the user-provided starting point
+        
         g.dijkstra(startIndex);
     } else {
         cout &lt;&lt; "Invalid node. Please enter a valid node from the graph.\n";
