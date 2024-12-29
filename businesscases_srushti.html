@@ -305,6 +305,186 @@
         <li><strong>Inclusive Public Spaces:</strong> Optimized road networks and feedback-driven design improvements ensure public spaces are accessible to all demographics, including women, children, older persons, and persons with disabilities.</li>
         <li><strong>Safety Measures:</strong> Focus on lighting, pedestrian infrastructure, and community feedback ensures that public spaces remain safe for all users.</li>
     </ul>
+    <h2>The Kurakals Algorithm in Citizen Feedback Portal</h2>
+        <div class="algorithm">
+            <p>The <strong>Kurakals Algorithm</strong> can be applied in a Citizen Feedback Portal in the following ways:</p>
+            <ul>
+                <li><strong>Sentiment Analysis:</strong> It analyzes the tone of feedback (positive, neutral, or negative) to gauge public sentiment on services.</li>
+                <li><strong>Categorization:</strong> The algorithm classifies feedback into relevant categories (e.g., healthcare, transportation) using keywords and patterns.</li>
+                <li><strong>Trend Detection:</strong> It identifies emerging issues by tracking frequent concerns across feedback submissions.</li>
+                <li><strong>Prioritization:</strong> Based on volume and severity, the algorithm prioritizes urgent issues for immediate attention.</li>
+                <li><strong>Actionable Insights:</strong> Aggregated data provides actionable insights, helping governments make informed decisions, allocate resources, and improve services efficiently.</li>
+            </ul>
+            <p>This helps streamline feedback processing, ensuring timely responses and effective governance.</p>
+        </div>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kruskal's Algorithm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+        }
+        #kruskalCode {
+            display: none;
+            background-color: #2e2e2e;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Kruskal's Algorithm - View Code</h1>
+</header>
+
+<div class="content">
+    <button onclick="toggleCode()">Click to View Kruskal's Algorithm Code</button>
+
+    <div id="kruskalCode">
+        <pre>
+#include &lt;bits/stdc++.h&gt; 
+using namespace std;
+
+class Kruskal {
+public:
+    struct Edge {
+        int u, v, w;
+    };
+
+    int n, m, count = 0;
+    vector&lt;Edge&gt; edges, ans;
+    int* arr;
+
+    Kruskal() {
+        cout &lt;&lt; "Enter number of vertices: ";
+        cin &gt;&gt; n;
+        cout &lt;&lt; "Enter number of edges in the graph:";
+        cin &gt;&gt; m;
+
+        edges.resize(m);
+        cout &lt;&lt; "Enter values for u, v, w one by one:\n";
+        for (int i = 0; i &lt; m; i++) {
+            cin &gt;&gt; edges[i].u &gt;&gt; edges[i].v &gt;&gt; edges[i].w;
+        }
+
+        mergeSort(edges);
+
+        arr = (int*)malloc(sizeof(int) * n);
+        for (int i = 0; i &lt; n; i++) {
+            arr[i] = i;
+        }
+    }
+
+    void merge(vector&lt;Edge&gt;& left, vector&lt;Edge&gt;& right, vector&lt;Edge&gt;& result) {
+        int i = 0, j = 0, k = 0, p = left.size(), q = right.size();
+        while (i &lt; p && j &lt; q) {
+            if (left[i].w &lt;= right[j].w) {
+                result[k++] = left[i++];
+            } else {
+                result[k++] = right[j++];
+            }
+        }
+        while (i &lt; p) result[k++] = left[i++];
+        while (j &lt; q) result[k++] = right[j++];
+    }
+
+    void mergeSort(vector&lt;Edge&gt;& edges) {
+        int n = edges.size();
+        if (n &gt; 1) {
+            vector&lt;Edge&gt; left(edges.begin(), edges.begin() + n / 2);
+            vector&lt;Edge&gt; right(edges.begin() + n / 2, edges.end());
+            mergeSort(left);
+            mergeSort(right);
+            merge(left, right, edges);
+        }
+    }
+
+    void Union(int u, int v) {
+        int temp = arr[u];
+        for (int i = 0; i &lt; n; i++) {
+            if (arr[i] == temp)
+                arr[i] = arr[v];
+        }
+    }
+
+    bool Find(int u, int v) {
+        if (arr[u] == arr[v])
+        return 1;
+        else
+            return 0;
+    }
+
+    void spanning_tree() {
+        int i = 0;
+        while (count &lt; n - 1 && i &lt; m) {
+            if (Find(edges[i].u, edges[i].v)==0) {
+                Union(edges[i].u, edges[i].v);
+                ans.push_back(edges[i]);
+                count++;
+            }
+            i++;
+        }
+    }
+};
+
+int main() {
+    Kruskal k;
+    k.spanning_tree();
+
+    cout &lt;&lt; "Edges in the Minimum Spanning Tree:\n";
+    for (size_t i = 0; i &lt; k.ans.size(); i++) {
+    cout &lt;&lt; k.ans[i].u &lt;&lt; " " &lt;&lt; k.ans[i].v &lt;&lt; " " &lt;&lt; k.ans[i].w &lt;&lt; endl;
+}
+
+    return 0;
+}
+        </pre>
+    </div>
+</div>
+
+<script>
+    function toggleCode() {
+        var codeElement = document.getElementById('kruskalCode');
+        if (codeElement.style.display === "none") {
+            codeElement.style.display = "block";
+        } else {
+            codeElement.style.display = "none";
+        }
+    }
+</script>
 
 </body>
 </html>
+
+
+
