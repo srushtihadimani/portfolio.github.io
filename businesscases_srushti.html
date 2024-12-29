@@ -3,72 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Citizen Feedback Portal - Public Spaces Accessibility</title>
+    <title>Smart City Project: Zones and Areas Overview</title>
     <link rel="stylesheet" href="styles.css"> <!-- External CSS for styling -->
-    <script src="script.js" defer></script> <!-- External JS for handling feedback submissions -->
 </head>
 <body>
     <header>
         <div class="header-container">
-            <h1>Citizen Feedback Portal</h1>
-            <p>Help us improve accessibility, safety, and inclusivity in our public spaces!</p>
+            <h1>Smart City Project</h1>
+            <p>Zones and Areas Overview</p>
         </div>
     </header>
 
-    <section id="feedback-form-section">
-        <h2>Submit Your Feedback</h2>
-        <form id="feedback-form" action="submitFeedback" method="POST">
-            <label for="location">Location (e.g., Park, Street, etc.):</label>
-            <input type="text" id="location" name="location" required placeholder="Enter location">
-            
-            <label for="issue">Issue Reported:</label>
-            <textarea id="issue" name="issue" required placeholder="Describe the accessibility issue"></textarea>
-
-            <label for="urgency">Urgency Level:</label>
-            <select id="urgency" name="urgency">
-                <option value="low">Low</option>
-                <option value="medium">Medium</option>
-                <option value="high">High</option>
-            </select>
-
-            <label for="accessibility">Does this affect accessibility for vulnerable groups?</label>
-            <select id="accessibility" name="accessibility" required>
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-            </select>
-
-            <button type="submit">Submit Feedback</button>
-        </form>
-    </section>
-
-    <section id="feedback-display-section">
-        <h2>Recent Feedback</h2>
-        <div id="feedback-list">
-            <!-- Placeholder for feedback display -->
-        </div>
-    </section>
-
-    <section id="road-network">
-        <h2>Road Network Optimization</h2>
-        <p>Our algorithms are working to improve the road network for better accessibility and safety.</p>
-        <button id="optimize-roads-btn">Optimize Roads</button>
-        <div id="road-optimization-result">
-            <!-- Result of Kruskal's Algorithm will be displayed here -->
-        </div>
+    <section id="zones-overview">
+        <h2>Zones and Areas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sl. No.</th>
+                    <th>Zone/Area</th>
+                    <th>Number of Locations</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Residential Zones</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Commercial Zones</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Industrial Zones</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Agricultural Zones</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Healthcare Zones</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Education Zones</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Public Service Zones</td>
+                    <td>4</td>
+                </tr>
+            </tbody>
+        </table>
     </section>
 
     <footer>
-        <p>Contact us at <a href="mailto:feedback@city.gov">feedback@city.gov</a></p>
-        <p>&copy; 2024 City Development & Urban Planning</p>
+        <p>&copy; 2024 Smart City Project</p>
     </footer>
-
-    <!-- Modal for success or error messages -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <p id="modal-message">Thank you for your feedback!</p>
-        </div>
-    </div>
 </body>
 </html>
-
