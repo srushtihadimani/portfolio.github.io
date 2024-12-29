@@ -55,7 +55,13 @@
             margin-top: 40px;
             text-align: center;
             width: 100%;
-            height: 600px;  /* Increased height for better visibility */
+            height: 500px;
+        }
+        /* Custom Styling for Network */
+        .vis-network {
+            border: 2px solid #2c3e50;
+            border-radius: 8px;
+            background-color: #ecf0f1;
         }
     </style>
 </head>
@@ -160,4 +166,173 @@
                 <td>3</td>
                 <td>Blossom Route (Green)</td>
                 <td>School 1 to Electric Board</td>
-                <
+                <td>120</td>
+                <td>4 (Schools), 1 (Electric Boards)</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Sunset Route (Yellow)</td>
+                <td>Hospital 3 to School 3</td>
+                <td>240</td>
+                <td>5 (Hospitals), 4 (Schools)</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Sunrise Route (Purple)</td>
+                <td>Post Office to Market 7</td>
+                <td>180</td>
+                <td>3 (Post Offices), 7 (Agricultural Market Boards)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Graph for Public Transportation Scheduling -->
+    <div class="graph-container">
+        <h3>Graph: Public Transportation Scheduling</h3>
+        <div id="transportGraph"></div>
+    </div>
+</section>
+
+<!-- Waste and Water Management -->
+<section class="business-case">
+    <h2>Business Case: Waste and Water Management</h2>
+    <p><strong>Sub-task:</strong> Optimizing Collection and Distribution Systems</p>
+    <p><strong>SDG Goal:</strong> 6 | <strong>Target:</strong> 6.3 | <strong>Indicator:</strong> 6.3.1</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Sl. No.</th>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>Travel Cost (Units)</th>
+                <th>Number of Locations</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Residential Zone 1</td>
+                <td>Commercial Zone 2</td>
+                <td>100</td>
+                <td>3 (Residential Zones), 2 (Commercial Zones)</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Residential Zone 3</td>
+                <td>Industrial Zone 4</td>
+                <td>140</td>
+                <td>3 (Residential Zones), 4 (Industrial Zones)</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Agricultural Zone 5</td>
+                <td>Commercial Zone 2</td>
+                <td>200</td>
+                <td>3 (Agricultural Zones), 2 (Commercial Zones)</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Residential Zone 2</td>
+                <td>Agricultural Zone 3</td>
+                <td>180</td>
+                <td>3 (Residential Zones), 3 (Agricultural Zones)</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Commercial Zone 1</td>
+                <td>Industrial Zone 2</td>
+                <td>150</td>
+                <td>2 (Commercial Zones), 4 (Industrial Zones)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Graph for Waste and Water Management -->
+    <div class="graph-container">
+        <h3>Graph: Waste and Water Management</h3>
+        <div id="waterManagementGraph"></div>
+    </div>
+</section>
+
+<script>
+    // Data for Optimal Road Network Design (Nodes and Edges)
+    var nodes1 = new vis.DataSet([
+        { id: 1, label: 'Hospital 1', color: '#e74c3c' },
+        { id: 2, label: 'School 1', color: '#3498db' },
+        { id: 3, label: 'Agricultural Board 3', color: '#2ecc71' },
+        { id: 4, label: 'Electric Board', color: '#f39c12' },
+        { id: 5, label: 'Post Office 1', color: '#9b59b6' }
+    ]);
+
+    var edges1 = new vis.DataSet([
+        { from: 1, to: 2, label: '120', color: { color: '#ecf0f1' } },
+        { from: 2, to: 3, label: '180', color: { color: '#ecf0f1' } },
+        { from: 3, to: 4, label: '240', color: { color: '#ecf0f1' } },
+        { from: 5, to: 1, label: '200', color: { color: '#ecf0f1' } }
+    ]);
+
+    var container1 = document.getElementById('roadNetworkGraph');
+    var data1 = { nodes: nodes1, edges: edges1 };
+    var options1 = { 
+        edges: { font: { size: 16 } }, 
+        nodes: { shape: 'dot', size: 30 }, 
+        physics: false,
+        layout: { improvedLayout: true }
+    };
+    var network1 = new vis.Network(container1, data1, options1);
+
+    // Data for Public Transportation Scheduling (Nodes and Edges)
+    var nodes2 = new vis.DataSet([
+        { id: 1, label: 'Skyline Route (Red)', color: '#e74c3c' },
+        { id: 2, label: 'Horizon Route (Blue)', color: '#3498db' },
+        { id: 3, label: 'Blossom Route (Green)', color: '#2ecc71' },
+        { id: 4, label: 'Sunset Route (Yellow)', color: '#f39c12' },
+        { id: 5, label: 'Sunrise Route (Purple)', color: '#9b59b6' }
+    ]);
+
+    var edges2 = new vis.DataSet([
+        { from: 1, to: 2, label: '150', color: { color: '#ecf0f1' } },
+        { from: 2, to: 3, label: '200', color: { color: '#ecf0f1' } },
+        { from: 3, to: 4, label: '120', color: { color: '#ecf0f1' } },
+        { from: 4, to: 5, label: '240', color: { color: '#ecf0f1' } }
+    ]);
+
+    var container2 = document.getElementById('transportGraph');
+    var data2 = { nodes: nodes2, edges: edges2 };
+    var options2 = { 
+        edges: { font: { size: 16 } }, 
+        nodes: { shape: 'dot', size: 30 }, 
+        physics: false,
+        layout: { improvedLayout: true }
+    };
+    var network2 = new vis.Network(container2, data2, options2);
+
+    // Data for Waste and Water Management (Nodes and Edges)
+    var nodes3 = new vis.DataSet([
+        { id: 1, label: 'Residential Zone 1', color: '#e74c3c' },
+        { id: 2, label: 'Commercial Zone 2', color: '#3498db' },
+        { id: 3, label: 'Agricultural Zone 5', color: '#2ecc71' },
+        { id: 4, label: 'Industrial Zone 4', color: '#f39c12' },
+        { id: 5, label: 'Post Office', color: '#9b59b6' }
+    ]);
+
+    var edges3 = new vis.DataSet([
+        { from: 1, to: 2, label: '100', color: { color: '#ecf0f1' } },
+        { from: 2, to: 3, label: '140', color: { color: '#ecf0f1' } },
+        { from: 3, to: 4, label: '200', color: { color: '#ecf0f1' } },
+        { from: 4, to: 5, label: '180', color: { color: '#ecf0f1' } }
+    ]);
+
+    var container3 = document.getElementById('waterManagementGraph');
+    var data3 = { nodes: nodes3, edges: edges3 };
+    var options3 = { 
+        edges: { font: { size: 16 } }, 
+        nodes: { shape: 'dot', size: 30 }, 
+        physics: false,
+        layout: { improvedLayout: true }
+    };
+    var network3 = new vis.Network(container3, data3, options3);
+</script>
+
+</body>
+</html>
