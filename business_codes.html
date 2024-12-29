@@ -87,10 +87,202 @@
             padding: 0.5rem;
             margin-top: 2rem;
         }
+        body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+}
 
-        p {
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #333;
+}
+
+header h2 {
+    color: #555;
+    font-size: 1.2em;
+}
+
+section {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+section h4 {
+    color: #0077cc;
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+table th {
+    background-color: #0077cc;
+    color: white;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+p {
+    color: #333;
+    line-height: 1.6;
+}
+
+strong {
+    color: #0077cc;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f1f1f1;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #2c3e50;
+}
+
+header h2 {
+    color: #34495e;
+    font-size: 1.2em;
+}
+
+section {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+section h4 {
+    color: #2980b9;
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+table th {
+    background-color: #2980b9;
+    color: white;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+p {
+    color: #333;
+    line-height: 1.6;
+}
+
+strong {
+    color: #2980b9;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #eef5f9;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #1a5276;
+}
+
+header h2 {
+    color: #21618c;
+    font-size: 1.2em;
+}
+
+section {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+section h4 {
+    color: #1f618d;
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+table th {
+    background-color: #1f618d;
+    color: white;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+p {
+    color: #333;
+    line-height: 1.6;
+}
+
+strong {
+    color: #1f618d;
+}
+
+
+        
+  p {
             font-size: 1rem;
         }
+        
     </style>
 </head>
 <body>
@@ -213,6 +405,62 @@
             <li><strong>Prim’s Algorithm:</strong> Finds the minimum spanning tree. <i>Application: Used to connect essential nodes with minimal construction cost.</i></li>
             <li><strong>Kruskal’s Algorithm:</strong> Another approach for finding the minimum spanning tree. <i>Application: Ensures minimal cost in connecting essential areas.</i></li>
         </ul>
+        <body>
+    <header>
+        <h1>Optimal Road Network Design</h1>
+        <h2>SDG Goal: 11 - Sustainable Cities and Communities</h2>
+    </header>
+    <section>
+        <h3>Target: 11.2</h3>
+        <p>Indicator: 11.2.1</p>
+        <p>Designing a road network to ensure efficient movement of people and goods across Aurangabad (1500 sq. km).</p>
+        <h4>Nodes</h4>
+        <ul>
+            <li>Hospitals: H1, H2, H3, H4</li>
+            <li>Residential Areas: R1, R2, R3</li>
+            <li>Commercial Area: C1</li>
+            <li>Industrial Hub: I1</li>
+            <li>Transport Hub: T1</li>
+        </ul>
+    </section>
+    <section>
+        <h4>Distance Matrix (in km)</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>From/To</th>
+                    <th>H1</th>
+                    <th>H2</th>
+                    <th>H3</th>
+                    <th>H4</th>
+                    <th>R1</th>
+                    <th>R2</th>
+                    <th>R3</th>
+                    <th>C1</th>
+                    <th>I1</th>
+                    <th>T1</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>H1</td><td>0</td><td>8</td><td>12</td><td>15</td><td>10</td><td>20</td><td>25</td><td>5</td><td>18</td><td>30</td></tr>
+                <tr><td>H2</td><td>8</td><td>0</td><td>10</td><td>13</td><td>12</td><td>15</td><td>18</td><td>10</td><td>25</td><td>22</td></tr>
+                <tr><td>H3</td><td>12</td><td>10</td><td>0</td><td>9</td><td>22</td><td>18</td><td>20</td><td>15</td><td>8</td><td>28</td></tr>
+                <tr><td>H4</td><td>15</td><td>13</td><td>9</td><td>0</td><td>18</td><td>30</td><td>25</td><td>20</td><td>15</td><td>35</td></tr>
+                <tr><td>R1</td><td>10</td><td>12</td><td>22</td><td>18</td><td>0</td><td>8</td><td>10</td><td>12</td><td>20</td><td>25</td></tr>
+                <tr><td>R2</td><td>20</td><td>15</td><td>18</td><td>30</td><td>8</td><td>0</td><td>5</td><td>18</td><td>22</td><td>15</td></tr>
+                <tr><td>R3</td><td>25</td><td>18</td><td>20</td><td>25</td><td>10</td><td>5</td><td>0</td><td>22</td><td>25</td><td>12</td></tr>
+                <tr><td>C1</td><td>5</td><td>10</td><td>15</td><td>20</td><td>12</td><td>18</td><td>22</td><td>0</td><td>12</td><td>28</td></tr>
+                <tr><td>I1</td><td>18</td><td>25</td><td>8</td><td>15</td><td>20</td><td>22</td><td>25</td><td>12</td><td>0</td><td>10</td></tr>
+                <tr><td>T1</td><td>30</td><td>22</td><td>28</td><td>35</td><td>25</td><td>15</td><td>12</td><td>28</td><td>10</td><td>0</td></tr>
+            </tbody>
+        </table>
+    </section>
+      </section>
+        <h4>Approach</h4>
+        <p><strong>Algorithm Used:</strong> Dijkstra's Algorithm</p>
+        <p><strong>Description:</strong> Computes the shortest path to ensure minimal travel cost for city traffic, prioritizing emergency and high-demand routes.</p>
+        <p><strong>Outcome:</strong> Optimal road network enhancing accessibility and reducing congestion.</p>
+
     </section>
 
     <!-- Public Transport Section -->
@@ -277,6 +525,57 @@
             <li><strong>Genetic Algorithm:</strong> Optimization based on natural selection. <i>Application: Used for optimizing routes and schedules.</i></li>
             <li><strong>Simulated Annealing:</strong> Probabilistic optimization. <i>Application: Used to minimize waiting times and balance loads.</i></li>
         </ul>
+        <header>
+        <h1>Smart Public Transport Scheduling</h1>
+        <h2>SDG Goal: 11 - Sustainable Cities and Communities</h2>
+    </header>
+    <section>
+        <h3>Target: 11.2</h3>
+        <p>Indicator: 11.2.1</p>
+        <p>Streamlining public transportation systems for better connectivity and efficiency across Aurangabad.</p>
+        <h4>Nodes</h4>
+        <ul>
+            <li>Transport Hubs: T1, T2, T3</li>
+            <li>Schools: S1, S2, S3, S4</li>
+            <li>Hospitals: H1, H2</li>
+        </ul>
+    </section>
+    <section>
+        <h4>Distance Matrix (in km)</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>From/To</th>
+                    <th>T1</th>
+                    <th>T2</th>
+                    <th>T3</th>
+                    <th>S1</th>
+                    <th>S2</th>
+                    <th>S3</th>
+                    <th>S4</th>
+                    <th>H1</th>
+                    <th>H2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>T1</td><td>0</td><td>12</td><td>18</td><td>10</td><td>15</td><td>22</td><td>25</td><td>8</td><td>20</td></tr>
+                <tr><td>T2</td><td>12</td><td>0</td><td>10</td><td>15</td><td>18</td><td>20</td><td>28</td><td>22</td><td>12</td></tr>
+                <tr><td>T3</td><td>18</td><td>10</td><td>0</td><td>20</td><td>25</td><td>15</td><td>12</td><td>25</td><td>18</td></tr>
+                <tr><td>S1</td><td>10</td><td>15</td><td>20</td><td>0</td><td>8</td><td>12</td><td>18</td><td>10</td><td>22</td></tr>
+                <tr><td>S2</td><td>15</td><td>18</td><td>25</td><td>8</td><td>0</td><td>10</td><td>15</td><td>12</td><td>20</td></tr>
+                <tr><td>S3</td><td>22</td><td>20</td><td>15</td><td>12</td><td>10</td><td>0</td><td>5</td><td>15</td><td>18</td></tr>
+                <tr><td>S4</td><td>25</td><td>28</td><td>12</td><td>18</td><td>15</td><td>5</td><td>0</td><td>20</td><td>10</td></tr>
+                <tr><td>H1</td><td>8</td><td>22</td><td>25</td><td>10</td><td>12</td><td>15</td><td>20</td><td>0</td><td>8</td></tr>
+                <tr><td>H2</td><td>20</td><td>12</td><td>18</td><td>22</td><td>20</td><td>18</td><td>10</td><td>8</td><td>0</td></tr>
+            </tbody>
+        </table>
+    </section>
+    <section>
+        <h4>Approach</h4>
+        <p><strong>Algorithm Used:</strong> Bellman-Ford Algorithm</p>
+        <p><strong>Description:</strong> Plans the most efficient bus schedules while considering traffic conditions and peak hours.</p>
+        <p><strong>Outcome:</strong> Minimized travel time and increased convenience for commuters.</p>
+    </section>
     </section>
 
     <!-- Water and Waste Management Section -->
@@ -341,6 +640,55 @@
             <li><strong>Greedy Algorithm for MST:</strong> Constructs a minimum spanning tree. <i>Application: Designing optimal layouts for water and waste systems.</i></li>
             <li><strong>Ant Colony Optimization:</strong> Optimization inspired by ants finding the shortest path. <i>Application: Optimizing water and waste collection routes.</i></li>
         </ul>
+        <header>
+        <h1>Waste and Water Management</h1>
+        <h2>SDG Goal: 11 - Sustainable Cities and Communities</h2>
+    </header>
+    <section>
+        <h3>Target: 11.6</h3>
+        <p>Indicator: 11.6.1</p>
+        <p>Optimizing water resource distribution and waste disposal in Aurangabad for better sustainability and efficiency.</p>
+        <h4>Nodes</h4>
+        <ul>
+            <li>Water Treatment Plants: W1, W2</li>
+            <li>Waste Disposal Sites: D1, D2</li>
+            <li>Residential Clusters: R1, R2, R3, R4</li>
+        </ul>
+    </section>
+    <section>
+        <h4>Distance Matrix (in km)</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>From/To</th>
+                    <th>W1</th>
+                    <th>W2</th>
+                    <th>D1</th>
+                    <th>D2</th>
+                    <th>R1</th>
+                    <th>R2</th>
+                    <th>R3</th>
+                    <th>R4</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>W1</td><td>0</td><td>10</td><td>15</td><td>18</td><td>8</td><td>12</td><td>20</td><td>25</td></tr>
+                <tr><td>W2</td><td>10</td><td>0</td><td>12</td><td>15</td><td>10</td><td>15</td><td>22</td><td>18</td></tr>
+                <tr><td>D1</td><td>15</td><td>12</td><td>0</td><td>8</td><td>10</td><td>18</td><td>25</td><td>22</td></tr>
+                <tr><td>D2</td><td>18</td><td>15</td><td>8</td><td>0</td><td>15</td><td>20</td><td>28</td><td>25</td></tr>
+                <tr><td>R1</td><td>8</td><td>10</td><td>10</td><td>15</td><td>0</td><td>5</td><td>12</td><td>18</td></tr>
+                <tr><td>R2</td><td>12</td><td>15</td><td>18</td><td>20</td><td>5</td><td>0</td><td>8</td><td>10</td></tr>
+                <tr><td>R3</td><td>20</td><td>22</td><td>25</td><td>28</td><td>12</td><td>8</td><td>0</td><td>5</td></tr>
+                <tr><td>R4</td><td>25</td><td>18</td><td>22</td><td>25</td><td>18</td><td>10</td><td>5</td><td>0</td></tr>
+            </tbody>
+        </table>
+    </section>
+    <section>
+        <h4>Approach</h4>
+        <p><strong>Algorithm Used:</strong> Floyd-Warshall Algorithm</p>
+        <p><strong>Description:</strong> Identifies the shortest paths for water distribution and waste collection.</p>
+        <p><strong>Outcome:</strong> Reduced operational costs and improved environmental sustainability.</p>
+    </section>
     </section>
 
     <footer>
