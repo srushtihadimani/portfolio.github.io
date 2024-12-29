@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Disaster Response System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            font-size: 16px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        .algorithms {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Real-Time Disaster Response System</h1>
+    <p><strong>Goal:</strong> Reduce fatalities and ensure timely evacuation</p>
+    <p><strong>SDG Goal:</strong> 11 - Sustainable Cities and Communities</p>
+    <p><strong>Target:</strong> 11.5</p>
+    <p><strong>Indicator:</strong> 11.5.1</p>
+    <p><strong>Task:</strong> Create an early warning system for natural disasters, focusing on water-related disasters</p>
+
+    <h2>Nodes</h2>
+    <ul>
+        <li><strong>Water Treatment Plants:</strong> W1, W2</li>
+        <li><strong>Waste Disposal Sites:</strong> D1, D2</li>
+        <li><strong>Residential Clusters:</strong> R1, R2, R3, R4</li>
+    </ul>
+
+    <h2>Distance Matrix (in km)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>From/To</th>
+                <th>W1</th>
+                <th>W2</th>
+                <th>D1</th>
+                <th>D2</th>
+                <th>R1</th>
+                <th>R2</th>
+                <th>R3</th>
+                <th>R4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>W1</td><td>0</td><td>10</td><td>15</td><td>18</td><td>8</td><td>12</td><td>20</td><td>25</td></tr>
+            <tr><td>W2</td><td>10</td><td>0</td><td>12</td><td>15</td><td>10</td><td>15</td><td>22</td><td>18</td></tr>
+            <tr><td>D1</td><td>15</td><td>12</td><td>0</td><td>8</td><td>10</td><td>18</td><td>25</td><td>22</td></tr>
+            <tr><td>D2</td><td>18</td><td>15</td><td>8</td><td>0</td><td>15</td><td>20</td><td>28</td><td>25</td></tr>
+            <tr><td>R1</td><td>8</td><td>10</td><td>10</td><td>15</td><td>0</td><td>5</td><td>12</td><td>18</td></tr>
+            <tr><td>R2</td><td>12</td><td>15</td><td>18</td><td>20</td><td>5</td><td>0</td><td>8</td><td>10</td></tr>
+            <tr><td>R3</td><td>20</td><td>22</td><td>25</td><td>28</td><td>12</td><td>8</td><td>0</td><td>5</td></tr>
+            <tr><td>R4</td><td>25</td><td>18</td><td>22</td><td>25</td><td>18</td><td>10</td><td>5</td><td>0</td></tr>
+        </tbody>
+    </table>
+
+    <h2 class="algorithms">Algorithms Used</h2>
+
+    <h3>Dijkstra’s Algorithm</h3>
+    <p><strong>Purpose:</strong> Find the shortest path in a graph.</p>
+    <p><strong>Application:</strong> Calculates optimal evacuation routes from residential clusters to safe zones.</p>
+
+    <h3>A* Algorithm</h3>
+    <p><strong>Purpose:</strong> Shortest path with a heuristic.</p>
+    <p><strong>Application:</strong> Considers flood risks, road conditions, and traffic to find evacuation routes that avoid hazards.</p>
+
+    <h3>Bellman-Ford Algorithm</h3>
+    <p><strong>Purpose:</strong> Find shortest paths with negative edge weights.</p>
+    <p><strong>Application:</strong> Handles scenarios with blocked or damaged routes (e.g., floods).</p>
+
+    <h3>Flood Prediction Algorithms</h3>
+    <p><strong>Purpose:</strong> Predict flood events using environmental data.</p>
+    <p><strong>Application:</strong> Time-series forecasting (e.g., ARIMA, LSTM) to predict floods and identify high-risk areas.</p>
+
+    <h3>Ant Colony Optimization (ACO)</h3>
+    <p><strong>Purpose:</strong> Simulate ant behavior to find the shortest path.</p>
+    <p><strong>Application:</strong> Identifies optimal evacuation routes and allocates resources like rescue teams efficiently.</p>
+
+</body>
+</html>
