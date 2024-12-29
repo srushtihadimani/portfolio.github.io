@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Business Cases for Smart City with Graphs</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/vis-network@9.0.0/dist/vis-network.min.js"></script>
     <style>
         body {
@@ -54,7 +55,7 @@
             margin-top: 40px;
             text-align: center;
             width: 100%;
-            height: 700px; /* Increased height for better visibility */
+            height: 600px;  /* Increased height for better visibility */
         }
     </style>
 </head>
@@ -69,6 +70,54 @@
     <h2>Business Case: Optimal Road Network Design</h2>
     <p><strong>Sub-task:</strong> Developing Efficient and Cost-Effective Roads</p>
     <p><strong>SDG Goal:</strong> 11 | <strong>Target:</strong> 11.2 | <strong>Indicator:</strong> 11.2.1</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Sl. No.</th>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>Travel Cost (Units)</th>
+                <th>Number of Locations</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Hospital 1</td>
+                <td>School 1</td>
+                <td>120</td>
+                <td>5 (Hospitals), 4 (Schools)</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>School 1</td>
+                <td>Agricultural Board 3</td>
+                <td>180</td>
+                <td>7 (Agricultural Market Boards)</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Hospital 2</td>
+                <td>Electric Board</td>
+                <td>240</td>
+                <td>1 (Electric Boards)</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Agricultural Board 5</td>
+                <td>Post Office 1</td>
+                <td>200</td>
+                <td>3 (Post Offices)</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>School 3</td>
+                <td>Hospital 5</td>
+                <td>150</td>
+                <td>5 (Hospitals), 4 (Schools)</td>
+            </tr>
+        </tbody>
+    </table>
 
     <!-- Graph for Optimal Road Network Design -->
     <div class="graph-container">
@@ -82,119 +131,33 @@
     <h2>Business Case: Smart Public Transportation Scheduling</h2>
     <p><strong>Sub-task:</strong> Efficient Scheduling and Operation of Public Transit</p>
     <p><strong>SDG Goal:</strong> 11 | <strong>Target:</strong> 11.2 | <strong>Indicator:</strong> 11.2.1</p>
-
-    <!-- Graph for Public Transportation Scheduling -->
-    <div class="graph-container">
-        <h3>Graph: Public Transportation Scheduling</h3>
-        <div id="transportGraph"></div>
-    </div>
-</section>
-
-<!-- Waste and Water Management -->
-<section class="business-case">
-    <h2>Business Case: Waste and Water Management</h2>
-    <p><strong>Sub-task:</strong> Optimizing Collection and Distribution Systems</p>
-    <p><strong>SDG Goal:</strong> 6 | <strong>Target:</strong> 6.3 | <strong>Indicator:</strong> 6.3.1</p>
-
-    <!-- Graph for Waste and Water Management -->
-    <div class="graph-container">
-        <h3>Graph: Waste and Water Management</h3>
-        <div id="waterManagementGraph"></div>
-    </div>
-</section>
-
-<script>
-    // Data for Optimal Road Network Design (Bidirectional Graph)
-    var nodes1 = new vis.DataSet([
-        { id: 1, label: 'Hospital 1', size: 50 },
-        { id: 2, label: 'School 1', size: 50 },
-        { id: 3, label: 'Agricultural Board 3', size: 50 },
-        { id: 4, label: 'Hospital 2', size: 50 },
-        { id: 5, label: 'Electric Board', size: 50 },
-        { id: 6, label: 'Agricultural Board 5', size: 50 },
-        { id: 7, label: 'Post Office 1', size: 50 },
-        { id: 8, label: 'School 3', size: 50 },
-        { id: 9, label: 'Hospital 5', size: 50 }
-    ]);
-    var edges1 = new vis.DataSet([
-        { from: 1, to: 2, label: '120 units' },
-        { from: 2, to: 3, label: '180 units' },
-        { from: 4, to: 5, label: '240 units' },
-        { from: 6, to: 7, label: '200 units' },
-        { from: 8, to: 9, label: '150 units' },
-        { from: 2, to: 1, label: '120 units' }, // Bidirectional edge
-        { from: 3, to: 2, label: '180 units' }, // Bidirectional edge
-        { from: 5, to: 4, label: '240 units' }, // Bidirectional edge
-        { from: 7, to: 6, label: '200 units' }, // Bidirectional edge
-        { from: 9, to: 8, label: '150 units' }  // Bidirectional edge
-    ]);
-
-    var container1 = document.getElementById('roadNetworkGraph');
-    var data1 = { nodes: nodes1, edges: edges1 };
-    var options1 = {
-        nodes: { shape: 'dot', size: 50 }, // Increased node size
-        edges: { width: 3, arrows: { to: true, from: true }, smooth: { type: 'continuous' } }, // Enhanced arrow visibility and smoother edges
-        physics: { enabled: true, barnesHut: { gravitationalConstant: -10000, centralGravity: 0.3, springLength: 200 } }
-    };
-    var network1 = new vis.Network(container1, data1, options1);
-
-    // Data for Public Transportation Scheduling (Bidirectional Graph)
-    var nodes2 = new vis.DataSet([
-        { id: 1, label: 'City Central', size: 50 },
-        { id: 2, label: 'School 1', size: 50 },
-        { id: 3, label: 'Hospital 2', size: 50 },
-        { id: 4, label: 'Market 5', size: 50 },
-        { id: 5, label: 'Electric Board', size: 50 },
-        { id: 6, label: 'Post Office', size: 50 }
-    ]);
-    var edges2 = new vis.DataSet([
-        { from: 1, to: 2, label: '150 units' },
-        { from: 3, to: 4, label: '200 units' },
-        { from: 2, to: 5, label: '120 units' },
-        { from: 4, to: 6, label: '240 units' },
-        { from: 2, to: 1, label: '150 units' }, // Bidirectional edge
-        { from: 4, to: 3, label: '200 units' }, // Bidirectional edge
-        { from: 5, to: 2, label: '120 units' }, // Bidirectional edge
-        { from: 6, to: 4, label: '240 units' }  // Bidirectional edge
-    ]);
-
-    var container2 = document.getElementById('transportGraph');
-    var data2 = { nodes: nodes2, edges: edges2 };
-    var options2 = {
-        nodes: { shape: 'dot', size: 50 }, // Increased node size
-        edges: { width: 3, arrows: { to: true, from: true }, smooth: { type: 'continuous' } }, // Enhanced arrow visibility and smoother edges
-        physics: { enabled: true, barnesHut: { gravitationalConstant: -10000, centralGravity: 0.3, springLength: 200 } }
-    };
-    var network2 = new vis.Network(container2, data2, options2);
-
-    // Data for Waste and Water Management (Bidirectional Graph)
-    var nodes3 = new vis.DataSet([
-        { id: 1, label: 'Residential Zone 1', size: 50 },
-        { id: 2, label: 'Commercial Zone 2', size: 50 },
-        { id: 3, label: 'Industrial Zone 4', size: 50 },
-        { id: 4, label: 'Agricultural Zone 5', size: 50 },
-        { id: 5, label: 'Residential Zone 2', size: 50 }
-    ]);
-    var edges3 = new vis.DataSet([
-        { from: 1, to: 2, label: '100 units' },
-        { from: 3, to: 4, label: '140 units' },
-        { from: 4, to: 5, label: '200 units' },
-        { from: 2, to: 5, label: '150 units' },
-        { from: 2, to: 1, label: '100 units' }, // Bidirectional edge
-        { from: 4, to: 3, label: '140 units' }, // Bidirectional edge
-        { from: 5, to: 4, label: '200 units' }, // Bidirectional edge
-        { from: 5, to: 2, label: '150 units' }  // Bidirectional edge
-    ]);
-
-    var container3 = document.getElementById('waterManagementGraph');
-    var data3 = { nodes: nodes3, edges: edges3 };
-    var options3 = {
-        nodes: { shape: 'dot', size: 50 }, // Increased node size
-        edges: { width: 3, arrows: { to: true, from: true }, smooth: { type: 'continuous' } }, // Enhanced arrow visibility and smoother edges
-        physics: { enabled: true, barnesHut: { gravitationalConstant: -10000, centralGravity: 0.3, springLength: 200 } }
-    };
-    var network3 = new vis.Network(container3, data3, options3);
-</script>
-
-</body>
-</html>
+    <table>
+        <thead>
+            <tr>
+                <th>Sl. No.</th>
+                <th>Route Name</th>
+                <th>Stops</th>
+                <th>Travel Cost (Units)</th>
+                <th>Number of Locations</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Skyline Route (Red)</td>
+                <td>City Central to School 1</td>
+                <td>150</td>
+                <td>4 (Schools)</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Horizon Route (Blue)</td>
+                <td>Hospital 2 to Market 5</td>
+                <td>200</td>
+                <td>5 (Hospitals), 7 (Agricultural Market Boards)</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Blossom Route (Green)</td>
+                <td>School 1 to Electric Board</td>
+                <
