@@ -74,191 +74,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Citizen Feedback Portal for Safe, Inclusive Public Spaces</title>
+    <title>Citizen Feedback Portal - Safe and Inclusive Public Spaces</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            color: #333;
         }
-
         header {
-            background-color: #2a6b94;
+            background-color: #007BFF;
             color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-
-        section {
             padding: 20px;
+            text-align: center;
+        }
+        section {
             margin: 20px;
+            padding: 20px;
             background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
+        h1, h2, h3 {
+            color: #007BFF;
         }
-
-        table, th, td {
-            border: 1px solid #ccc;
+        .card {
+            background-color: #e9ecef;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
         }
-
-        th, td {
-            padding: 10px;
-            text-align: center;
+        .algorithm-card {
+            background-color: #f8f9fa;
+            border-left: 5px solid #007BFF;
         }
-
-        th {
-            background-color: #2a6b94;
-            color: white;
+        ul {
+            list-style-type: none;
+            padding-left: 0;
         }
-
+        li {
+            padding: 8px;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #007BFF;
+        }
         footer {
-            background-color: #2a6b94;
+            background-color: #343a40;
             color: white;
-            padding: 10px;
             text-align: center;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-
-        .content-container {
-            max-width: 1200px;
-            margin: auto;
+            padding: 10px;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="header-container">
-        <h1>Citizen Feedback Portal</h1>
-        <p>Monitoring and Improving Access to Safe, Inclusive, and Accessible Public Spaces</p>
-    </div>
+    <h1>Citizen Feedback Portal</h1>
+    <p>Monitor and Improve Access to Safe, Inclusive, and Accessible Public Spaces</p>
 </header>
 
-<section id="sdg-goals">
+<section>
     <h2>Relevant SDG Goal: Sustainable Cities and Communities (SDG 11)</h2>
-    <p><strong>Target 11.7:</strong> By 2030, provide universal access to safe, inclusive, and accessible, green, and public spaces, in particular for women, children, older persons, and persons with disabilities.</p>
-    <p><strong>Indicator 11.7.1:</strong> Average share of the built-up area of cities that is open space for public use for all, by sex, age, and persons with disabilities.</p>
+    <p><strong>Target:</strong> 11.7 - By 2030, provide universal access to safe, inclusive, and accessible, green, and public spaces, in particular for women, children, older persons, and persons with disabilities.</p>
+    <p><strong>Indicator:</strong> 11.7.1 - Average share of the built-up area of cities that is open space for public use for all, by sex, age, and persons with disabilities.</p>
 </section>
 
-<section id="objective">
+<section>
     <h2>Objective</h2>
     <p>Develop a Citizen Feedback Portal to monitor and improve accessibility, safety, and inclusivity in public spaces. This system will utilize road network design, algorithms for optimization, and real-time feedback to enhance urban planning and ensure all citizens, especially vulnerable groups, have equitable access to safe, inclusive, and accessible public spaces.</p>
 </section>
 
-<section id="key-zones">
+<section>
     <h2>Key Zones and Areas</h2>
-    <table>
+    <table border="1" cellpadding="10">
+        <tr><th>Zone/Area</th><th>Locations</th></tr>
+        <tr><td>Residential Zones</td><td>R1, R2, R3</td></tr>
+        <tr><td>Commercial Zone</td><td>C1</td></tr>
+        <tr><td>Industrial Zone</td><td>I1</td></tr>
+        <tr><td>Healthcare Zones</td><td>H1, H2, H3, H4</td></tr>
+        <tr><td>Public Service Zones</td><td>T1</td></tr>
+    </table>
+</section>
+
+<section>
+    <h2>Distance Matrix (in km)</h2>
+    <table border="1" cellpadding="10">
         <thead>
             <tr>
-                <th>Sl. No.</th>
-                <th>Zone/Area</th>
-                <th>Number of Locations</th>
+                <th>From/To</th>
+                <th>H1</th>
+                <th>H2</th>
+                <th>H3</th>
+                <th>H4</th>
+                <th>R1</th>
+                <th>R2</th>
+                <th>R3</th>
+                <th>C1</th>
+                <th>I1</th>
+                <th>T1</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>Residential Zones</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Commercial Zones</td>
-                <td>4</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Industrial Zones</td>
-                <td>4</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Agricultural Zones</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Healthcare Zones</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>Education Zones</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>Public Service Zones</td>
-                <td>4</td>
-            </tr>
+            <tr><td>H1</td><td>0</td><td>8</td><td>12</td><td>15</td><td>10</td><td>20</td><td>25</td><td>5</td><td>18</td><td>30</td></tr>
+            <tr><td>H2</td><td>8</td><td>0</td><td>10</td><td>13</td><td>12</td><td>15</td><td>18</td><td>10</td><td>25</td><td>22</td></tr>
+            <tr><td>H3</td><td>12</td><td>10</td><td>0</td><td>9</td><td>22</td><td>18</td><td>20</td><td>15</td><td>8</td><td>28</td></tr>
+            <tr><td>H4</td><td>15</td><td>13</td><td>9</td><td>0</td><td>18</td><td>30</td><td>25</td><td>20</td><td>15</td><td>35</td></tr>
+            <tr><td>R1</td><td>10</td><td>12</td><td>22</td><td>18</td><td>0</td><td>8</td><td>10</td><td>12</td><td>20</td><td>25</td></tr>
+            <tr><td>R2</td><td>20</td><td>15</td><td>18</td><td>30</td><td>8</td><td>0</td><td>5</td><td>18</td><td>22</td><td>15</td></tr>
+            <tr><td>R3</td><td>25</td><td>18</td><td>20</td><td>25</td><td>10</td><td>5</td><td>0</td><td>22</td><td>25</td><td>12</td></tr>
+            <tr><td>C1</td><td>5</td><td>10</td><td>15</td><td>20</td><td>12</td><td>18</td><td>22</td><td>0</td><td>12</td><td>28</td></tr>
+            <tr><td>I1</td><td>18</td><td>25</td><td>8</td><td>15</td><td>20</td><td>22</td><td>25</td><td>12</td><td>0</td><td>10</td></tr>
+            <tr><td>T1</td><td>30</td><td>22</td><td>28</td><td>35</td><td>25</td><td>15</td><td>12</td><td>28</td><td>10</td><td>0</td></tr>
         </tbody>
     </table>
 </section>
 
-<section id="algorithms">
+<section>
     <h2>Algorithms for Safety and Inclusivity</h2>
-    <h3>Dijkstra's Algorithm</h3>
-    <p><strong>Objective:</strong> Optimize the shortest paths between public spaces to ensure easy access, especially for vulnerable populations such as elderly, disabled, and women. This helps prioritize routes that are safe, efficient, and inclusive.</p>
-    <p><strong>Input:</strong> The distance matrix representing the city’s road network.</p>
-    <p><strong>Output:</strong> Shortest paths from residential zones to public service areas, hospitals, and commercial zones.</p>
-    <p><strong>Application:</strong> Dijkstra’s algorithm helps identify the most efficient routes, ensuring that hospitals (H1-H4) are easily accessible from residential areas (R1-R3) and public service zones (T1) are within reach of all citizens. Paths are prioritized based on accessibility, traffic safety, and ease of travel.</p>
+    <div class="card algorithm-card">
+        <h3>1. Dijkstra's Algorithm</h3>
+        <p><strong>Objective:</strong> Optimize the shortest paths between public spaces to ensure easy access, especially for vulnerable populations such as elderly, disabled, and women. This helps prioritize routes that are safe, efficient, and inclusive.</p>
+        <ul>
+            <li><strong>Input:</strong> The distance matrix representing the city’s road network.</li>
+            <li><strong>Output:</strong> Shortest paths from residential zones to public service areas, hospitals, and commercial zones.</li>
+        </ul>
+    </div>
 
-    <h3>Kruskal’s Algorithm</h3>
-    <p><strong>Objective:</strong> Build a Minimum Spanning Tree (MST) that connects all important public spaces with minimal cost and ensures no isolated areas.</p>
-    <p><strong>Input:</strong> The city’s distance matrix (edges).</p>
-    <p><strong>Output:</strong> MST connecting all public spaces to improve road network connectivity and accessibility.</p>
-    <p><strong>Application:</strong> Kruskal’s algorithm ensures equitable access across all areas of the city by creating the least cost network of roads connecting hospitals, residential zones, commercial areas, and industrial hubs.</p>
+    <div class="card algorithm-card">
+        <h3>2. Kruskal’s Algorithm</h3>
+        <p><strong>Objective:</strong> Build a Minimum Spanning Tree (MST) that connects all important public spaces with minimal cost and ensures no isolated areas.</p>
+        <ul>
+            <li><strong>Input:</strong> The city’s distance matrix (edges).</li>
+            <li><strong>Output:</strong> MST connecting all public spaces to improve road network connectivity and accessibility.</li>
+        </ul>
+    </div>
 
-    <h3>Prim’s Algorithm</h3>
-    <p><strong>Objective:</strong> Ensure optimal connectivity between important nodes in the city, focusing on making public spaces accessible to all residents.</p>
-    <p><strong>Application:</strong> Prim's algorithm helps build an accessible road network to connect zones like hospitals and residential areas, reducing travel time for emergency services and other essential public services.</p>
-</section>
-
-<section id="citizen-feedback-portal">
-    <h2>Citizen Feedback Portal</h2>
-    <p><strong>Objective:</strong> Collect real-time feedback from citizens about the safety and accessibility of public spaces, allowing for continuous improvement in urban planning.</p>
-    <p><strong>Input:</strong> Data from citizens reporting issues related to public space safety, barriers for people with disabilities, and general accessibility.</p>
-    <p><strong>Output:</strong> Improvements to infrastructure and public space designs based on real-time citizen input.</p>
-    <p><strong>Application:</strong> The portal allows citizens to report issues such as lack of ramps, unsafe crosswalks, or inadequate lighting in public spaces. This data can be analyzed to update the city’s road network and public space designs, ensuring that all public spaces remain inclusive, accessible, and safe.</p>
-</section>
-
-<section id="safety-inclusivity-features">
-    <h2>Safety and Inclusivity Features for Public Spaces</h2>
-    <ul>
-        <li><strong>Pedestrian and Disability-Friendly Infrastructure:</strong> Develop wide sidewalks, pedestrian crossings, and ramps at intersections for wheelchair users and people with limited mobility. Ensure safe crossing signals for vulnerable groups like children and the elderly.</li>
-        <li><strong>Public Space Accessibility:</strong> Green spaces, playgrounds, and parks should be designed to cater to all, including accessible pathways, wheelchair-friendly park benches, and inclusive public toilets.</li>
-        <li><strong>Lighting and Surveillance:</strong> Install well-lit pathways and public spaces. Ensure the presence of security cameras and community policing to enhance safety.</li>
-        <li><strong>Regular Audits and Updates:</strong> Regular audits based on feedback from the portal can identify areas in need of improvement, ensuring the continuous development of inclusive spaces.</li>
-    </ul>
-</section>
-
-<section id="outcome-impact">
-    <h2>Outcome and Impact</h2>
-    <p><strong>Improved Public Space Accessibility:</strong> By using Dijkstra's and Kruskal’s algorithms, the city will ensure that all public spaces, including hospitals, parks, and residential areas, are connected with the shortest and safest paths, improving overall accessibility.</p>
-    <p><strong>Real-Time Citizen Feedback:</strong> The Citizen Feedback Portal enables ongoing engagement from the community, ensuring that safety and accessibility issues are addressed in real time.</p>
-    <p><strong>Inclusive Public Spaces:</strong> The combination of optimized road networks and feedback-driven design improvements ensures that public spaces are accessible to all demographics, including women, children, older persons, and persons with disabilities.</p>
-    <p><strong>Safety Measures:</strong> The focus on lighting, pedestrian infrastructure, and community feedback ensures that public spaces remain safe for all users.</p>
+    <div class="card algorithm-card">
+        <h3>3. Prim’s Algorithm</h3>
+        <p><strong>Objective:</strong> Ensure optimal connectivity between important nodes in the city, with a focus on making public spaces accessible to all residents.</p>
+    </div>
+    
+    <div class="card algorithm-card">
+        <h3>4. Citizen Feedback Portal</h3>
+        <p><strong>Objective:</strong> Collect real-time feedback from citizens about the safety and accessibility of public spaces, allowing for continuous improvement in urban planning.</p>
+        <ul>
+            <li><strong>Input:</strong> Data from citizens reporting issues related to public space safety, barriers for people with disabilities, and general accessibility.</li>
+            <li><strong>Output:</strong> Improvements to infrastructure and public space designs based on real-time citizen input.</li>
+        </ul>
+    </div>
 </section>
 
 <footer>
-    <p>&copy; 2024 Citizen Feedback Portal Project. All Rights Reserved.</p>
+    <p>&copy; 2024 Citizen Feedback Portal. All rights reserved.</p>
 </footer>
 
 </body>
 </html>
+
  <h2>The Kurakals Algorithm in Citizen Feedback Portal</h2>
         <div class="algorithm">
             <p>The <strong>Kurakals Algorithm</strong> can be applied in a Citizen Feedback Portal in the following ways:</p>
