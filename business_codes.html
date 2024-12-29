@@ -727,114 +727,83 @@ footer p {
        
     <div class="container">
        
-         <body>
-    <h1>Road Network Optimization Algorithms</h1>
-    <ol class="algorithm-list">
-        <li class="algorithm-item">
-            <h3>Adjacency List Representation</h3>
-            <p><span>Purpose:</span> Efficiently stores the graph (road network) as a list of lists, where each node has a list of adjacent nodes.</p>
-            <p><span>Application:</span> Used to represent roads and intersections in the city's traffic management system.</p>
-        
-        </li>
+           <section class="algorithm">
+            <h2>Dijkstra's Algorithm</h2>
+            <p>Finds the shortest path between a starting node and all other nodes in a graph with non-negative edge weights. It's useful for minimizing travel time on the road network.</p>
+        </section>
 
-        <li class="algorithm-item">
-            <h3>Kruskal's Algorithm (MST Construction)</h3>
-            <p><span>Purpose:</span> Builds a Minimum Spanning Tree (MST) by connecting all nodes with the least possible total edge weight.</p>
-            <p><span>Application:</span> Used for designing the least-cost road network in the city, minimizing infrastructure costs.</p>
-            
-        </li>
+        <section class="algorithm">
+            <h2>Kruskal's Algorithm</h2>
+            <p>Builds a minimum spanning tree (MST) for a graph, which connects all nodes with the least possible total edge weight. It's used for building the least-cost road network.</p>
+        </section>
 
-        <li class="algorithm-item">
-            <h3>Prim's Algorithm (Network Expansion)</h3>
-            <p><span>Purpose:</span> Builds a Minimum Spanning Tree (MST) starting from an arbitrary node and incrementally adding edges.</p>
-            <p><span>Application:</span> Expands an existing network with minimal cost while ensuring all areas are connected.</p>
-            
-        </li>
+        <section class="algorithm">
+            <h2>Prim's Algorithm</h2>
+            <p>Also builds an MST but starts from an arbitrary node. It incrementally adds edges to the growing MST, ensuring minimal total cost.</p>
+        </section>
 
-        <li class="algorithm-item">
-            <h3>Dijkstra's Algorithm (Shortest Paths for Public Transport)</h3>
-            <p><span>Purpose:</span> Finds the shortest path from a starting node to all other nodes in a graph with non-negative edge weights.</p>
-            <p><span>Application:</span> Optimizes public transport routes and emergency services by minimizing travel time.</p>
-            
-        </li>
+        <section class="algorithm">
+            <h2>Breadth-First Search (BFS)</h2>
+            <p>Explores a graph level by level. It can be used to check connectivity in the road network, ensuring all areas are accessible.</p>
+        </section>
 
-        <li class="algorithm-item">
-            <h3>Floyd-Warshall Algorithm (All-Pairs Shortest Paths)</h3>
-            <p><span>Purpose:</span> Computes the shortest paths between all pairs of nodes.</p>
-            <p><span>Application:</span> Used for citywide transportation and logistics systems where shortest paths between all locations are needed.</p>
-            
-        </li>
+        <section class="algorithm">
+            <h2>Depth-First Search (DFS)</h2>
+            <p>Explores a graph by going as deep as possible from a node before backtracking. DFS is used to check whether all road nodes are reachable from any starting point.</p>
+        </section>
 
-        <li class="algorithm-item">
-            <h3>BFS (Verify Connectivity)</h3>
-            <p><span>Purpose:</span> Explores a graph level by level and is used to check connectivity in the road network.</p>
-            <p><span>Application:</span> Ensures that all parts of the city are reachable, especially for public services and emergency access.</p>
-            
-        </li>
+        <section class="algorithm">
+            <h2>Floyd-Warshall Algorithm</h2>
+            <p>Computes the shortest paths between all pairs of nodes. It's used when all-pairs shortest paths are needed, such as finding the most efficient travel routes between any two locations.</p>
+        </section>
 
-        <li class="algorithm-item">
-            <h3>DFS (Verify Deeper Connectivity)</h3>
-            <p><span>Purpose:</span> Explores a graph deeply before backtracking.</p>
-            <p><span>Application:</span> Ensures that all road sections are reachable and there are no disconnected subgraphs in the network.</p>
+        <section class="algorithm">
+            <h2>Sorting (Merge Sort)</h2>
+            <p>A divide-and-conquer algorithm to sort distances efficiently. It is often used in algorithms like Kruskal's for sorting edges by weight.</p>
+        </section>
 
-        </li>
+        <section class="algorithm">
+            <h2>Hashing (Lookup Table)</h2>
+            <p>Provides fast access to travel distances between locations, which is crucial for optimizing algorithms like Dijkstra’s and Bellman-Ford.</p>
+        </section>
 
-        <li class="algorithm-item">
-            <h3>Merge Sort (Sorting Edges)</h3>
-            <p><span>Purpose:</span> A divide-and-conquer algorithm for sorting edges or distances efficiently.</p>
-            <p><span>Application:</span> Used in algorithms like Kruskal’s to sort road segments by cost or distance.</p>
-            
-        </li>
+        <section class="algorithm">
+            <h2>Queue Data Structure</h2>
+            <p>A linear data structure used to manage traffic flow or hold nodes during BFS traversal. It ensures the exploration is done in a level-wise manner.</p>
+        </section>
 
-        <li class="algorithm-item">
-            <h3>Binary Search (Optimized Edge Selection in Kruskal’s)</h3>
-            <p><span>Purpose:</span> A faster search algorithm for sorted data, useful for finding specific edge weights when processing Kruskal’s algorithm.</p>
-            <p><span>Application:</span> Helps speed up Kruskal's algorithm by finding the correct edge to add to the MST.</p>
-            
-        </li>
+        <section class="algorithm">
+            <h2>Stack Data Structure</h2>
+            <p>A last-in-first-out (LIFO) structure that assists DFS by holding nodes to backtrack when needed.</p>
+        </section>
 
-        <li class="algorithm-item">
-            <h3>Union-Find Algorithm (DSU) (Cycle Detection)</h3>
-            <p><span>Purpose:</span> Efficiently manages the connected components of a graph and detects cycles.</p>
-            <p><span>Application:</span> Used in Kruskal’s algorithm to prevent cycles and manage connected road segments.</p>
-            
-        </li>
+        <section class="algorithm">
+            <h2>Linear Search</h2>
+            <p>A basic search algorithm that checks each node or distance sequentially, often used in initializing algorithms or when small datasets are involved.</p>
+        </section>
 
-        <li class="algorithm-item">
-            <h3>Bellman-Ford Algorithm (Handling Negative Edge Weights)</h3>
-            <p><span>Purpose:</span> Similar to Dijkstra’s but can handle graphs with negative edge weights and detect negative weight cycles.</p>
-            <p><span>Application:</span> Used in road network optimization where edge weights could represent factors like road construction or reverse flows.</p>
-            
-        </li>
+        <section class="algorithm">
+            <h2>Binary Search</h2>
+            <p>A faster search algorithm for sorted data, useful for finding specific edge weights when processing Kruskal’s algorithm.</p>
+        </section>
 
-        <li class="algorithm-item">
-            <h3>Hashing (Quick Data Lookup)</h3>
-            <p><span>Purpose:</span> Provides fast access to data, such as travel times or distances between locations.</p>
-            <p><span>Application:</span> Optimizes algorithms like Dijkstra’s and Bellman-Ford by providing constant time lookups.</p>
-    
-        </li>
+        <section class="algorithm">
+            <h2>Union-Find Algorithm</h2>
+            <p>Also known as Disjoint Set Union (DSU), this algorithm manages the connected components of a graph. It's used in Kruskal’s algorithm to efficiently check and merge disjoint sets.</p>
+        </section>
 
-        <li class="algorithm-item">
-            <h3>Queue Data Structure (Traffic Flow Management)</h3>
-            <p><span>Purpose:</span> A linear data structure used to manage nodes during BFS traversal, ensuring level-wise exploration.</p>
-            <p><span>Application:</span> Used to manage traffic flow or hold nodes during BFS traversal in real-time traffic systems.</p>
-            
-        </li>
+        <section class="algorithm">
+            <h2>Bellman-Ford Algorithm</h2>
+            <p>Similar to Dijkstra’s but capable of handling graphs with negative weights. It also detects negative weight cycles, which could affect road network optimization.</p>
+        </section>
 
-        <li class="algorithm-item">
-            <h3>Stack Data Structure (DFS for Deeper Exploration)</h3>
-            <p><span>Purpose:</span> A last-in-first-out (LIFO) structure that assists DFS by holding nodes to backtrack when necessary.</p>
-            <p><span>Application:</span> Helps in managing the exploration process for DFS and ensures complete exploration of the road network.</p>
-    
-        </li>
+        <section class="algorithm">
+            <h2>Adjacency List Representation</h2>
+            <p>Efficiently stores the graph as a list of lists, where each node has a list of adjacent nodes. This structure is memory-efficient and speeds up the traversal of road networks.</p>
+        </section>
+    </div>
 
-        <li class="algorithm-item">
-            <h3>Linear Search (Final Checks)</h3>
-            <p><span>Purpose:</span> A basic search algorithm to check each node or distance sequentially.</p>
-            <p><span>Application:</span> Used for small datasets or initial checks during road network initialization.</p>
-        
-        </li>
-    </ol>
+   
 </body>
         
 <section>
@@ -897,71 +866,67 @@ footer p {
     <div class="container">
        <h1>Algorithms used </h1>
        
-         
-    
-    <h1>Smart Public Transportation Scheduling Algorithms</h1>
-    <ol class="algorithm-list">
-        <li class="algorithm-item">
-            <h3>Graph Representation (Adjacency List)</h3>
-            <p><span>Purpose:</span> Efficiently stores the network of transport routes and connections between bus stops, allowing easy traversal and search for connections.</p>
-            <p><span>Application:</span> Represents the entire bus network, facilitating route planning and analysis of connections between bus stops.</p>
-        </li>
-        <li class="algorithm-item">
-            <h3>Union-Find Algorithm</h3>
-            <p><span>Purpose:</span> Ensures that all bus routes or transport networks are connected, preventing isolated sections of the network.</p>
-            <p><span>Application:</span> Used to verify the connectivity of the transport system, ensuring there are no unreachable bus stops.</p>
-        </li>
-        <li class="algorithm-item">
-            <h3>Breadth-First Search (BFS)</h3>
-            <p><span>Purpose:</span> Traverses the transport network and ensures that all bus stops can be accessed from the starting point.</p>
-            <p><span>Application:</span> Ensures the entire network is reachable and helps in exploring the shortest path for public transport.</p>
-        </li>
-        <li class="algorithm-item">
-            <h3>Depth-First Search (DFS)</h3>
-            <p><span>Purpose:</span> Explores all potential routes in the transport system, ensuring that no possible path is overlooked.</p>
-            <p><span>Application:</span> Used to explore deeper paths or more complex connections in the transport network.</p>
-        </li>
-        <li class="algorithm-item">
-            <h3>Bellman-Ford Algorithm</h3>
-            <p><span>Purpose:</span> Finds the shortest path in a graph with variable travel times and can handle negative weights, such as delays.</p>
-            <p><span>Application:</span> Essential for calculating optimal routes when delays or variable travel times are a concern.</p>
-        </li>
-        <li class="algorithm-item">
-            <h3>Floyd-Warshall Algorithm</h3>
-            <p><span>Purpose:</span> Computes the shortest paths between all pairs of bus stops, ideal for analyzing all-pairs distances in a city.</p>
-            <p><span>Application:</span> Helps in determining the best routes for connections between different bus stops or hubs.</p>
-        </li>
-        <li class="algorithm-item">
-            <h3>Priority Queue</h3>
-            <p><span>Purpose:</span> A data structure that assigns priorities to each bus stop, ensuring that high-demand routes are prioritized in scheduling.</p>
-            <p><span>Application:</span> Used for optimizing bus dispatch based on demand, making sure high-priority stops are serviced first.</p>
-        </li>
-        <li class="algorithm-item">
-            <h3>Heap Sort</h3>
-            <p><span>Purpose:</span> A sorting algorithm used to manage the priority queue by sorting routes based on traffic or demand levels.</p>
-            <p><span>Application:</span> Sorts routes to ensure that buses are dispatched to the most critical routes based on sorted traffic/demand data.</p>
-        </li>
-        <li class="algorithm-item">
-            <h3>Hashing (Lookup Table)</h3>
-            <p><span>Purpose:</span> Optimizes the lookup of transport schedules or demand levels, reducing computation time in route optimization.</p>
-            <p><span>Application:</span> Enables faster decision-making and access to schedule data for route planning and optimization.</p>
-        </li>
-        <li class="algorithm-item">
-            <h3>Binary Search</h3>
-            <p><span>Purpose:</span> Efficiently searches for optimal time slots for buses in sorted schedules.</p>
-            <p><span>Application:</span> Ensures buses are routed based on time constraints and optimized schedules.</p>
-        </li>
-        <li class="algorithm-item">
-            <h3>Circular Queue</h3>
-            <p><span>Purpose:</span> Manages bus schedules in a round-robin system where buses continuously loop through their routes.</p>
-            <p><span>Application:</span> Ensures uninterrupted bus service by rotating buses through their scheduled routes in a cyclic manner.</p>
-        </li>
-        <li class="algorithm-item">
-            <h3>Linear Search</h3>
-            <p><span>Purpose:</span> A straightforward search method to locate a specific route or bus stop, typically used in small-scale applications or initial setup.</p>
-            <p><span>Application:</span> Used for identifying routes or bus stops in small-scale or initial setups before scaling up.</p>
-        </li>
-    </ol>
+           <section class="algorithm">
+            <h2>Bellman-Ford Algorithm</h2>
+            <p>Used to find the shortest path in a graph with variable travel times between transport stops. It’s capable of handling negative weight edges, such as delays.</p>
+        </section>
+
+        <section class="algorithm">
+            <h2>Floyd-Warshall Algorithm</h2>
+            <p>Computes the shortest paths between all pairs of nodes, ideal for analyzing all-pairs distances between bus stations or hubs in a city.</p>
+        </section>
+
+        <section class="algorithm">
+            <h2>Priority Queue</h2>
+            <p>A data structure where each element is assigned a priority. It's useful for scheduling buses based on demand, ensuring high-demand stops are prioritized.</p>
+        </section>
+
+        <section class="algorithm">
+            <h2>Heap Sort</h2>
+            <p>A comparison-based sorting algorithm, often used to manage the priority queue by sorting routes based on traffic or demand levels.</p>
+        </section>
+
+        <section class="algorithm">
+            <h2>Breadth-First Search (BFS)</h2>
+            <p>Used to traverse the public transport network and ensure that all stops can be reached from the starting point.</p>
+        </section>
+
+        <section class="algorithm">
+            <h2>Depth-First Search (DFS)</h2>
+            <p>Used to explore all possible routes, ensuring complete exploration of the transport system for optimization purposes.</p>
+        </section>
+
+       
+        <section class="algorithm">
+            <h2>Hashing (Lookup Table)</h2>
+            <p>A technique for quickly accessing transport schedules or demand levels for specific routes, reducing computation time in route optimization.</p>
+        </section>
+
+        <section class="algorithm">
+            <h2>Binary Search</h2>
+            <p>Used to efficiently search for the optimal time slots for buses in sorted schedules, ensuring that routes are optimized based on time.</p>
+        </section>
+
+        <section class="algorithm">
+            <h2>Graph Representation (Adjacency List)</h2>
+            <p>Efficiently stores the network of transport routes and connections, allowing easy traversal and search for connections between bus stops.</p>
+        </section>
+
+        <section class="algorithm">
+            <h2>Circular Queue</h2>
+            <p>A queue structure where the last element connects back to the first. This is useful for managing bus schedules in a round-robin system, where buses continuously loop on their routes.</p>
+        </section>
+
+        <section class="algorithm">
+            <h2>Linear Search</h2>
+            <p>A straightforward search method to locate a specific route or bus stop, typically used in small-scale applications or initial setup.</p>
+        </section>
+
+        <section class="algorithm">
+            <h2>Union-Find Algorithm</h2>
+            <p>Used to ensure that all bus routes or transport networks are connected, making sure there are no isolated parts in the transport system.</p>
+        </section>
+    </div>
 
    
 </body>  
@@ -1025,70 +990,67 @@ footer p {
     <div class="container">
        <h1>Algorithms used </h1>
         
-          
-    <h1>Water and Waste Management Optimization Algorithms</h1>
-    <ol class="algorithm-list">
-        <li class="algorithm-item">
-            <h3>Adjacency Matrix Representation</h3>
-            <p><span>Purpose:</span> Represents the network of water pipelines or waste collection routes, storing the distances or connections between nodes. It's space-efficient for dense graphs.</p>
-            <p><span>Application:</span> Helps in visualizing the entire network and allows easy traversal and pathfinding between different nodes.</p>
-        </li>
-        <li class="algorithm-item">
-            <h3>Union-Find Algorithm</h3>
-            <p><span>Purpose:</span> Ensures that all regions in the water or waste management network are connected, helping to identify disconnected sections or isolated nodes.</p>
-            <p><span>Application:</span> Used to manage the connectivity of regions and prevent isolated areas in the network.</p>
-        </li>
-        <li class="algorithm-item">
-            <h3>Breadth-First Search (BFS)</h3>
-            <p><span>Purpose:</span> Used for modeling waste collection routes or water distribution, ensuring all areas are covered and accessible from the central node.</p>
-            <p><span>Application:</span> Ensures that all regions are reachable from the central point by traversing the network level by level.</p>
-        </li>
-        <li class="algorithm-item">
-            <h3>Depth-First Search (DFS)</h3>
-            <p><span>Purpose:</span> Explores all possible paths in the distribution network, ensuring no potential routes are missed.</p>
-            <p><span>Application:</span> Ensures that all paths in the network are explored, which is essential for identifying hidden or less-accessed parts.</p>
-        </li>
-        <li class="algorithm-item">
-            <h3>Floyd-Warshall Algorithm</h3>
-            <p><span>Purpose:</span> Calculates the shortest paths for efficient water distribution or waste collection. It’s useful for handling all-pairs distance calculations.</p>
-            <p><span>Application:</span> Computes the optimal routes for water or waste transport between all points in the network.</p>
-        </li>
-        <li class="algorithm-item">
-            <h3>Kruskal's Algorithm</h3>
-            <p><span>Purpose:</span> Builds a Minimum Spanning Tree (MST) for efficiently connecting different parts of the water or waste network, minimizing infrastructure costs.</p>
-            <p><span>Application:</span> Helps minimize the cost of infrastructure by connecting the necessary parts of the water or waste network with the least cost.</p>
-        </li>
-        <li class="algorithm-item">
-            <h3>Prim's Algorithm</h3>
-            <p><span>Purpose:</span> Similar to Kruskal’s, but starts from any node, used for creating an optimal network of water pipelines or waste collection routes.</p>
-            <p><span>Application:</span> Expands the network optimally from an initial point, ensuring the least cost to connect all parts.</p>
-        </li>
-        <li class="algorithm-item">
-            <h3>Sorting (Merge Sort)</h3>
-            <p><span>Purpose:</span> A divide-and-conquer algorithm used for sorting delivery or collection points based on priority, such as areas requiring immediate attention.</p>
-            <p><span>Application:</span> Sorts the tasks or areas by urgency or priority for efficient resource allocation and task management.</p>
-        </li>
-        <li class="algorithm-item">
-            <h3>Hashing (Lookup Table)</h3>
-            <p><span>Purpose:</span> Optimizes the storage of resource allocation information, such as water trucks or waste collection points, allowing for fast lookups and decision-making.</p>
-            <p><span>Application:</span> Allows quick access to resources or tasks, improving decision-making speed in real-time optimization.</p>
-        </li>
-        <li class="algorithm-item">
-            <h3>Linear Search</h3>
-            <p><span>Purpose:</span> A simple search algorithm that checks each node or distance sequentially, often used for initializing resource allocation or network setup.</p>
-            <p><span>Application:</span> Used during the initial setup or for small datasets, helping to identify specific points or connections.</p>
-        </li>
-        <li class="algorithm-item">
-            <h3>Binary Search</h3>
-            <p><span>Purpose:</span> Helps to efficiently locate a specific priority level or resource in sorted delivery or collection schedules.</p>
-            <p><span>Application:</span> Optimizes resource allocation by quickly finding the relevant items in sorted collections.</p>
-        </li>
-        <li class="algorithm-item">
-            <h3>Circular Queue</h3>
-            <p><span>Purpose:</span> Used for periodic tasks, such as cyclic waste collection or water distribution, where resources rotate between nodes or regions.</p>
-            <p><span>Application:</span> Efficiently manages cyclical tasks by rotating resources like water trucks or waste collection trucks.</p>
-        </li>
-    </ol>
+          <section class="algorithm">
+            <h2>Floyd-Warshall Algorithm</h2>
+            <p>Calculates the shortest paths for efficient water distribution or waste collection. It’s useful for handling all-pairs distance calculations.</p>
+        </section>
+
+        <section class="algorithm">
+            <h2>Kruskal's Algorithm</h2>
+            <p>Builds a minimum spanning tree (MST) for efficiently connecting different parts of the water or waste network, minimizing infrastructure costs.</p>
+        </section>
+
+        <section class="algorithm">
+            <h2>Prim's Algorithm</h2>
+            <p>Similar to Kruskal’s but starts from any node, used for creating an optimal network of water pipelines or waste collection routes.</p>
+        </section>
+
+       
+        <section class="algorithm">
+            <h2>Breadth-First Search (BFS)</h2>
+            <p>Used for modeling waste collection routes or water distribution, ensuring all areas are covered and accessible from the central node.</p>
+        </section>
+
+        <section class="algorithm">
+            <h2>Depth-First Search (DFS)</h2>
+            <p>Explores all possible paths in the distribution network, ensuring no potential routes are missed.</p>
+        </section>
+
+        <section class="algorithm">
+            <h2>Sorting (Merge Sort)</h2>
+            <p>A divide-and-conquer algorithm used for sorting delivery or collection points based on priority, such as areas requiring immediate attention.</p>
+        </section>
+
+        <section class="algorithm">
+            <h2>Hashing (Lookup Table)</h2>
+            <p>Optimizes the storage of resource allocation information, such as water trucks or waste collection points, allowing for fast lookups and decision-making.</p>
+        </section>
+
+        <section class="algorithm">
+            <h2>Adjacency Matrix Representation</h2>
+            <p>Represents the network of water pipelines or waste collection routes, storing the distances or connections between nodes. It's space-efficient for dense graphs.</p>
+        </section>
+
+        <section class="algorithm">
+            <h2>Linear Search</h2>
+            <p>A simple search algorithm that checks each node or distance sequentially, often used for initializing resource allocation or network setup.</p>
+        </section>
+
+        <section class="algorithm">
+            <h2>Binary Search</h2>
+            <p>Helps to efficiently locate a specific priority level or resource in sorted delivery or collection schedules.</p>
+        </section>
+
+        <section class="algorithm">
+            <h2>Circular Queue</h2>
+            <p>Used for periodic tasks, such as cyclic waste collection or water distribution, where resources rotate between nodes or regions.</p>
+        </section>
+
+        <section class="algorithm">
+            <h2>Union-Find Algorithm</h2>
+            <p>Ensures that all regions in the water or waste management network are connected, helping to identify disconnected sections or isolated nodes.</p>
+        </section>
+    </div>
 
   
 </body>   
