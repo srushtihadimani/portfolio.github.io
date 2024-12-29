@@ -316,9 +316,164 @@
         <div class="section-title">5. Real-Time Disaster Management</div>
         <p>Provides real-time route updates for emergency services, adapting to road conditions and ensuring the fastest routes are used.</p>
     </div>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dijkstra's Algorithm Code</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        pre {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        code {
+            color: #f39c12;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Dijkstra's Algorithm Code</h1>
+    <p>Click the button below to view the C++ code for Dijkstra's algorithm:</p>
+    <button onclick="toggleCode()">Click to View Dijkstra's Code</button>
+
+    <pre id="code" style="display: none;">
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;climits&gt;
+#include &lt;queue&gt;
+
+using namespace std;
+
+class Graph {
+public:
+    vector&lt;vector&lt;int&gt;&gt; adjMatrix; // Adjacency matrix for the graph
+    vector&lt;string&gt; nodes; // List of node names
+
+    // Constructor: Initialize the graph with nodes and adjacency matrix
+    Graph() {
+        nodes = {"T1", "T2", "T3", "S1", "S2", "S3", "S4", "H1", "H2"};
+        adjMatrix = {
+            {0, 12, 18, 10, 15, 22, 25, 8, 20},
+            {12, 0, 10, 15, 18, 20, 28, 22, 12},
+            {18, 10, 0, 20, 25, 15, 12, 25, 18},
+            {10, 15, 20, 0, 8, 12, 18, 10, 22},
+            {15, 18, 25, 8, 0, 10, 15, 12, 20},
+            {22, 20, 15, 12, 10, 0, 5, 15, 18},
+            {25, 28, 12, 18, 15, 5, 0, 20, 10},
+            {8, 22, 25, 10, 12, 15, 20, 0, 8},
+            {20, 12, 18, 22, 20, 18, 10, 8, 0}
+        };
+    }
+
+    // Function to run Dijkstra's algorithm
+    void dijkstra(int start) {
+        int n = nodes.size();
+        vector&lt;int&gt; dist(n, INT_MAX); // Distance from start node to all other nodes
+        vector&lt;bool&gt; visited(n, false); // To track if a node is processed
+
+        dist[start] = 0;
+
+        // Min-heap priority queue to store (distance, node)
+        priority_queue&lt;pair&lt;int, int&gt;, vector&lt;pair&lt;int, int&gt;&gt;, greater&lt;pair&lt;int, int&gt;&gt;&gt; pq;
+        pq.push({0, start}); // Push the starting node with distance 0
+
+        while (!pq.empty()) {
+            int u = pq.top().second; // Get the node with the smallest distance
+            pq.pop();
+
+            // If this node is already visited, skip it
+            if (visited[u]) continue;
+            visited[u] = true;
+
+            // Update the distances of adjacent nodes
+            for (int v = 0; v &lt; n; ++v) {
+                if (!visited[v] && adjMatrix[u][v] != 0) {
+                    int newDist = dist[u] + adjMatrix[u][v];
+                    if (newDist &lt; dist[v]) {
+                        dist[v] = newDist;
+                        pq.push({dist[v], v});
+                    }
+                }
+            }
+        }
+
+        // Print the shortest distances from the start node
+        cout &lt;&lt; "Shortest paths from " &lt;&lt; nodes[start] &lt;&lt; ":\n";
+        for (int i = 0; i &lt; n; ++i) {
+            if (dist[i] == INT_MAX) {
+                cout &lt;&lt; nodes[i] &lt;&lt; " is unreachable.\n";
+            } else {
+                cout &lt;&lt; "To " &lt;&lt; nodes[i] &lt;&lt; ": " &lt;&lt; dist[i] &lt;&lt; " km\n";
+            }
+        }
+    }
+};
+
+int main() {
+    // Create the graph with the distance matrix
+    Graph g;
+
+    // Ask the user for the starting node
+    string startNode;
+    cout &lt;&lt; "Enter the starting node (e.g., T1, T2, S1, H1, etc.): ";
+    cin &gt;&gt; startNode;
+
+    // Map the starting node to an index
+    vector&lt;string&gt; nodeList = {"T1", "T2", "T3", "S1", "S2", "S3", "S4", "H1", "H2"};
+    int startIndex = -1;
+
+    // Find the index of the starting node
+    for (int i = 0; i &lt; nodeList.size(); ++i) {
+        if (nodeList[i] == startNode) {
+            startIndex = i;
+            break;
+        }
+    }
+
+    // Check if the node exists in the graph
+    if (startIndex != -1) {
+        // Run Dijkstra's algorithm for the user-provided starting point
+        g.dijkstra(startIndex);
+    } else {
+        cout &lt;&lt; "Invalid node. Please enter a valid node from the graph.\n";
+    }
+
+    return 0;
+}
+    </pre>
+
+    <script>
+        function toggleCode() {
+            var codeElement = document.getElementById("code");
+            if (codeElement.style.display === "none") {
+                codeElement.style.display = "block";
+            } else {
+                codeElement.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 </html>
+
+
+
 
 
 
