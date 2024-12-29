@@ -106,15 +106,15 @@
 <script>
     // Data for Optimal Road Network Design (Bidirectional Graph)
     var nodes1 = new vis.DataSet([
-        { id: 1, label: 'Hospital 1' },
-        { id: 2, label: 'School 1' },
-        { id: 3, label: 'Agricultural Board 3' },
-        { id: 4, label: 'Hospital 2' },
-        { id: 5, label: 'Electric Board' },
-        { id: 6, label: 'Agricultural Board 5' },
-        { id: 7, label: 'Post Office 1' },
-        { id: 8, label: 'School 3' },
-        { id: 9, label: 'Hospital 5' }
+        { id: 1, label: 'Hospital 1', size: 30 },
+        { id: 2, label: 'School 1', size: 30 },
+        { id: 3, label: 'Agricultural Board 3', size: 30 },
+        { id: 4, label: 'Hospital 2', size: 30 },
+        { id: 5, label: 'Electric Board', size: 30 },
+        { id: 6, label: 'Agricultural Board 5', size: 30 },
+        { id: 7, label: 'Post Office 1', size: 30 },
+        { id: 8, label: 'School 3', size: 30 },
+        { id: 9, label: 'Hospital 5', size: 30 }
     ]);
     var edges1 = new vis.DataSet([
         { from: 1, to: 2, label: '120 units' },
@@ -132,20 +132,20 @@
     var container1 = document.getElementById('roadNetworkGraph');
     var data1 = { nodes: nodes1, edges: edges1 };
     var options1 = {
-        nodes: { shape: 'dot', size: 20 },
+        nodes: { shape: 'dot', size: 30 },
         edges: { width: 2, arrows: { to: true, from: true } }, // Directed edges (arrows on both sides for bidirectional)
-        physics: true
+        physics: { enabled: true, barnesHut: { gravitationalConstant: -10000, centralGravity: 0.3, springLength: 150 } }
     };
     var network1 = new vis.Network(container1, data1, options1);
 
     // Data for Public Transportation Scheduling (Bidirectional Graph)
     var nodes2 = new vis.DataSet([
-        { id: 1, label: 'City Central' },
-        { id: 2, label: 'School 1' },
-        { id: 3, label: 'Hospital 2' },
-        { id: 4, label: 'Market 5' },
-        { id: 5, label: 'Electric Board' },
-        { id: 6, label: 'Post Office' }
+        { id: 1, label: 'City Central', size: 30 },
+        { id: 2, label: 'School 1', size: 30 },
+        { id: 3, label: 'Hospital 2', size: 30 },
+        { id: 4, label: 'Market 5', size: 30 },
+        { id: 5, label: 'Electric Board', size: 30 },
+        { id: 6, label: 'Post Office', size: 30 }
     ]);
     var edges2 = new vis.DataSet([
         { from: 1, to: 2, label: '150 units' },
@@ -161,19 +161,19 @@
     var container2 = document.getElementById('transportGraph');
     var data2 = { nodes: nodes2, edges: edges2 };
     var options2 = {
-        nodes: { shape: 'dot', size: 20 },
+        nodes: { shape: 'dot', size: 30 },
         edges: { width: 2, arrows: { to: true, from: true } }, // Directed edges (arrows on both sides for bidirectional)
-        physics: true
+        physics: { enabled: true, barnesHut: { gravitationalConstant: -10000, centralGravity: 0.3, springLength: 150 } }
     };
     var network2 = new vis.Network(container2, data2, options2);
 
     // Data for Waste and Water Management (Bidirectional Graph)
     var nodes3 = new vis.DataSet([
-        { id: 1, label: 'Residential Zone 1' },
-        { id: 2, label: 'Commercial Zone 2' },
-        { id: 3, label: 'Industrial Zone 4' },
-        { id: 4, label: 'Agricultural Zone 5' },
-        { id: 5, label: 'Residential Zone 2' }
+        { id: 1, label: 'Residential Zone 1', size: 30 },
+        { id: 2, label: 'Commercial Zone 2', size: 30 },
+        { id: 3, label: 'Industrial Zone 4', size: 30 },
+        { id: 4, label: 'Agricultural Zone 5', size: 30 },
+        { id: 5, label: 'Residential Zone 2', size: 30 }
     ]);
     var edges3 = new vis.DataSet([
         { from: 1, to: 2, label: '100 units' },
@@ -189,9 +189,9 @@
     var container3 = document.getElementById('waterManagementGraph');
     var data3 = { nodes: nodes3, edges: edges3 };
     var options3 = {
-        nodes: { shape: 'dot', size: 20 },
+        nodes: { shape: 'dot', size: 30 },
         edges: { width: 2, arrows: { to: true, from: true } }, // Directed edges (arrows on both sides for bidirectional)
-        physics: true
+        physics: { enabled: true, barnesHut: { gravitationalConstant: -10000, centralGravity: 0.3, springLength: 150 } }
     };
     var network3 = new vis.Network(container3, data3, options3);
 </script>
