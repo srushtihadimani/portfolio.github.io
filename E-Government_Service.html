@@ -347,19 +347,31 @@
     </style>
 </head>
 <body>
-
     <header>
-    <h1>dijkstra's Algorithm - View Code</h1>
+    <h1>Kruskal's Algorithm - View Code</h1>
 </header>
 
 <div class="content">
-    <button onclick="toggleCode()">Click to View dijkstra's Algorithm Code</button>
+    <button onclick="toggleCode()">Click to View Kruskal's Algorithm Code</button>
 
-    <div id="dijkstraCode">
+    <div id="kruskalCode">
         <pre>
 
-    <pre id="code" style="display: none;">
-#include &lt;iostream&gt;
+        </pre>
+    </div>
+</div>
+
+<script>
+    function toggleCode() {
+        var codeElement = document.getElementById('kruskalCode');
+        if (codeElement.style.display === "none") {
+            codeElement.style.display = "block";
+        } else {
+            codeElement.style.display = "none";
+        }
+    }
+</script>
+    #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;climits&gt;
 #include &lt;queue&gt;
@@ -477,9 +489,4 @@ int main() {
 
 </body>
 </html>
-
-
-
-
-
 
