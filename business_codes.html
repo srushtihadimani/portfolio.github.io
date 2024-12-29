@@ -313,24 +313,24 @@ strong {
                     <td>4</td>
                 </tr>
                 <tr>
-                    <td>3</td>
+                    <td>4</td>
                     <td>Industrial Zones</td>
                     <td>4</td>
                 </tr>
                 <tr>
-                    <td>4</td>
+                    <td>5</td>
                     <td>Agricultural Zones</td>
                     <td>5</td>
                 </tr>
                 <tr>
                     <td>5</td>
                     <td>Healthcare Zones</td>
-                    <td>3</td>
+                    <td>5</td>
                 </tr>
                 <tr>
                     <td>6</td>
                     <td>Education Zones</td>
-                    <td>3</td>
+                    <td>5</td>
                 </tr>
                 <tr>
                     <td>7</td>
@@ -342,71 +342,11 @@ strong {
     </section>
 
     <!-- Road Network Section -->
-    <section id="road-network">
-        <h2>Business Case: Optimal Road Network Design</h2>
-        <p><strong>Sub-task:</strong> Developing Efficient and Cost-Effective Roads</p>
-        <p><strong>SDG Goal:</strong> 11 | <strong>Target:</strong> 11.2 | <strong>Indicator:</strong> 11.2.1</p>
-        <table>
-            <thead>
-                <tr>
-                    <th>Sl. No.</th>
-                    <th>Source</th>
-                    <th>Destination</th>
-                    <th>Travel Cost (Units)</th>
-                    <th>Number of Locations</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Hospital 1</td>
-                    <td>School 1</td>
-                    <td>120</td>
-                    <td>5 (Hospitals), 4 (Schools)</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>School 1</td>
-                    <td>Agricultural Board 3</td>
-                    <td>180</td>
-                    <td>7 (Agricultural Market Boards)</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Hospital 2</td>
-                    <td>Electric Board</td>
-                    <td>240</td>
-                    <td>1 (Electric Boards)</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Agricultural Board 5</td>
-                    <td>Post Office 1</td>
-                    <td>200</td>
-                    <td>3 (Post Offices)</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>School 3</td>
-                    <td>Hospital 5</td>
-                    <td>150</td>
-                    <td>5 (Hospitals), 4 (Schools)</td>
-                </tr>
-            </tbody>
-        </table>
     
-        
-        <h3>Algorithms Used:</h3>
-        <ul>
-            <li><strong>Merge Sort:</strong> Sorting algorithm for road data. <i>Application: Sorting road network data for better decision-making.</i></li>
-            <li><strong>Quick Sort:</strong> Sorting algorithm for route prioritization. <i>Application: Used to sort route options for optimization.</i></li>
-            <li><strong>Dijkstra's Algorithm:</strong> Computes the shortest path to minimize travel costs. <i>Application: Used to find the shortest path between critical locations.</i></li>
-            <li><strong>Floyd-Warshall Algorithm:</strong> Computes all-pairs shortest paths. <i>Application: Used to analyze the overall network for all routes.</i></li>
-            <li><strong>Prim’s Algorithm:</strong> Finds the minimum spanning tree. <i>Application: Used to connect essential nodes with minimal construction cost.</i></li>
-            <li><strong>Kruskal’s Algorithm:</strong> Another approach for finding the minimum spanning tree. <i>Application: Ensures minimal cost in connecting essential areas.</i></li>
-        </ul>
-        <body>
-    <header>
+                   
+               
+    <body>
+         <header>
         <h1>Optimal Road Network Design</h1>
         <h2>SDG Goal: 11 - Sustainable Cities and Communities</h2>
     </header>
@@ -420,8 +360,7 @@ strong {
             <li>Residential Areas: R1, R2, R3</li>
             <li>Commercial Area: C1</li>
             <li>Industrial Hub: I1</li>
-            <li>Transport Hub: T1</li>
-        </ul>
+              </ul>
     </section>
     <section>
         <h4>Distance Matrix (in km)</h4>
@@ -441,7 +380,7 @@ strong {
                     <th>T1</th>
                 </tr>
             </thead>
-            <tbody>
+             <tbody>
                 <tr><td>H1</td><td>0</td><td>8</td><td>12</td><td>15</td><td>10</td><td>20</td><td>25</td><td>5</td><td>18</td><td>30</td></tr>
                 <tr><td>H2</td><td>8</td><td>0</td><td>10</td><td>13</td><td>12</td><td>15</td><td>18</td><td>10</td><td>25</td><td>22</td></tr>
                 <tr><td>H3</td><td>12</td><td>10</td><td>0</td><td>9</td><td>22</td><td>18</td><td>20</td><td>15</td><td>8</td><td>28</td></tr>
@@ -455,7 +394,21 @@ strong {
             </tbody>
         </table>
     </section>
-      </section>
+        
+        <h3>Algorithms Used:</h3>
+        <ul>
+            <li><strong>Merge Sort:</strong> Sorting algorithm for road data. <i>Application: Sorting road network data for better decision-making.</i></li>
+            <li><strong>Quick Sort:</strong> Sorting algorithm for route prioritization. <i>Application: Used to sort route options for optimization.</i></li>
+            <li><strong>Dijkstra's Algorithm:</strong> Computes the shortest path to minimize travel costs. <i>Application: Used to find the shortest path between critical locations.</i></li>
+            <li><strong>Floyd-Warshall Algorithm:</strong> Computes all-pairs shortest paths. <i>Application: Used to analyze the overall network for all routes.</i></li>
+            <li><strong>Prim’s Algorithm:</strong> Finds the minimum spanning tree. <i>Application: Used to connect essential nodes with minimal construction cost.</i></li>
+            <li><strong>Kruskal’s Algorithm:</strong> Another approach for finding the minimum spanning tree. <i>Application: Ensures minimal cost in connecting essential areas.</i></li>
+        </ul>
+        <body>
+    
+      
+           
+    </section>
         <h4>Approach</h4>
         <p><strong>Algorithm Used:</strong> Dijkstra's Algorithm</p>
         <p><strong>Description:</strong> Computes the shortest path to ensure minimal travel cost for city traffic, prioritizing emergency and high-demand routes.</p>
@@ -467,64 +420,8 @@ strong {
     <section id="public-transport">
         <h2>Smart Public Transport Scheduling</h2>
         <p><strong>Goal:</strong> Optimize public transportation schedules for better commuter convenience.</p>
-        <p><strong>SDG Goal:</strong> 11 | <strong>Target:</strong> 11.2 | <strong>Indicator:</strong> 11.2.1</p>
+       
         <h3>Algorithms Used:</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>Sl. No.</th>
-                    <th>Route Name</th>
-                    <th>Stops</th>
-                    <th>Travel Cost (Units)</th>
-                    <th>Number of Locations</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Skyline Route (Red)</td>
-                    <td>City Central to School 1</td>
-                    <td>150</td>
-                    <td>4 (Schools)</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Horizon Route (Blue)</td>
-                    <td>Hospital 2 to Market 5</td>
-                    <td>200</td>
-                    <td>5 (Hospitals), 7 (Agricultural Market Boards)</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Blossom Route (Green)</td>
-                    <td>School 1 to Electric Board</td>
-                    <td>120</td>
-                    <td>4 (Schools), 1 (Electric Boards)</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Sunset Route (Yellow)</td>
-                    <td>Hospital 3 to School 3</td>
-                    <td>240</td>
-                    <td>5 (Hospitals), 4 (Schools)</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Sunrise Route (Purple)</td>
-                    <td>Post Office to Market 7</td>
-                    <td>180</td>
-                    <td>3 (Post Offices), 7 (Agricultural Market Boards)</td>
-                </tr>
-            </tbody>
-        </table>
-        <ul>
-            <li><strong>Bubble Sort:</strong> Sorting algorithm for small datasets. <i>Application: Sorting transport schedules or route options.</i></li>
-            <li><strong>Insertion Sort:</strong> Sorting algorithm for optimizing bus schedules. <i>Application: Sorting small datasets of bus schedules.</i></li>
-            <li><strong>Bellman-Ford Algorithm:</strong> Computes shortest paths considering negative weights. <i>Application: Helps in planning efficient bus routes.</i></li>
-            <li><strong>Greedy Algorithm for Activity Selection:</strong> Selects maximum non-overlapping activities. <i>Application: Ensures buses do not overlap.</i></li>
-            <li><strong>Genetic Algorithm:</strong> Optimization based on natural selection. <i>Application: Used for optimizing routes and schedules.</i></li>
-            <li><strong>Simulated Annealing:</strong> Probabilistic optimization. <i>Application: Used to minimize waiting times and balance loads.</i></li>
-        </ul>
         <header>
         <h1>Smart Public Transport Scheduling</h1>
         <h2>SDG Goal: 11 - Sustainable Cities and Communities</h2>
@@ -570,6 +467,16 @@ strong {
             </tbody>
         </table>
     </section>
+        
+        <ul>
+            <li><strong>Bubble Sort:</strong> Sorting algorithm for small datasets. <i>Application: Sorting transport schedules or route options.</i></li>
+            <li><strong>Insertion Sort:</strong> Sorting algorithm for optimizing bus schedules. <i>Application: Sorting small datasets of bus schedules.</i></li>
+            <li><strong>Bellman-Ford Algorithm:</strong> Computes shortest paths considering negative weights. <i>Application: Helps in planning efficient bus routes.</i></li>
+            <li><strong>Greedy Algorithm for Activity Selection:</strong> Selects maximum non-overlapping activities. <i>Application: Ensures buses do not overlap.</i></li>
+            <li><strong>Genetic Algorithm:</strong> Optimization based on natural selection. <i>Application: Used for optimizing routes and schedules.</i></li>
+            <li><strong>Simulated Annealing:</strong> Probabilistic optimization. <i>Application: Used to minimize waiting times and balance loads.</i></li>
+        </ul>
+        
     <section>
         <h4>Approach</h4>
         <p><strong>Algorithm Used:</strong> Bellman-Ford Algorithm</p>
@@ -582,66 +489,8 @@ strong {
     <section id="water-waste-management">
         <h2>Water and Waste Management System</h2>
         <p><strong>Goal:</strong> Ensure efficient resource distribution for water and waste management in Aurangabad.</p>
-        <p><strong>SDG Goal:</strong> 11 | <strong>Target:</strong> 11.6 | <strong>Indicator:</strong> 11.6.1</p>
-        <h3>Algorithms Used:</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>Sl. No.</th>
-                    <th>Source</th>
-                    <th>Destination</th>
-                    <th>Travel Cost (Units)</th>
-                    <th>Number of Locations</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Residential Zone 1</td>
-                    <td>Commercial Zone 2</td>
-                    <td>100</td>
-                    <td>3 (Residential Zones), 2 (Commercial Zones)</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Residential Zone 3</td>
-                    <td>Industrial Zone 4</td>
-                    <td>140</td>
-                    <td>3 (Residential Zones), 4 (Industrial Zones)</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Agricultural Zone 5</td>
-                    <td>Commercial Zone 2</td>
-                    <td>200</td>
-                    <td>3 (Agricultural Zones), 2 (Commercial Zones)</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Residential Zone 2</td>
-                    <td>Agricultural Zone 3</td>
-                    <td>180</td>
-                    <td>3 (Residential Zones), 3 (Agricultural Zones)</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Commercial Zone 1</td>
-                    <td>Industrial Zone 2</td>
-                    <td>150</td>
-                    <td>2 (Commercial Zones), 4 (Industrial Zones)</td>
-                </tr>
-            </tbody>
-        </table>
-        <ul>
-            <li><strong>Heap Sort:</strong> Sorting algorithm for resource allocation. <i>Application: Arranges resources efficiently for scheduling.</i></li>
-            <li><strong>Radix Sort:</strong> Sorting algorithm for waste collection times or water distribution tasks. <i>Application: Sorting waste collection or distribution tasks in a structured format.</i></li>
-            <li><strong>Dijkstra's Algorithm:</strong> Computes the shortest path for water pipes and waste trucks. <i>Application: Designing efficient routes for water and waste collection.</i></li>
-            <li><strong>Floyd-Warshall Algorithm:</strong> Computes shortest paths for water distribution and waste collection. <i>Application: Identifies optimal paths for resource management.</i></li>
-            <li><strong>Greedy Algorithm for MST:</strong> Constructs a minimum spanning tree. <i>Application: Designing optimal layouts for water and waste systems.</i></li>
-            <li><strong>Ant Colony Optimization:</strong> Optimization inspired by ants finding the shortest path. <i>Application: Optimizing water and waste collection routes.</i></li>
-        </ul>
-        <header>
-        <h1>Waste and Water Management</h1>
+        </h1> <header>
+        <h1>Waste and Water Management
         <h2>SDG Goal: 11 - Sustainable Cities and Communities</h2>
     </header>
     <section>
@@ -689,6 +538,17 @@ strong {
         <p><strong>Description:</strong> Identifies the shortest paths for water distribution and waste collection.</p>
         <p><strong>Outcome:</strong> Reduced operational costs and improved environmental sustainability.</p>
     </section>
+        <h3>Algorithms Used:</h3>
+       
+        <ul>
+            <li><strong>Heap Sort:</strong> Sorting algorithm for resource allocation. <i>Application: Arranges resources efficiently for scheduling.</i></li>
+            <li><strong>Radix Sort:</strong> Sorting algorithm for waste collection times or water distribution tasks. <i>Application: Sorting waste collection or distribution tasks in a structured format.</i></li>
+            <li><strong>Dijkstra's Algorithm:</strong> Computes the shortest path for water pipes and waste trucks. <i>Application: Designing efficient routes for water and waste collection.</i></li>
+            <li><strong>Floyd-Warshall Algorithm:</strong> Computes shortest paths for water distribution and waste collection. <i>Application: Identifies optimal paths for resource management.</i></li>
+            <li><strong>Greedy Algorithm for MST:</strong> Constructs a minimum spanning tree. <i>Application: Designing optimal layouts for water and waste systems.</i></li>
+            <li><strong>Ant Colony Optimization:</strong> Optimization inspired by ants finding the shortest path. <i>Application: Optimizing water and waste collection routes.</i></li>
+        </ul>
+      
     </section>
 
     <footer>
