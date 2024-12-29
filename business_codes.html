@@ -254,52 +254,48 @@
         { id: 1, label: 'Hospital 1' },
         { id: 2, label: 'School 1' },
         { id: 3, label: 'Agricultural Board 3' },
-        { id: 4, label: 'Hospital 2' },
-        { id: 5, label: 'Electric Board' },
-        { id: 6, label: 'Agricultural Board 5' },
-        { id: 7, label: 'Post Office 1' },
-        { id: 8, label: 'School 3' },
-        { id: 9, label: 'Hospital 5' }
+        { id: 4, label: 'Electric Board' },
+        { id: 5, label: 'Post Office 1' }
     ]);
+
     var edges1 = new vis.DataSet([
-        { from: 1, to: 2, label: '120 units' },
-        { from: 2, to: 3, label: '180 units' },
-        { from: 4, to: 5, label: '240 units' },
-        { from: 6, to: 7, label: '200 units' },
-        { from: 8, to: 9, label: '150 units' }
+        { from: 1, to: 2, label: '120' },
+        { from: 2, to: 3, label: '180' },
+        { from: 3, to: 4, label: '240' },
+        { from: 5, to: 1, label: '200' }
     ]);
 
     var container1 = document.getElementById('roadNetworkGraph');
     var data1 = { nodes: nodes1, edges: edges1 };
-    var options1 = {
-        nodes: { shape: 'dot', size: 20 },
-        edges: { width: 2, arrows: 'to' },
-        physics: true
+    var options1 = { 
+        edges: { font: { size: 16 } }, 
+        nodes: { shape: 'dot', size: 20 }, 
+        physics: false
     };
     var network1 = new vis.Network(container1, data1, options1);
 
     // Data for Public Transportation Scheduling (Nodes and Edges)
     var nodes2 = new vis.DataSet([
-        { id: 1, label: 'City Central' },
-        { id: 2, label: 'School 1' },
-        { id: 3, label: 'Hospital 2' },
-        { id: 4, label: 'Market 5' },
-        { id: 5, label: 'Electric Board' },
-        { id: 6, label: 'Post Office' }
+        { id: 1, label: 'Skyline Route (Red)' },
+        { id: 2, label: 'Horizon Route (Blue)' },
+        { id: 3, label: 'Blossom Route (Green)' },
+        { id: 4, label: 'Sunset Route (Yellow)' },
+        { id: 5, label: 'Sunrise Route (Purple)' }
     ]);
+
     var edges2 = new vis.DataSet([
-        { from: 1, to: 2, label: '150 units' },
-        { from: 3, to: 4, label: '200 units' },
-        { from: 2, to: 5, label: '120 units' },
-        { from: 4, to: 6, label: '240 units' }
+        { from: 1, to: 2, label: '150' },
+        { from: 2, to: 3, label: '200' },
+        { from: 3, to: 4, label: '120' },
+        { from: 4, to: 5, label: '240' }
     ]);
 
     var container2 = document.getElementById('transportGraph');
     var data2 = { nodes: nodes2, edges: edges2 };
-    var options2 = {
-        nodes: { shape: 'dot', size: 20 },
-        edges: { width: 2, arrows: 'to' },
-        physics: true
+    var options2 = { 
+        edges: { font: { size: 16 } }, 
+        nodes: { shape: 'dot', size: 20 }, 
+        physics: false
     };
     var network2 = new vis.Network(container2, data2, options2);
 
@@ -307,23 +303,24 @@
     var nodes3 = new vis.DataSet([
         { id: 1, label: 'Residential Zone 1' },
         { id: 2, label: 'Commercial Zone 2' },
-        { id: 3, label: 'Industrial Zone 4' },
-        { id: 4, label: 'Agricultural Zone 5' },
-        { id: 5, label: 'Residential Zone 2' }
+        { id: 3, label: 'Agricultural Zone 5' },
+        { id: 4, label: 'Industrial Zone 4' },
+        { id: 5, label: 'Post Office' }
     ]);
+
     var edges3 = new vis.DataSet([
-        { from: 1, to: 2, label: '100 units' },
-        { from: 3, to: 4, label: '140 units' },
-        { from: 4, to: 5, label: '200 units' },
-        { from: 2, to: 5, label: '150 units' }
+        { from: 1, to: 2, label: '100' },
+        { from: 2, to: 3, label: '140' },
+        { from: 3, to: 4, label: '200' },
+        { from: 4, to: 5, label: '180' }
     ]);
 
     var container3 = document.getElementById('waterManagementGraph');
     var data3 = { nodes: nodes3, edges: edges3 };
-    var options3 = {
-        nodes: { shape: 'dot', size: 20 },
-        edges: { width: 2, arrows: 'to' },
-        physics: true
+    var options3 = { 
+        edges: { font: { size: 16 } }, 
+        nodes: { shape: 'dot', size: 20 }, 
+        physics: false
     };
     var network3 = new vis.Network(container3, data3, options3);
 </script>
