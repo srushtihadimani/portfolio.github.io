@@ -268,124 +268,14 @@
             </a>
         </div>
         
-       
+        <!-- GitHub Button for Srushti hadimani -->
+        <div class="github-link">
+            <a href="realtime.html" target="_blank">
+                <button>>Real-Time Disaster Response System</button>
+            </a>
+        </div>
    
-                  <!-- E-Government service -->
-            =   <h1 onclick="toggleDetails('tourismDetails')">E-Government service </h1>
-    <div id="tourismDetails" style="display: none;">
-        <div class="section">
-                <div class="icon">🏛💻📲</div>
-                <h3>E-Government service</h3>
-                <p><strong>Relevant SDG:</strong> Sustainable Cities and Communities (11)</p>
-                <p><strong>Target:</strong>11.b-By 2020, substantially increase the number of cities and human settlements adopting and implementing integrated policies and plans towards inclusion, resource efficiency, mitigation and adaptation to climate change, resilience to disasters, and develop and implement, in line with the Sendai Framework for Disaster Risk Reduction 2015-2030, holistic disaster risk management at all levels</p>
-                <p class="indicator"><strong>Indicator:</strong>11.b.2-Proportion of local governments that adopt and implement local disaster risk reduction strategies in line with national disaster risk reduction strategies</p>
-                <div class="sdg">SDG 11</div>
-            </div>
-           
-    <div class="example">
-        <p><strong>Example:</strong> e-Government services can enable citizens to submit feedback and interact with government officials through digital platforms. This creates a more inclusive and participatory system, where citizens' opinions can be directly heard and influence policy.</p>
-    </div>
 
-    <h2>2. Advantages of e-Government Services in Citizen Feedback Portals</h2>
-
-    <div class="advantages">
-        <ul>
-            <li><strong>Increased Transparency:</strong> e-Government portals provide clear and transparent access to policies, updates, and services, allowing citizens to track the progress of their requests and feedback.</li>
-            <li><strong>Enhanced Efficiency:</strong> Online platforms allow for faster processing of feedback, reducing response times compared to traditional methods (e.g., phone or in-person).</li>
-            <li><strong>Inclusivity and Accessibility:</strong> e-Government services ensure that marginalized communities can also access essential public services and submit feedback, promoting equality.</li>
-            <li><strong>Cost Reduction:</strong> e-Government reduces the costs associated with traditional administrative procedures, such as paper-based forms and in-person visits.</li>
-            <li><strong>Data-Driven Decision-Making:</strong> The integration of feedback into the system enables governments to make data-driven decisions, optimizing resource allocation.</li>
-       </ul>
-        
-      </div>
-        <h2>TheThe Merge Sort Algorithm in E-Government Services</h2>
-        <div class="algorithm">
-            <p>The <strong>merge sort algorithm</strong> can be applied in E-Government Services in the following ways:</p>
-            <ul>
-            <li><strong>Informed Decision-Making:</strong> Governments can use real-time feedback to adjust policies and improve public services.</li>
-            <li><strong>Sorting Citizen Feedback:</strong> Organizes feedback by categories like urgency, date, or rating for efficient response.</li>
-            <li><strong>Analyzing Trends and Patterns:</strong> Helps detect emerging issues or recurring concerns by sorting feedback data.</li>
-            <li><strong>Prioritizing Feedback for Action:</strong> Sorts feedback based on urgency or severity, allowing for prioritized actions and better resource allocation.</li>
-            <li><strong>Enhancing Transparency and Accountability:</strong> Sorted feedback enables transparency in government responses and shows citizens how their concerns are being handled.</li>
-            <li><strong>Streamlining Public Services:</strong> Sorts service requests (e.g., utility issues) by priority to ensure timely resolution.</li>
-            <li><strong>Improving Disaster Risk Management:</strong> Sorts disaster-related feedback by location or urgency to direct resources efficiently in disaster risk management.</li>
-            <li><strong>Improving Public Trust and Engagement:</strong> Sorted feedback shared with the public enhances trust and encourages active participation in governance.</li> 
-               </ul>
-            <p>This helps in the E-governance sservice.</p>
-        </div>
-                <div class="section">
-    <h2 onclick="toggleDetails('mergeSortCode')" style="cursor: pointer; color: #007bff;">Click to view Merge Sort Code</h2>
-    <div id="mergeSortCode" style="display: none;">
-        <h2>Code Example</h2>
-        <pre>
-#include <iostream>
-#include <vector>
-
-using namespace std;
-
-void Merge(const vector<int> &B, const vector<int> &C, vector<int> &A) {
-    int p = B.size();
-    int q = C.size();
-    int i = 0, j = 0, k = 0;
-
-    while (i < p && j < q) {
-        if (B[i] <= C[j]) {
-            A[k++] = B[i++];
-        } else {
-            A[k++] = C[j++];
-        }
-    }
-
-    while (i < p) {
-        A[k++] = B[i++];
-    }
-
-    while (j < q) {
-        A[k++] = C[j++];
-    }
-}
-
-void MergeSort(vector<int> &A) {
-    int n = A.size();
-
-    if (n <= 1) {
-        return;
-    }
-
-    int mid = n / 2;
-    vector<int> B(A.begin(), A.begin() + mid);
-    vector<int> C(A.begin() + mid, A.end());
-
-    MergeSort(B);
-    MergeSort(C);
-    Merge(B, C, A);
-}
-
-int main() {
-    vector<int> A = {38, 27, 43, 3, 9, 82, 10};
-
-    cout << "Original Array: ";
-    for (int num : A) {
-        cout << num << " ";
-    }
-    cout << endl;
-
-    MergeSort(A);
-
-    cout << "Sorted Array: ";
-    for (int num : A) {
-        cout << num << " ";
-    }
-    cout << endl;
-
-    return 0;
-}
-           </pre>
-          </div>
-        </div>
-    </div>
-              </div>
-              </div>
      <!-- Real-Time Disaster Response System Card -->
             <div class="business-case-card">
                 <div class="icon">🌍</div>
