@@ -321,30 +321,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dijkstra's Algorithm Code</title>
+    <title>Kruskal's Algorithm</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
             background-color: #f4f4f9;
-            color: #333;
         }
-        h1 {
-            color: #2c3e50;
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
         }
-        pre {
-            background-color: #2c3e50;
-            color: #ecf0f1;
+        .content {
             padding: 20px;
+        }
+        #kruskalCode {
+            display: none;
+            background-color: #2e2e2e;
+            color: #f8f8f2;
+            padding: 15px;
             border-radius: 5px;
-            overflow-x: auto;
             white-space: pre-wrap;
             word-wrap: break-word;
         }
-        code {
-            color: #f39c12;
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
         }
     </style>
-    <head>
-    <body>
+</head>
+<body>
+
+<header>
+    <h1>Kruskal's Algorithm - View Code</h1>
+</header>
+
+<div class="content">
+    <button onclick="toggleCode()">Click to View Kruskal's Algorithm Code</button>
+
+    <div id="kruskalCode">
+        <pre>
+            #include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;climits&gt;
+#include &lt;queue&gt;
+
+using namespace std;
+
+class Graph {
+public:
+    vector&lt;vector&lt;int&gt;&gt; adjMatrix; 
+    vector&lt;string&gt; nodes;
+
+   
+    Graph() {
+        nodes = {"T1", "T2", "T3", "S1", "S2", "S3", "S4", "H1", "H2"};
+        adjMatrix = {
+            {0, 12, 18, 10, 15, 22, 25, 8, 20},
+            {12, 0, 10, 15, 18, 20, 28, 22, 12},
+            {18, 10, 0, 20, 25, 15, 12, 25, 18},
+            {10, 15, 20, 0, 8, 12, 18, 10, 22},
+            {15, 18, 25, 8, 0, 10, 15, 12, 20},
+            {22, 20, 15, 12, 10, 0, 5, 15, 18},
+            {25, 28, 12, 18, 15, 5, 0, 20, 10},
+            {8, 22, 25, 10, 12, 15, 20, 0, 8},
+            {20, 12, 18, 22, 20, 18, 10, 8, 0}
+        };
+    }
+
     
+    void dijkstra(int start) {
+        int n = nodes.size();
+        vector&lt;int&gt; dist(n, INT_MAX);
+        vector&lt;bool&gt; visited(n, false); 
+
+        dist[start] = 0;
+
+       
+        priority_queue&lt;pair&lt;int, int&gt;, vector&lt;pair&lt;int, int&gt;&gt;, greater&lt;pair&lt;int, int&gt;&gt;&gt; pq;
+        pq.push({0, start}); 
+
+        while (!pq.empty()) {
+            int u = pq.top().second; 
+            pq.pop();
+
+            
+            if (visited[u]) continue;
+            visited[u] = true;
+
+           
+            for (int v = 0; v &lt; n; ++v) {
+                if (!visited[v] && adjMatrix[u][v] != 0) {
+                    int newDist = dist[u] + adjMatrix[u][v];
+                    if (newDist &lt; dist[v]) {
+                        dist[v] = newDist;
+                        pq.push({dist[v], v});
+                    }
+                }
+            }
+        }
+
+        
+        cout &lt;&lt; "Shortest paths from " &lt;&lt; nodes[start] &lt;&lt; ":\n";
+        for (int i = 0; i &lt; n; ++i) {
+            if (dist[i] == INT_MAX) {
+                cout &lt;&lt; nodes[i] &lt;&lt; " is unreachable.\n";
+            } else {
+                cout &lt;&lt; "To " &lt;&lt; nodes[i] &lt;&lt; ": " &lt;&lt; dist[i] &lt;&lt; " km\n";
+            }
+        }
+    }
+};
+
+int main() {
+   
+    Graph g;
+
+   
+    string startNode;
+    cout &lt;&lt; "Enter the starting node (e.g., T1, T2, S1, H1, etc.): ";
+    cin &gt;&gt; startNode;
+
+  
+    vector&lt;string&gt; nodeList = {"T1", "T2", "T3", "S1", "S2", "S3", "S4", "H1", "H2"};
+    int startIndex = -1;
+
+    
+    for (int i = 0; i &lt; nodeList.size(); ++i) {
+        if (nodeList[i] == startNode) {
+            startIndex = i;
+            break;
+        }
+    }
+
+   
+    if (startIndex != -1) {
+        
+        g.dijkstra(startIndex);
+    } else {
+        cout &lt;&lt; "Invalid node. Please enter a valid node from the graph.\n";
+    }
+
+    return 0;
+}
+    </pre>
+
+    <script>
+        function toggleCode() {
+            var codeElement = document.getElementById("code");
+            if (codeElement.style.display === "none") {
+                codeElement.style.display = "block";
+            } else {
+                codeElement.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
