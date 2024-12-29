@@ -144,6 +144,134 @@
         <h2>4. Negative Weight Cycle Detection</h2>
         <p>The algorithm can detect critical failures, like infrastructure loops or areas experiencing repeated flooding, which require immediate attention for recovery and repair.</p>
     </div>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bellman-Ford Algorithm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #codeSection {
+            display: none;
+            white-space: pre-wrap;
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-top: 20px;
+            font-family: monospace;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Bellman-Ford Algorithm</h1>
+<p>Click the button below to see the C++ code for the Bellman-Ford Algorithm.</p>
+
+<button onclick="showCode()">Click here for Bellman-Ford Algorithm code</button>
+
+<div id="codeSection">
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;climits&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
+// Define a structure to represent an edge
+struct Edge {
+    int source, destination, weight;
+};
+
+// Bellman-Ford Algorithm to find the shortest paths from the source node
+void bellmanFord(const vector&lt;Edge&gt;&amp; edges, int V, int E, int source) {
+    // Step 1: Initialize distances from source to all other nodes as INFINITE
+    vector&lt;int&gt; dist(V, INT_MAX);
+    dist[source] = 0;
+
+    // Step 2: Relax all edges V-1 times
+    for (int i = 1; i &lt;= V - 1; ++i) {
+        for (int j = 0; j &lt; E; ++j) {
+            int u = edges[j].source;
+            int v = edges[j].destination;
+            int weight = edges[j].weight;
+            if (dist[u] != INT_MAX &amp;&amp; dist[u] + weight &lt; dist[v]) {
+                dist[v] = dist[u] + weight;
+            }
+        }
+    }
+
+    // Step 3: Check for negative-weight cycles
+    for (int i = 0; i &lt; E; ++i) {
+        int u = edges[i].source;
+        int v = edges[i].destination;
+        int weight = edges[i].weight;
+        if (dist[u] != INT_MAX &amp;&amp; dist[u] + weight &lt; dist[v]) {
+            cout &lt;&lt; "Negative weight cycle detected!" &lt;&lt; endl;
+            return;
+        }
+    }
+
+    // Step 4: Output the shortest distances from the source node
+    cout &lt;&lt; "Shortest distances from source node " &lt;&lt; source &lt;&lt; " (Water Treatment Plants and other nodes):" &lt;&lt; endl;
+    for (int i = 0; i &lt; V; ++i) {
+        if (dist[i] == INT_MAX)
+            cout &lt;&lt; "Node " &lt;&lt; i &lt;&lt; " is unreachable." &lt;&lt; endl;
+        else
+            cout &lt;&lt; "Node " &lt;&lt; i &lt;&lt; ": " &lt;&lt; dist[i] &lt;&lt; " km" &lt;&lt; endl;
+    }
+}
+
+int main() {
+    // Number of nodes (V) and edges (E)
+    int V = 8;  // Number of nodes (e.g., W1, W2, D1, D2, R1, R2, R3, R4)
+    int E = 20; // Number of edges (each edge between two nodes)
+
+    // List of edges with (source, destination, weight)
+    vector&lt;Edge&gt; edges = {
+        {0, 1, 10}, {0, 2, 15}, {0, 3, 18}, {0, 4, 8}, {0, 5, 12}, {0, 6, 20}, {0, 7, 25}, {0, 8, 18},
+        {1, 0, 10}, {1, 2, 12}, {1, 3, 15}, {1, 4, 10}, {1, 5, 15}, {1, 6, 22}, {1, 7, 18}, {1, 8, 10},
+        {2, 0, 15}, {2, 1, 12}, {2, 3, 8}, {2, 4, 10}, {2, 5, 18}, {2, 6, 25}, {2, 7, 22}, {2, 8, 20},
+        {3, 0, 18}, {3, 1, 15}, {3, 2, 8}, {3, 4, 15}, {3, 5, 20}, {3, 6, 28}, {3, 7, 25}, {3, 8, 30},
+        {4, 0, 8}, {4, 1, 10}, {4, 2, 10}, {4, 3, 15}, {4, 5, 5}, {4, 6, 12}, {4, 7, 20}, {4, 8, 18},
+        {5, 0, 12}, {5, 1, 15}, {5, 2, 18}, {5, 3, 20}, {5, 4, 5}, {5, 6, 10}, {5, 7, 15}, {5, 8, 18},
+        {6, 0, 20}, {6, 1, 22}, {6, 2, 25}, {6, 3, 28}, {6, 4, 12}, {6, 5, 10}, {6, 7, 5}, {6, 8, 10},
+        {7, 0, 25}, {7, 1, 18}, {7, 2, 22}, {7, 3, 25}, {7, 4, 20}, {7, 5, 15}, {7, 6, 5}, {7, 8, 8},
+        {8, 0, 18}, {8, 1, 10}, {8, 2, 20}, {8, 3, 30}, {8, 4, 18}, {8, 5, 18}, {8, 6, 10}, {8, 7, 8}
+    };
+
+    // Select the source node (e.g., W1 = 0, W2 = 1, D1 = 2, D2 = 3, R1 = 4, R2 = 5, etc.)
+    int sourceNode = 0;  // Let's assume we start from W1 (Node 0)
+
+    // Run the Bellman-Ford algorithm
+    bellmanFord(edges, V, E, sourceNode);
+
+    return 0;
+}
+</pre>
+</div>
+
+<script>
+    function showCode() {
+        // Display the code when the button is clicked
+        document.getElementById('codeSection').style.display = 'block';
+    }
+</script>
+
 </body>
 </html>
 
