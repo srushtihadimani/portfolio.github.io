@@ -56,6 +56,69 @@
                 padding: 10px;
             }
         }
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            border: 1px solid #dee2e6;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .section {
+            width: 90%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .section h3 {
+            color: #343a40;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+        }
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .section ul li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #007bff;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -234,5 +297,308 @@
             </tr>
         </tbody>
     </table>
+    <body>
+    <header>
+        <h1>Algorithms Lab Project Evaluation Sheet</h1>
+        <p>Name: Aarzoo Chikkodi | SRN: 01FE23BCS276 | Roll: 322</p>
+    </header>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Algorithm/Data Structure</th>
+                <th>Used? (Yes/No)</th>
+                <th>How and Where?</th>
+                <th>Space Efficiency</th>
+                <th>Time Efficiency</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Arrays</td>
+                <td>Yes</td>
+                <td>Used for adjacency matrices in Floyd-Warshall and Bellman-Ford.</td>
+                <td>O(n²)</td>
+                <td>O(n³) for Floyd-Warshall.</td>
+            </tr>
+            <tr>
+                <td>Structures</td>
+                <td>Yes</td>
+                <td>Not used.</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>List</td>
+                <td>Yes</td>
+                <td>Used to store graph edges in Bellman-Ford and Dijkstra.</td>
+                <td>O(E)</td>
+                <td>Efficient for edge traversal.</td>
+            </tr>
+            <tr>
+                <td>Stack</td>
+                <td>Yes</td>
+                <td>Used for DFS traversal (traffic analysis, etc.)</td>
+                <td>O(V)</td>
+                <td>O(V + E) for DFS.</td>
+            </tr>
+            <tr>
+                <td>Queue</td>
+                <td>Yes</td>
+                <td>Used in BFS for exploring traffic or transport flows.</td>
+                <td>O(V)</td>
+                <td>O(V + E)</td>
+            </tr>
+            <tr>
+                <td>Binary Tree</td>
+                <td>No</td>
+                <td>Not required in your project.</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Binary Search Tree</td>
+                <td>No</td>
+                <td>Not required in your project.</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>AVL Tree</td>
+                <td>No</td>
+                <td>Not required in your project.</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>2-3 Tree</td>
+                <td>No</td>
+                <td>Not required in your project.</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Red-Black Tree</td>
+                <td>No</td>
+                <td>Not required in your project.</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Trie</td>
+                <td>No</td>
+                <td>Not required in your project.</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Heap</td>
+                <td>Yes</td>
+                <td>Used in Dijkstra for priority queue implementation.</td>
+                <td>O(V)</td>
+                <td>O(log V) per operation.</td>
+            </tr>
+            <tr>
+                <td>Lookup Table</td>
+                <td>Yes</td>
+                <td>Used to store precomputed shortest paths in road networks.</td>
+                <td>O(n²)</td>
+                <td>Lookup is O(1)</td>
+            </tr>
+            <tr>
+                <td>Sparse Table</td>
+                <td>No</td>
+                <td>Not required in your project.</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Fenwick Tree</td>
+                <td>No</td>
+                <td>Not required in your project.</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Segment Tree</td>
+                <td>No</td>
+                <td>Not required in your project.</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Skip List</td>
+                <td>No</td>
+                <td>Not required in your project.</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Union-Find</td>
+                <td>Yes</td>
+                <td>Used to manage connected components in graph algorithms.</td>
+                <td>O(V)</td>
+                <td>O(α(V))</td>
+            </tr>
+            <tr>
+                <td>Hashing</td>
+                <td>Yes</td>
+                <td>Used for mapping locations or nodes in graphs.</td>
+                <td>O(n)</td>
+                <td>O(1) average lookup.</td>
+            </tr>
+            <tr>
+                <td>DFS</td>
+                <td>Yes</td>
+                <td>Used for depth-first exploration in traffic analysis.</td>
+                <td>O(V + E)</td>
+                <td>O(V + E)</td>
+            </tr>
+            <tr>
+                <td>BFS</td>
+                <td>Yes</td>
+                <td>Used for exploring shortest paths in unweighted graphs.</td>
+                <td>O(V + E)</td>
+                <td>O(V + E)</td>
+            </tr>
+            <tr>
+                <td>Bubble Sort</td>
+                <td>No</td>
+                <td>Not used.</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Selection Sort</td>
+                <td>No</td>
+                <td>Not used.</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Insertion Sort</td>
+                <td>No</td>
+                <td>Not used.</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Quick Sort</td>
+                <td>No</td>
+                <td>Not used.</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Merge Sort</td>
+                <td>Yes</td>
+                <td>Used for sorting nodes/edges (e.g., for route prioritization).</td>
+                <td>O(n)</td>
+                <td>O(n log n)</td>
+            </tr>
+            <tr>
+                <td>Brute Force String Search</td>
+                <td>No</td>
+                <td>Not used.</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Rabin Karp</td>
+                <td>No</td>
+                <td>Not used.</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Boyer-Moore</td>
+                <td>No</td>
+                <td>Not used.</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Knuth-Morris-Pratt</td>
+                <td>No</td>
+                <td>Not used.</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Heap Sort</td>
+                <td>Yes</td>
+                <td>Used for sorting edges or nodes in order of priority, such as in road optimization.</td>
+                <td>O(1) auxiliary</td>
+                <td>O(n log n)</td>
+            </tr>
+            <tr>
+                <td>Kruskal</td>
+                <td>Yes</td>
+                <td>Used for MST in road network design (connects nodes with minimal cost).</td>
+                <td>O(E)</td>
+                <td>O(E log E)</td>
+            </tr>
+            <tr>
+                <td>Prim</td>
+                <td>Yes</td>
+                <td>Used for MST in road network design (minimizes connection cost).</td>
+                <td>O(V)</td>
+                <td>O(V²) for dense graphs, O(E log V) for sparse graphs</td>
+            </tr>
+            <tr>
+                <td>Dijkstra</td>
+                <td>Yes</td>
+                <td>Used for optimal road network design.</td>
+                <td>O(V)</td>
+                <td>O(V²)</td>
+            </tr>
+            <tr>
+                <td>Floyd-Warshall</td>
+                <td>Yes</td>
+                <td>Used for water and waste management systems.</td>
+                <td>O(n²)</td>
+                <td>O(n³)</td>
+            </tr>
+            <tr>
+                <td>Warshall</td>
+                <td>No</td>
+                <td>Not used.</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Bellman-Ford</td>
+                <td>Yes</td>
+                <td>Used for scheduling smart public transport systems.</td>
+                <td>O(VE)</td>
+                <td>O(VE)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="section">
+        <h3>Design Techniques and Principles Used</h3>
+        <ul>
+            <li>Greedy Technique (Dijkstra)</li>
+            <li>Dynamic Programming (Floyd-Warshall)</li>
+            <li>Space-Time Tradeoff (Adjacency matrix in Floyd-Warshall)</li>
+            <li>Divide and Conquer</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h3>SDG Connect</h3>
+        <p>SDG 11: Sustainable Cities and Communities (Optimal road network design, smart public transport scheduling, and water management).</p>
+    </div>
+
+    <div class="section">
+        <h3>Reflections</h3>
+        <p>This project helped understand the practical applications of algorithms like Dijkstra, Bellman-Ford, and Floyd-Warshall in solving real-world problems.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Aarzoo Chikkodi. All rights reserved.</p>
+    </footer>
+</body>
 </body>
 </html>
